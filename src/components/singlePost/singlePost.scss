@@ -1,0 +1,110 @@
+// variables
+@import "../../styles/variables.scss";
+
+.singlePost {
+  min-height: 100vh;
+  margin-top: 100px;
+  width: 100%;
+  padding-bottom: 80px;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include sm {
+      padding: 0 16px;
+    }
+
+    h4,
+    h3 {
+      margin: 24px 0;
+      color: $neu-09;
+    }
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: solid 1px $neu-06;
+    border-bottom: solid 1px $neu-06;
+    padding: 12px 0;
+  }
+
+  &__barUser {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__bartUserText {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin-bottom: 2px;
+      margin-top: 0;
+    }
+  }
+
+  &__barAside {
+    display: flex;
+    align-items: center;
+  }
+
+  &__like,
+  &__message,
+  &__share {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      opacity: 0.7;
+    }
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  &__save {
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      svg {
+        path {
+          fill: $m-01;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__imageText {
+    display: flex;
+    align-items: flex-start;
+    margin: 24px 0;
+    
+    img {
+      width: 60%;
+    }
+  }
+  
+  &__imageTextContent {
+    width: 40%;
+  }
+}

@@ -1,0 +1,31 @@
+// variables
+@import "../../styles/variables.scss";
+
+.searchResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    margin: 24px 0;
+    color: #F97821;
+    font-weight: bold;
+  }
+
+  p {
+    color: $neu-09;
+    margin-bottom: 24px;
+    max-width: 360px;
+    text-align: center;
+
+    a {
+      color: #3D92D1;
+      transition: all 0.2s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

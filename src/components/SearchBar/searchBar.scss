@@ -1,0 +1,85 @@
+// variables
+@import "../../styles/variables.scss";
+
+.searchBar {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 120px;
+
+  &__wrapper {
+    padding: 0 32px;
+  }
+
+  &__inputSearch {
+    display: flex;
+    align-items: center;
+
+    select {
+      height: 40px;
+      border-radius: 8px;
+      border: solid 1px #f77c37;
+      padding: 0 16px;
+      margin-right: 10px;
+
+      @include sm {
+        padding: 0 8px;
+      }
+    }
+  }
+
+  &__inputWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      left: 16px;
+    }
+
+    input {
+      height: 40px;
+      padding: 0 24px 0 40px;
+      border: solid 1px $neu-06;
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+
+  &__searchBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  &__searchBtn {
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: $m-01;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+
+    @include sm {
+      padding: 0 16px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      width: 72px;
+    }
+  }
+}

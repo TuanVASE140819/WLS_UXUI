@@ -1,0 +1,251 @@
+// variables
+@import "../../styles/variables.scss";
+
+.cards {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 120px;
+
+  &__wrapper {
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__inputSearch {
+    display: flex;
+    align-items: center;
+
+    select {
+      height: 40px;
+      border-radius: 8px;
+      border: solid 1px #f77c37;
+      padding: 0 16px;
+      margin-right: 10px;
+    }
+  }
+
+  &__inputWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      left: 16px;
+    }
+
+    input {
+      height: 40px;
+      padding: 0 24px 0 40px;
+      border: solid 1px $neu-06;
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+
+  &__searchBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  &__searchBtn {
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: $m-01;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      width: 72px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 32px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    border: solid 1px $neu-06;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    margin-right: 8px;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  &__itemContent {
+    width: 100%;
+  }
+
+  &__title {
+    color: $m-01;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__ratingsViews {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  &__ratingsUsers,
+  &__ratingsStars {
+    display: flex;
+    align-items: center;
+  }
+
+  &__ratingsUsers {
+    margin-right: 8px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__btnView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4abc96;
+    height: 32px;
+    padding: 0 24px;
+    border-radius: 8px;
+    color: white;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+    width: 100%;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__btnPopup {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neu-06;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  &__popup {
+    width: 140px;
+    height: 80px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 4px 10px;
+    border: solid 1px $neu-06;
+    color: $neu-09;
+    background-color: white;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: absolute;
+    top: 40px;
+    left: -16px;
+    opacity: 0;
+    transition: all 0.2s 0.1s ease;
+    pointer-events: none;
+
+    &:before {
+      width: 20px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      background-color: white;
+      border-left: solid 1px $neu-06;
+      border-top: solid 1px $neu-06;
+      top: -10px;
+      left: 20px;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    &:after {
+      width: 140px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      z-index: 2;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+      
+
+      &:hover {
+        opacity: 0.7;
+        color: $m-01;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+        transform: translateX(2px);
+      }
+    }
+
+  }
+
+  &__btnPopup {
+    &:hover {
+      .cards__popup {
+        opacity: 1;
+        pointer-events: inherit;
+      }
+    }
+  }
+}

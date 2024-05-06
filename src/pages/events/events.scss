@@ -1,0 +1,260 @@
+// variables
+@import "../../styles/variables.scss";
+
+.events {
+  margin-top: 100px;
+
+  &__wrapper {
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__bg {
+    padding: 20px 32px 64px 32px;
+    background: url("../../assets/images/bg-gardient.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+  }
+
+  &__content {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  &__header {
+    img {
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+
+  &__gridUsers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 24px;
+    text-align: center;
+    font-weight: bold;
+
+    @include sm {
+      margin: 16px;
+    }
+
+    img {
+      border-radius: 100%;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font-s;
+    color: $neu-09;
+    font-weight: bold;
+    padding: 0 56px;
+    max-width: 640px;
+    margin: 24px auto 16px auto;
+    text-align: center;
+  }
+
+  &__desc {
+    padding: 0 24px 24px 24px;
+    margin: 0 auto;
+    text-align: center;
+    @include font-xs;
+    color: $neu-09;
+    line-height: 18px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  &__countDown {
+    display: flex;
+    align-items: center;
+  }
+
+  &__timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+
+    p {
+      color: $neu-09;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__number {
+    width: 40px;
+    height: 40px;
+    border: solid 1px $neu-09;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $neu-09;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    border-radius: 40px;
+    padding: 0 32px;
+    height: 40px;
+    background: linear-gradient(
+      75.41deg,
+      #73adf3 8.52%,
+      #ff9a9b 38.58%,
+      #ff50b7 84.67%
+    );
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px white;
+    box-shadow: 4px 4px rgba(black, 0.2);
+    transition: all 0.4s ease;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(
+        -90.41deg,
+        #73adf3 8.52%,
+        #ff9a9b 38.58%,
+        #ff50b7 84.67%
+      );
+      box-shadow: 0px 0px rgba(black, 0.2);
+      transform: translateY(-4px);
+    }
+  }
+
+  &__ratingsTitle {
+    @include font-m;
+    color: $m-01--light-01;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+
+    span {
+      color: $neu-09;
+      display: block;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+  }
+
+  &__ratings {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__ratingsHeader {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    p {
+      &:nth-child(1) {
+        width: 20%;
+
+        @include sm {
+          width: 10%;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 60%;
+        transform: translateX(60px);
+
+        @include sm {
+          width: 40%;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 20%;
+      }
+    }
+  }
+
+  &__lists {
+    margin-top: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: solid 1px $neu-06;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__itemNumber {
+    width: 20%;
+
+    @include sm {
+      width: 10%;
+    }
+  }
+
+  &__logoText {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: $neu-09;
+
+    @include sm {
+      width: 40%;
+    }
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__asideNumber {
+    width: 20%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 16px;
+      color: green;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-left: 4px;
+      }
+    }
+  }
+}

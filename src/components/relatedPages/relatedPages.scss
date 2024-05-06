@@ -1,0 +1,44 @@
+// variables
+@import "../../styles/variables.scss";
+
+.relatedPages {
+  width: 100%;
+  margin-top: 92px;
+
+  &__wrapper {
+    padding: 0 24px;
+
+    h4 {
+      margin-bottom: 32px;
+      @include font-s;
+      font-weight: bold;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+    padding: 20px;
+    background-color: #FBFBFB;
+    border-radius: 4px;
+    border: solid 1px $neu-06;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

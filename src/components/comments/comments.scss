@@ -1,0 +1,168 @@
+// variables
+@import "../../styles/variables.scss";
+
+.comments {
+  
+  &__write {
+    img {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+
+    textarea {
+      border: solid 1px $neu-06;
+      border-radius: 8px;
+      padding: 24px 24px 24px 60px;
+      height: 140px;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    padding: 0 32px;
+    border-radius: 8px;
+    color: white;
+    background-color: #4ABC96;
+    bottom: 24px;
+    right: 24px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__posts {
+    border-bottom: solid 1px $neu-06;
+    &:last-child {
+      border: none;
+      margin-bottom: 40px;
+    }
+  
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    
+    h4 {
+      margin-bottom: 4px;
+    }
+
+    p {
+      padding: 0;
+    }
+  }
+
+  &__iconDot {
+    cursor: pointer;
+  }
+
+  &__content {
+    margin-top: 16px;
+    padding-left: 40px;
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+      padding: 16px 0;
+      color: $neu-09;
+    }
+
+    span {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
+    img {
+      padding: 8px 0;
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    margin-top: 16px;
+    padding-left: 40px;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__aside {
+    svg {
+      margin-left: 16px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    color: $neu-09;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__actionBtn {
+    margin-right: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.like {
+      color: #0487D9;
+    }
+  }
+
+  &__commented {
+    background-color: #FAFAFA;
+    padding: 10px 20px 10px 40px;
+    margin-left: 40px;
+    border-radius: 8px;
+  }
+
+  &__replies {
+    padding-left: 40px;
+  }
+}
