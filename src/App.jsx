@@ -23,26 +23,30 @@ import Forum from "./pages/forum/Forum";
 import Mession from "./pages/mession/Mession";
 import SchoolDetail from "./pages/schoolDetail/SchoolDetail";
 
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
 function App() {
   // const { user } = useContext(Context);
   return (
     <BrowserRouter>
       <MainNav />
       <ScrollToTop />
-        <Routes>
-          <Route path="*" element={<PageNotFound />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/topSchool" element={<TopSchool />} />
-          <Route path="/searchResults" element={<SearchResults />} />
-          <Route path="/userInfo" element={<UserInfo />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/mession" element={<Mession />} />
-          <Route path="/schoolDetail" element={<SchoolDetail />} />
-          <Route path="/post/:id" element={<Post />} />
-        </Routes>
+      <Routes>
+        <Route path="*" element={<PageNotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/topSchool" element={<TopSchool />} />
+        <Route path="/searchResults" element={<SearchResults />} />
+        <Route path="/userInfo" element={<UserInfo />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/mession" element={<Mession />} />
+        <Route path="/schoolDetail" element={<SchoolDetail />} />
+        <Route path="/post/:id" element={<Post />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
