@@ -107,6 +107,7 @@
   }
 
   &__message {
+    
     &:hover {
       .popupMessage {
         opacity: 1;
@@ -118,7 +119,7 @@
     }
   }
 
-  &__avatar {
+  &__notification {
     cursor: pointer;
     position: relative;
     @include xs {
@@ -126,7 +127,7 @@
     }
 
     &:hover {
-      .popupUser {
+      .popupNotification {
         opacity: 1;
         pointer-events: initial;
       }
@@ -151,7 +152,7 @@
   }
 }
 
-.popupUser {
+.popupNotification {
   box-shadow: 2px 2px 10px rgba(166, 166, 166, 0.2);
   position: absolute;
   width: 700px;
@@ -213,6 +214,8 @@
   }
 
   &__infoText {
+    padding-top: 8px;
+    padding-bottom: 8px;
     p {
       color: #fcaa17;
       font-weight: bold;
@@ -296,6 +299,30 @@
     &.active {
       display: initial;
     }
+  }
+  
+    &__name {
+    font-weight: bold;
+    }
+  &__infoContent {
+  //  flex chia thành 3 phần
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid $neu-09;
+    &:last-child {
+      border: none;
+    }
+    svg {
+      transition: all 0.2s ease;
+      &.active {
+        transform: rotate(90deg);
+      }
+    }
+  
   }
 }
 

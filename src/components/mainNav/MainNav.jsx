@@ -579,52 +579,22 @@ const MainNav = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </i>
-          <div className="mainNav__avatar">
-            <img src={require("../../assets/images/user.png")} alt="" />
-            <div className="popupUser">
-              <div className="popupUser__wrapper">
-                <div className="popupUser__top">
-                  <div className="popupUser__left">
-                    <figure className="popupUser__image">
-                      <img
-                        src={require("../../assets/images/user-2.png")}
-                        alt=""
-                      />
-                    </figure>
-                    <div className="popupUser__infoText">
-                      <h2>Hoà Hồ</h2>
-                      <p>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="#FCAA17"
-                            fillRule="evenodd"
-                            d="M10.787 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.405.434c1.163.093 1.636 1.545.748 2.305l-4.117 3.527 1.258 5.273c.27 1.136-.965 2.033-1.96 1.425L12 18.354 7.372 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.006z"
-                            clipRule="evenodd"
-                          ></path>
-                        </svg>
-                        9015
-                        <span>nạp xu</span>
-                      </p>
+            <div className=" popupNotification">
+              <div className=" popupNotification__wrapper">
+                <div className=" popupNotification__top">
+                  <div className=" popupNotification__left">
+                    <div className=" popupNotification__infoText">
+                      <h2>Thông báo</h2>
                     </div>
                   </div>
-                  <div className="popupUser__right">
-                    <div className="popupUser__btn">Lưu</div>
-                  </div>
                 </div>
-                <div className="popupUser__bottom">
-                  <div className="popupUser__info">
+                <div className=" popupNotification__bottom">
+                  <div className=" popupNotification__info">
                     <div
-                      className="popupUser__infoHeader"
+                      className=" popupNotification__infoHeader"
                       onClick={() => setOpen(!open)}
                     >
-                      <h4>Thông tin cá nhân</h4>
+                      <h4>4/5/2024</h4>
                       <svg
                         className={`${open ? "active" : ""}`}
                         xmlns="http://www.w3.org/2000/svg"
@@ -651,292 +621,76 @@ const MainNav = () => {
                         </defs>
                       </svg>
                     </div>
-                    <form className={`popupUser__form ${open ? "active" : ""}`}>
-                      <div className="popupUser__inputWrapper">
-                        <div className="popupUser__input">
-                          <label>Tên</label>
-                          <input type="text" defaultValue="Hoà" />
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            fill="none"
-                            viewBox="0 0 15 15"
-                          >
-                            <g clipPath="url(#clip0_277_303)">
-                              <path
-                                stroke="#505050"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_277_303">
-                                <path fill="#fff" d="M0 0H15V15H0z"></path>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                        <div className="popupUser__input">
-                          <label>Họ</label>
-                          <input type="text" defaultValue="Hồ" />
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            fill="none"
-                            viewBox="0 0 15 15"
-                          >
-                            <g clipPath="url(#clip0_277_303)">
-                              <path
-                                stroke="#505050"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_277_303">
-                                <path fill="#fff" d="M0 0H15V15H0z"></path>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                        <div className="popupUser__input">
-                          <label>Bí danh</label>
-                          <input type="text" defaultValue="9x" />
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            fill="none"
-                            viewBox="0 0 15 15"
-                          >
-                            <g clipPath="url(#clip0_277_303)">
-                              <path
-                                stroke="#505050"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_277_303">
-                                <path fill="#fff" d="M0 0H15V15H0z"></path>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="popupUser__inputWrapper">
-                        <div className="popupUser__input">
-                          <label>Tên</label>
-                          <input type="text" defaultValue="Hoà" />
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            fill="none"
-                            viewBox="0 0 15 15"
-                          >
-                            <g clipPath="url(#clip0_277_303)">
-                              <path
-                                stroke="#505050"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_277_303">
-                                <path fill="#fff" d="M0 0H15V15H0z"></path>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                        <div className="popupUser__input">
-                          <label>Email</label>
-                          <input type="text" defaultValue="hoaho9x@gmail.com" />
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            fill="none"
-                            viewBox="0 0 15 15"
-                          >
-                            <g clipPath="url(#clip0_277_303)">
-                              <path
-                                stroke="#505050"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_277_303">
-                                <path fill="#fff" d="M0 0H15V15H0z"></path>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="popupUser__input">
-                        <label>Địa chỉ</label>
-                        <input
-                          type="text"
-                          defaultValue="98 Phạm Thái Bường, Tân Phong, Quận 7, TP. Hồ Chí Minh"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          fill="none"
-                          viewBox="0 0 15 15"
-                        >
-                          <g clipPath="url(#clip0_277_303)">
-                            <path
-                              stroke="#505050"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                            ></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_277_303">
-                              <path fill="#fff" d="M0 0H15V15H0z"></path>
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                      <div className="popupUser__input">
-                        <label>Trường cấp 1</label>
-                        <input
-                          type="text"
-                          defaultValue="Trường TH Tam Phước 2"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          fill="none"
-                          viewBox="0 0 15 15"
-                        >
-                          <g clipPath="url(#clip0_277_303)">
-                            <path
-                              stroke="#505050"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                            ></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_277_303">
-                              <path fill="#fff" d="M0 0H15V15H0z"></path>
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                      <div className="popupUser__input">
-                        <label>Trường cấp 2</label>
-                        <input
-                          type="text"
-                          defaultValue="Trường THCS Hòa Bình"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          fill="none"
-                          viewBox="0 0 15 15"
-                        >
-                          <g clipPath="url(#clip0_277_303)">
-                            <path
-                              stroke="#505050"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                            ></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_277_303">
-                              <path fill="#fff" d="M0 0H15V15H0z"></path>
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                      <div className="popupUser__input">
-                        <label>Trường cấp 3</label>
-                        <input
-                          type="text"
-                          defaultValue="Trường TH-THCS-THPT Trịnh Hoài Đức"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          fill="none"
-                          viewBox="0 0 15 15"
-                        >
-                          <g clipPath="url(#clip0_277_303)">
-                            <path
-                              stroke="#505050"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                            ></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_277_303">
-                              <path fill="#fff" d="M0 0H15V15H0z"></path>
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                      <div className="popupUser__input">
-                        <label>Đại học</label>
-                        <input
-                          type="text"
-                          defaultValue="Trường Đại học Tôn Đức Thắng"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          fill="none"
-                          viewBox="0 0 15 15"
-                        >
-                          <g clipPath="url(#clip0_277_303)">
-                            <path
-                              stroke="#505050"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M10.539 2.804l1.054-1.055a1.172 1.172 0 011.658 1.658l-8.981 8.98c-.33.33-.738.573-1.186.707l-1.678.5.5-1.678c.134-.448.376-.856.706-1.186l7.927-7.926h0zm0 0l1.649 1.65"
-                            ></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_277_303">
-                              <path fill="#fff" d="M0 0H15V15H0z"></path>
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </form>
                     <div
-                      className="popupUser__infoHeader"
+                      className={` popupNotification__form ${
+                        open ? "active" : ""
+                      }`}
+                    >
+                      <div
+                        className=" popupNotification__infoContent"
+                        // onClick={() => setOpen1(!open1)}
+                      >
+                        <img
+                          src={require("../../assets/images/user.png")}
+                          alt=""
+                        />
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18C2.25 18.7956 2.56607 19.5587 3.12868 20.1213C3.69129 20.6839 4.45435 21 5.25 21H20.25C19.4544 21 18.6913 20.6839 18.1287 20.1213C17.5661 19.5587 17.25 18.7956 17.25 18V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75C11.8011 9.75 11.6103 9.82902 11.4697 9.96967C11.329 10.1103 11.25 10.3011 11.25 10.5C11.25 10.6989 11.329 10.8897 11.4697 11.0303C11.6103 11.171 11.8011 11.25 12 11.25H13.5C13.6989 11.25 13.8897 11.171 14.0303 11.0303C14.171 10.8897 14.25 10.6989 14.25 10.5C14.25 10.3011 14.171 10.1103 14.0303 9.96967C13.8897 9.82902 13.6989 9.75 13.5 9.75H12ZM11.25 7.5C11.25 7.30109 11.329 7.11032 11.4697 6.96967C11.6103 6.82902 11.8011 6.75 12 6.75H13.5C13.6989 6.75 13.8897 6.82902 14.0303 6.96967C14.171 7.11032 14.25 7.30109 14.25 7.5C14.25 7.69891 14.171 7.88968 14.0303 8.03033C13.8897 8.17098 13.6989 8.25 13.5 8.25H12C11.8011 8.25 11.6103 8.17098 11.4697 8.03033C11.329 7.88968 11.25 7.69891 11.25 7.5ZM6 12.75C5.80109 12.75 5.61032 12.829 5.46967 12.9697C5.32902 13.1103 5.25 13.3011 5.25 13.5C5.25 13.6989 5.32902 13.8897 5.46967 14.0303C5.61032 14.171 5.80109 14.25 6 14.25H13.5C13.6989 14.25 13.8897 14.171 14.0303 14.0303C14.171 13.8897 14.25 13.6989 14.25 13.5C14.25 13.3011 14.171 13.1103 14.0303 12.9697C13.8897 12.829 13.6989 12.75 13.5 12.75H6ZM5.25 16.5C5.25 16.3011 5.32902 16.1103 5.46967 15.9697C5.61032 15.829 5.80109 15.75 6 15.75H13.5C13.6989 15.75 13.8897 15.829 14.0303 15.9697C14.171 16.1103 14.25 16.3011 14.25 16.5C14.25 16.6989 14.171 16.8897 14.0303 17.0303C13.8897 17.171 13.6989 17.25 13.5 17.25H6C5.80109 17.25 5.61032 17.171 5.46967 17.0303C5.32902 16.8897 5.25 16.6989 5.25 16.5ZM6 6.75C5.80109 6.75 5.61032 6.82902 5.46967 6.96967C5.32902 7.11032 5.25 7.30109 5.25 7.5V10.5C5.25 10.914 5.586 11.25 6 11.25H9C9.19891 11.25 9.38968 11.171 9.53033 11.0303C9.67098 10.8897 9.75 10.6989 9.75 10.5V7.5C9.75 7.30109 9.67098 7.11032 9.53033 6.96967C9.38968 6.82902 9.19891 6.75 9 6.75H6Z"
+                            fill="#0487D9"
+                          />
+                          <path
+                            d="M18.75 6.75H20.625C21.246 6.75 21.75 7.254 21.75 7.875V18C21.75 18.3978 21.592 18.7794 21.3107 19.0607C21.0294 19.342 20.6478 19.5 20.25 19.5C19.8522 19.5 19.4706 19.342 19.1893 19.0607C18.908 18.7794 18.75 18.3978 18.75 18V6.75Z"
+                            fill="#0487D9"
+                          />
+                        </svg>
+
+                        <div>
+                          <p>
+                            <span className="popupNotification__name">
+                              Nguyễn Văn A
+                            </span>{" "}
+                            đã viết một bài viết lên trường{" "}
+                            <span className="popupNotification__name">
+                              Đại học Bách Khoa
+                            </span>
+                          </p>
+                          <p>
+                            Gặp Nhau Rồi Thật Khó Lìa Xa. Bao Tâm Sự Còn Đang
+                            Dang Dở...
+                          </p>
+                        </div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="34"
+                          height="7"
+                          fill="none"
+                          viewBox="0 0 34 7"
+                        >
+                          <g fill="#A3A3A3" clipPath="url(#clip0_277_1070)">
+                            <path d="M3.19 6.38a3.19 3.19 0 100-6.38 3.19 3.19 0 000 6.38zM16.88 6.38a3.19 3.19 0 100-6.38 3.19 3.19 0 000 6.38zM30.57 6.38a3.19 3.19 0 100-6.38 3.19 3.19 0 000 6.38z"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_277_1070">
+                              <path fill="#fff" d="M0 0H33.77V6.39H0z"></path>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      className=" popupNotification__infoHeader"
                       onClick={() => setOpen2(!open2)}
                     >
-                      <h4>Thông tin tài khoản</h4>
+                      <h4>3/5/2024</h4>
                       <svg
                         className={`${open2 ? "active" : ""}`}
                         xmlns="http://www.w3.org/2000/svg"
@@ -964,10 +718,12 @@ const MainNav = () => {
                       </svg>
                     </div>
                     <form
-                      className={`popupUser__form ${open2 ? "active" : ""}`}
+                      className={` popupNotification__form ${
+                        open2 ? "active" : ""
+                      }`}
                     >
-                      <div className="popupUser__inputWrapper">
-                        <div className="popupUser__input">
+                      <div className=" popupNotification__inputWrapper">
+                        <div className=" popupNotification__input">
                           <label>Tên đăng nhập</label>
                           <input type="text" defaultValue="hoasociu" />
                           <svg
@@ -993,7 +749,7 @@ const MainNav = () => {
                             </defs>
                           </svg>
                         </div>
-                        <div className="popupUser__input">
+                        <div className=" popupNotification__input">
                           <label>Mật khẩu</label>
                           <input type="text" defaultValue="****************" />
                           <svg
@@ -1020,8 +776,8 @@ const MainNav = () => {
                           </svg>
                         </div>
                       </div>
-                      <div className="popupUser__inputWrapper">
-                        <div className="popupUser__input">
+                      <div className=" popupNotification__inputWrapper">
+                        <div className=" popupNotification__input">
                           <label>Số điện thoại đăng kí</label>
                           <input type="text" defaultValue="0354646871" />
                           <svg
@@ -1047,7 +803,7 @@ const MainNav = () => {
                             </defs>
                           </svg>
                         </div>
-                        <div className="popupUser__input">
+                        <div className=" popupNotification__input">
                           <label>Bảo mật cấp 2</label>
                           <input type="text" defaultValue="hoaho9x@gmail.com" />
                           <svg
@@ -1079,7 +835,12 @@ const MainNav = () => {
                 </div>
               </div>
             </div>
+          </i>
+          <div className="mainNav__avatar">
+            {" "}
+            <img src={require("../../assets/images/user.png")} alt="" />
           </div>
+
           <div className="mainNav__lang">
             <NavLink to="/?lang=vi" className="mainNav__langLink">
               VI
