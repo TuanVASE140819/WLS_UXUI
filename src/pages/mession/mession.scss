@@ -4,6 +4,8 @@
 .steps {
   margin-top: 100px;
   width: 100%;
+
+
 }
 
 .steps {
@@ -14,12 +16,90 @@
       padding: 0 16px;
     }
   }
+&__info {
+  display: flex;
+  align-items: center;
+}
 
+&__name {
+  font-family: Mulish;
+font-size: 20px;
+font-weight: 700;
+line-height: 25.1px;
+text-align: left;
+
+}
+&__info__gift {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // căn chính giữa
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+&__coin {
+  font-family: Mulish;
+font-size: 20px;
+font-weight: 700;
+margin-left: 5px;
+line-height: 25.1px;
+text-align: left;
+color: #FCAA17;
+}
+
+&__created {
+ font-family: Mulish;
+font-size: 13px;
+font-weight: 400;
+line-height: 16.32px;
+text-align: left;
+color: #666666;
+
+}
+
+&__address {
+  font-family: Mulish;
+font-size: 13px;
+font-weight: 400;
+line-height: 16.32px;
+text-align: left;
+color: 
+#0487D9;
+
+}
+&__gift {
+width: 140px;
+height: 32px;
+border-radius: 16px;
+background-color: #D13D3D;
+color: #FFFFFF;
+font-size: 14px;
+// căn giữa
+display: flex;
+justify-content: center;
+align-items: center;  
+
+}
+
+
+&__avatar {
+  margin-right: 20px; /* Để tạo khoảng cách giữa hình ảnh và text */
+}
   &__heading {
-    margin-bottom: 48px;
-    text-align: center;
+    // margin-bottom: 48px;
+    // text-align: center;
+    // grid chia 3 cột
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
+  &__avatar {
+    // vòng tròn
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
   &__title {
     text-align: center;
     font-style: normal;
@@ -309,8 +389,8 @@
     transition: all 0.2s ease;
 
     &:hover {
-      opacity: 0.7;
-      background-color: #4abc96;
+      // opacity: 0.7;
+      background-color: #F4F5F8;
     }
 
     &.active {

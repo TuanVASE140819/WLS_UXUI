@@ -47,6 +47,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     // padding: 64px;
   }
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+  }
   &__subTitle {
     margin-top: 8px;
     margin-bottom: 8px;

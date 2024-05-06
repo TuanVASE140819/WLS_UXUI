@@ -1,0 +1,40 @@
+// variables
+@import "../../styles/variables.scss";
+
+.collapse-list {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.collapse-item {
+  border-bottom: 1px solid $neu-06;
+}
+
+.collapse-header {
+  padding: 12px 32px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    margin-top: 8px;
+  }
+}
+
+.collapse-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 32px;
+}
+
+.collapse-inner-content {
+  padding: 10px 0;
+}
+
+.collapse-icon {
+  &.active {
+    transition: all 0.2s ease;
+    transform: rotate(180deg);
+  }
+}
