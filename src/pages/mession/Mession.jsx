@@ -133,11 +133,7 @@ const Mession = () => {
                 <div className=""></div>
                 <div className="steps__info__gift">
                   <div className="steps__gift">
-                    <SvgGift
-                      style={{
-                        padding: "0 10px",
-                      }}
-                    />
+                    <SvgGift />
                     <span
                       style={{
                         marginLeft: "10px",
@@ -197,6 +193,7 @@ const Mession = () => {
                         </clipPath>
                       </defs>
                     </svg>
+
                     <div className="steps__popup">
                       <div className="steps__popupWrapper">
                         <figure className="steps__image">
@@ -207,7 +204,7 @@ const Mession = () => {
                         </figure>
                         <div className="steps__text">
                           <small>Tặng 1 chai sữa rửa mặt của CKD</small>
-                          <h2>100.000 vnđ</h2>
+
                           <div className="steps__btn">Nhận thưởng</div>
                         </div>
                       </div>
@@ -243,8 +240,8 @@ const Mession = () => {
                   <div className="steps__icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="19"
+                      width="18"
+                      height="21"
                       fill="none"
                       viewBox="0 0 20 19"
                     >
@@ -265,7 +262,7 @@ const Mession = () => {
                         </figure>
                         <div className="steps__text">
                           <small>1 mặt nạ CKD</small>
-                          <h2>100.000 vnđ</h2>
+
                           <div className="steps__btn">Nhận thưởng</div>
                         </div>
                       </div>
@@ -301,8 +298,8 @@ const Mession = () => {
                   <div className="steps__icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="29"
-                      height="30"
+                      width="18"
+                      height="21"
                       fill="none"
                       viewBox="0 0 29 30"
                     >
@@ -326,7 +323,7 @@ const Mession = () => {
                         </figure>
                         <div className="steps__text">
                           <small>1 mặt nạ CKD</small>
-                          <h2>100.000 vnđ</h2>
+
                           <div className="steps__btn">Nhận thưởng</div>
                         </div>
                       </div>
@@ -362,8 +359,8 @@ const Mession = () => {
                   <div className="steps__icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="29"
-                      height="30"
+                      width="18"
+                      height="21"
                       fill="none"
                       viewBox="0 0 29 30"
                     >
@@ -387,7 +384,7 @@ const Mession = () => {
                         </figure>
                         <div className="steps__text">
                           <small>Tặng 1 chai sữa rửa mặt của CKD</small>
-                          <h2>100.000 vnđ</h2>
+
                           <div className="steps__btn">Nhận thưởng</div>
                         </div>
                       </div>

@@ -3,7 +3,7 @@ import "./MissionList.scss";
 
 const MissionList = ({ items }) => {
   const CollapseItem = ({ header, content }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const contentRef = useRef(null);
     const [contentHeight, setContentHeight] = useState(0);
 
@@ -49,11 +49,11 @@ const MissionList = ({ items }) => {
                   >
                     <div className="mession__text">
                       <h4>{item.header}</h4>
-                      <p>Mời 5 người bạn đăng kí tài khoản</p>
+                      <p>{item.content} </p>
                     </div>
                     <div className="mession__icons">
                       <div className="mession__number">
-                        20
+                        {item.coin}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="15"
