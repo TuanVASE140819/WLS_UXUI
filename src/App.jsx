@@ -23,6 +23,7 @@ import Forum from "./pages/forum/Forum";
 import Mession from "./pages/mession/Mession";
 import SchoolDetail from "./pages/schoolDetail/SchoolDetail";
 
+import InforUser from "./pages/inforUser/InforUser";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/information" element={<InforUser />} />
         <Route path="/search" element={<Search />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/events" element={<Events />} />

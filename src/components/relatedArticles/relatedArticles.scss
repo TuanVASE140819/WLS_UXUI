@@ -110,6 +110,17 @@
     }
   }
 
+  &__noArticles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  // bài viện căn chính giữa
+    
+    width: 660px;
+    height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+  }
   &__itemLeft {
     display: flex;
     flex-direction: column;

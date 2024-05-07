@@ -114,7 +114,7 @@ const SchoolDetail = () => {
                 <div className="schoolDetail__btnSearch">Tìm kiếm</div>
               </div>
               <div className="schoolDetail__cardsWrapper">
-                <Link to="/" className="schoolDetail__card">
+                <Link to="/forum" className="schoolDetail__card">
                   <figure className="schoolDetail__image">
                     <img
                       src={require("../../assets/images/card-1.png")}
@@ -145,7 +145,7 @@ const SchoolDetail = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/" className="schoolDetail__card">
+                <Link to="/forum" className="schoolDetail__card">
                   <figure className="schoolDetail__image">
                     <img
                       src={require("../../assets/images/card-2.png")}
@@ -176,7 +176,7 @@ const SchoolDetail = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/" className="schoolDetail__card">
+                <Link to="/forum" className="schoolDetail__card">
                   <figure className="schoolDetail__image">
                     <img
                       src={require("../../assets/images/card-3.png")}
