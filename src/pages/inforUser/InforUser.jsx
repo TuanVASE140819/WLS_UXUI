@@ -1,8 +1,9 @@
 import React from "react";
 
 import SideBarUser from "../../components/sideBarUser/SideBarUser";
-import RelatedPages from "../../components/relatedPages/RelatedPages";
-import RelatedArticles from "../../components/relatedArticles/RelatedArticles";
+import Friends from "../../components/Friends/Friends";
+import Ads from "../../components/ads/Ads";
+import SchoolFllow from "../../components/schoolFollow/SchoolFollow";
 
 const InforUser = () => {
   return (
@@ -10,9 +11,11 @@ const InforUser = () => {
       <div style={{ display: "flex" }}>
         <SideBarUser />
         <div>
-          <RelatedPages />
-          <RelatedArticles />
+          <Friends />
+
+          <SchoolFllow />
         </div>
+        <Ads />
       </div>
     </>
   );
