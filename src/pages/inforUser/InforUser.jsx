@@ -4,6 +4,7 @@ import SideBarUser from "../../components/sideBarUser/SideBarUser";
 import Friends from "../../components/Friends/Friends";
 import Ads from "../../components/ads/Ads";
 import SchoolFllow from "../../components/schoolFollow/SchoolFollow";
+import PersonalPosts from "../../components/Posts/PersonalPosts";
 
 const InforUser = () => {
   return (
@@ -14,6 +15,7 @@ const InforUser = () => {
           <Friends />
 
           <SchoolFllow />
+          <PersonalPosts />
         </div>
         <Ads />
       </div>

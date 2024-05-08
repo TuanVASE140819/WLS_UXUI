@@ -12,7 +12,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Contacts from "./pages/contacts/Contacts";
 
-// import { Context } from "./context/Context";
+
 import Post from "./pages/post/Post";
 import Search from "./pages/search/Search";
 import Events from "./pages/events/Events";
