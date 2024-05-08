@@ -6,9 +6,16 @@
   margin-top: 92px;
 
   &__wrapper {
-    padding: 0 24px;
+    padding: 0 32px;
 
     h4 {
+      font-family: Mulish;
+font-size: 18px;
+font-weight: 800;
+line-height: 22.59px;
+text-align: left;
+color: 
+#666666;
       margin-bottom: 32px;
       @include font-s;
       font-weight: bold;
@@ -36,7 +43,7 @@
   &__item {
     transition: all 0.2s ease;
     position: relative;
-
+   
     &:hover {
       opacity: 0.7;
     }

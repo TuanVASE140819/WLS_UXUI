@@ -4,13 +4,17 @@
 .sideBarVideo {
   width: 100%;
   max-width: 300px;
-  margin-top: 64px;
-
+  padding-top: 64px;
+  padding-left: 32px;
+  border-left: solid 1px $neu-06;
+  margin-right: 24px;
+  // background-color: $neu-04;
   @include xs {
     display: none;
   }
 
   &__wrapper {
+   
     position: relative;
     padding-right: 24px;
     position: sticky;
