@@ -123,11 +123,6 @@ const RelatedArticles = () => {
                     <Link to="/post/1" className="relatedArticles__itemLeft">
                       <img
                         src={require("../../assets/images/post-1.png")}
-                        style={{
-                          width: "400px",
-                          height: "220px",
-                          objectFit: "cover",
-                        }}
                         alt=""
                       />
                       <p>
