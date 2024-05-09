@@ -91,6 +91,11 @@ align-items: center;
     // grid chia 3 cột
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include sm {
+      grid-template-columns: 1fr;
+      
+    }
   }
 
   &__avatar {

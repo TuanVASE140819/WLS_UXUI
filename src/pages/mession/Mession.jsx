@@ -88,62 +88,62 @@ const Mession = () => {
           className="steps"
           style={{
             paddingTop: "60px",
-            padding: "0 60px",
+            // padding: "0 60px",
             width: "100%",
             display: "flex",
             flexDirection: "column",
           }}
         >
+          <div className="steps__heading">
+            {/* <h2 className="steps__title">Title</h2> */}
+            {/* avatar */}
+            <div className="steps__info">
+              <div className="steps__avatar">
+                <img
+                  src={require("../../assets/images/ads-2.png")}
+                  alt="avatar"
+                  className="steps__avatar"
+                />
+              </div>
+
+              <div className="steps__infoText">
+                <h4 className="steps__name">Hòa Hồ</h4>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.78751 1.20997C9.23551 0.132972 10.7635 0.132972 11.2115 1.20997L13.2935 6.21597L18.6975 6.64997C19.8615 6.74297 20.3335 8.19497 19.4465 8.95497L15.3295 12.482L16.5865 17.755C16.8575 18.891 15.6225 19.788 14.6265 19.18L9.99951 16.354L5.37251 19.18C4.37651 19.788 3.14151 18.89 3.41251 17.755L4.66951 12.482L0.552514 8.95497C-0.334486 8.19497 0.137514 6.74297 1.30151 6.64997L6.70551 6.21597L8.78751 1.20997Z"
+                    fill="#FCAA17"
+                  />
+                </svg>
+                <span className="steps__coin">1000</span>
+                <p className="steps__created">ngày hết hạn 16/04/2024</p>
+                <p className="steps__address">Địa chỉ nhận quà</p>
+              </div>
+            </div>
+            <div className=""></div>
+            <div className="steps__info__gift">
+              <div className="steps__gift">
+                <SvgGift />
+                <span
+                  style={{
+                    marginLeft: "10px",
+                  }}
+                >
+                  Quà đã đổi
+                </span>
+              </div>
+            </div>
+          </div>
           <div className="steps__wrapper">
             <div className="steps__wrapper">
-              <div className="steps__heading">
-                {/* <h2 className="steps__title">Title</h2> */}
-                {/* avatar */}
-                <div className="steps__info">
-                  <div className="steps__avatar">
-                    <img
-                      src={require("../../assets/images/ads-2.png")}
-                      alt="avatar"
-                      className="steps__avatar"
-                    />
-                  </div>
-
-                  <div className="steps__infoText">
-                    <h4 className="steps__name">Hòa Hồ</h4>
-
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8.78751 1.20997C9.23551 0.132972 10.7635 0.132972 11.2115 1.20997L13.2935 6.21597L18.6975 6.64997C19.8615 6.74297 20.3335 8.19497 19.4465 8.95497L15.3295 12.482L16.5865 17.755C16.8575 18.891 15.6225 19.788 14.6265 19.18L9.99951 16.354L5.37251 19.18C4.37651 19.788 3.14151 18.89 3.41251 17.755L4.66951 12.482L0.552514 8.95497C-0.334486 8.19497 0.137514 6.74297 1.30151 6.64997L6.70551 6.21597L8.78751 1.20997Z"
-                        fill="#FCAA17"
-                      />
-                    </svg>
-                    <span className="steps__coin">1000</span>
-                    <p className="steps__created">ngày hết hạn 16/04/2024</p>
-                    <p className="steps__address">Địa chỉ nhận quà</p>
-                  </div>
-                </div>
-                <div className=""></div>
-                <div className="steps__info__gift">
-                  <div className="steps__gift">
-                    <SvgGift />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                      }}
-                    >
-                      Quà đã đổi
-                    </span>
-                  </div>
-                </div>
-              </div>
               <ul className="steps__nav">
                 <h5>
                   75{" "}
