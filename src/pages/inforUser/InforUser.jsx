@@ -13,9 +13,11 @@ import { SvgInfomation } from "../../components/svgs/Menu/SvgInfomation";
 import { SvgNews } from "../../components/svgs/Menu/SvgNews";
 
 import "./inforUser.scss";
+import Information from "../../components/Information/Information";
+import Account from "../../components/Account/Account";
 const InforUser = () => {
   const [selectedInterface, setSelectedInterface] = useState("posts");
-
+  console.log("selectedInterface", selectedInterface);
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -82,12 +84,22 @@ const InforUser = () => {
                 <p>Hội nhóm</p>
               </Link>
 
-              <Link to="/events" className="inforNav__linkItem">
+              <Link
+                to="/information?filter=information"
+                className={`inforNav__linkItem
+              ${selectedInterface === "information" ? "active" : ""}`}
+                onClick={() => setSelectedInterface("information")}
+              >
                 <SvgInfomation color="#626262" />
                 <p>Thông tin cá nhân</p>
               </Link>
 
-              <Link to="/events" className="inforNav__linkItem">
+              <Link
+                to="/information?filter=account"
+                className={`inforNav__linkItem
+              ${selectedInterface === "account" ? "active" : ""}`}
+                onClick={() => setSelectedInterface("account")}
+              >
                 <SvgAccount color="#626262" />
                 <p>Thông tin tài khoản</p>
               </Link>
@@ -97,6 +109,8 @@ const InforUser = () => {
         {selectedInterface === "posts" && <PersonalPosts />}
         {selectedInterface === "groups" && <SchoolFllow />}
         {selectedInterface === "friends" && <Friends />}
+        {selectedInterface === "information" && <Information />}
+        {selectedInterface === "account" && <Account />}
       </div>
     </>
   );
