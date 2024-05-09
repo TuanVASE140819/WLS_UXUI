@@ -5,6 +5,7 @@
  display: flex;
   justify-content: center;
   align-items: center;
+  
   width: 100%;
   margin-top: 92px;
   margin-bottom: 32px;;
@@ -25,6 +26,10 @@
       text-overflow: ellipsis;
       overflow: hidden;
       visibility: visible;
+    }
+
+    @include sm {
+      padding: 0 16px;
     }
   }
 

@@ -8,6 +8,9 @@
   &__wrapper {
     padding: 0 32px;
 
+    @include sm {
+      padding: 0 0;
+    }
     h4 {
       font-family: Mulish;
 font-size: 18px;
