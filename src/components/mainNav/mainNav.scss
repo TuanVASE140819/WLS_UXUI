@@ -19,6 +19,7 @@
     height: 100%;
     background-color: white;
     border-bottom: solid 1px $neu-06;
+    
   }
 
   &__logo {
@@ -166,6 +167,10 @@
   opacity: 0;
   pointer-events: none;
 
+  @include sm {
+    width: 320px;
+    right: -40px;
+  }
   &:before {
     width: 64px;
     height: 64px;
@@ -341,6 +346,11 @@
   pointer-events: none;
   overflow: visible;
 
+  @include sm {
+    width: 380px;
+    right: -120px;
+  }
+
   &:before {
     width: 64px;
     height: 64px;
@@ -351,6 +361,12 @@
     right: 28px;
     transform: rotate(45deg);
     z-index: 2;
+
+    @include sm {
+    top: -3px;
+    right: 105px;
+    z-index: -1;
+    }
   }
 
   &:after {
@@ -367,6 +383,10 @@
     padding: 16px;
     overflow-y: scroll;
     height: 520px;
+
+    @include sm {
+      height: 400px;
+      }
   }
 
   &__top {
