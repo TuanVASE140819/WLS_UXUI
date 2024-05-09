@@ -34,6 +34,10 @@
     margin-bottom: 32px;
     background-color: white;
     padding: 64px;
+
+    @include sm {
+      padding: 16px;
+    }
   }
 
   &__header {
@@ -48,11 +52,18 @@
   &__content {
     display: flex;
     width: 100%;
+      @include sm {
+    flex-direction: column;
+  }
   }
 
   &__left,
   &__right {
     width: 100%;
+
+  @include sm {
+    width: 100%;
+  }
   }
 
   &__left {
@@ -150,6 +161,10 @@
     align-items: center;
     justify-content: center;
     margin: 32px 0 40px;
+  
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &__headerItem {
@@ -161,6 +176,13 @@
 
     svg {
       margin-right: 16px;
+      
+    }
+
+    @include sm {
+      margin-right: 0;
+      margin-bottom: 16px;
+      width: 100%;
     }
   }
 }
