@@ -1,0 +1,71 @@
+// variables
+@import "../../styles/variables.scss";
+
+.banner {
+  min-height: 647px;
+  margin-top: 72px;
+  background-image: url("../../assets/images/bg-group.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     min-height: 647px;
+  }
+
+  &__wrapper {
+    @include wrapper;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding-top: 32px;
+
+    @include sm {
+      padding: 16px;
+    }
+
+    // h1
+    h1 {
+   font-family: Dongle;
+   font-size: 32px;
+   font-weight: 700;
+   line-height: 46.34px;
+   padding: 16px;
+   text-align: center;
+   color: #3D92D1;
+      @include sm {
+        font-size: 32px;
+      }
+    }
+    h2 {
+      font-family: Dongle;
+font-size: 40px;
+
+font-weight: 700;
+line-height: 32px;
+text-align: center;
+
+color: #4B4B4B;
+      @include sm {
+        font-size: 32px;
+      }
+    }
+    // p
+    p {
+        padding-top: 16px;
+      font-family: Mulish;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20.08px;
+      text-align: center; 
+  }
+  }
+
+}

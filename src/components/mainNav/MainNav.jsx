@@ -236,7 +236,7 @@ const MainNav = () => {
 
             <p>Nhiệm vụ</p>
           </NavLink>
-          <NavLink to="/" className="mainNav__linkItem">
+          <NavLink to="/news" className="mainNav__linkItem">
             <svg
               width="24"
               height="24"

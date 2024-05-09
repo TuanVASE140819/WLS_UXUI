@@ -1,0 +1,38 @@
+// variables
+@import "../../styles/variables.scss";
+
+.banner2 {
+  max-width: 1383px;
+  margin: 0 auto;
+
+  &__wrapper {
+  //  grid chiap 2 phan
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 16px;
+    margin-top: 16px;
+
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    @include sm {
+      padding: 16px;
+    }
+  }
+}

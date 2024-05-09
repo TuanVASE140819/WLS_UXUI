@@ -9,9 +9,8 @@ import PageNotFound from "./components/pageNotFound/PageNotFound";
 import Footer from "./components/footer/Footer";
 
 // pages
-import Home from "./pages/home/Home";
+import Home from "./pages/Home/Home";
 import Contacts from "./pages/contacts/Contacts";
-
 
 import Post from "./pages/post/Post";
 import Search from "./pages/search/Search";
@@ -26,6 +25,7 @@ import SchoolDetail from "./pages/schoolDetail/SchoolDetail";
 import InforUser from "./pages/inforUser/InforUser";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+import News from "./pages/news/News";
 function App() {
   // const { user } = useContext(Context);
   return (
@@ -35,6 +35,7 @@ function App() {
       <Routes>
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/information" element={<InforUser />} />

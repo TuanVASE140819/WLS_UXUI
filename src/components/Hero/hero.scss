@@ -1,0 +1,181 @@
+// variables
+@import "../../styles/variables.scss";
+
+.hero {
+  min-height: 800px;
+  margin-top: 72px;
+  background-image: url("../../assets/images/bg-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__wrapper {
+    @include wrapper;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    @include sm {
+      padding: 16px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 1383px;
+    margin: 180px auto;
+    margin-bottom: 32px;
+    background-color: white;
+    padding: 16px;
+
+
+    border-radius: 10px;
+    @include sm {
+      padding: 16px;
+      margin: 40px 40px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       padding-top: 16px;
+    @include sm {
+      flex-direction: column;
+
+    }
+  }
+
+  &__search--location {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    @include sm {
+   
+    }
+  }
+
+  &__header {
+   font-family: Dongle;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46.34px;
+  text-align: left;
+  color: #696969;
+// căn giữa
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  // dưới có đường gạch
+  border-bottom: 2px solid#D9D9D9;
+
+  }
+
+  &__header--highlight {
+    color:#3D92D1;
+    margin-left: 10px;
+  }
+
+  &__select {
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    padding: 8px 16px;
+    margin-right: 16px;
+    width: 100%;
+    max-width: 180px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #696969;
+
+    @include sm {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__input {
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #696969;
+    
+  }
+
+  &__level {
+     background-color: #F4F4F4;
+    border-radius: 30px;
+    border: 1px solid #D9D9D9;
+    padding: 8px 16px;
+    width: 70%;
+    max-width: 150px;
+    margin-right: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #696969;
+
+    @include sm {
+      width: 400px;
+         border-radius: 10px;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  
+
+&__search--button {
+    background-color: #3D92D1;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    @include sm {
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+      width: 100%;
+
+    }
+}
+
+  &__search--input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin-right: 16px;
+
+    @include sm {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
+
