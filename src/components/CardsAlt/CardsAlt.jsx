@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./cardsAlt.scss";
 
 const CardsAlt = () => {
+
   return (
     <div className="cards">
       <div className="cards__wrapper">
@@ -35,6 +36,7 @@ const CardsAlt = () => {
           </p>
           <h4>Đề xuất</h4>
         </div>
+        
         <div className="cards__items">
           <div className="cards__item">
             <figure className="cards__image">

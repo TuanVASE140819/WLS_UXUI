@@ -9,7 +9,7 @@ import PageNotFound from "./components/pageNotFound/PageNotFound";
 import Footer from "./components/footer/Footer";
 
 // pages
-import Home from "./pages/Home/Home";
+import Home from "./pages/home/Home";
 import Contacts from "./pages/contacts/Contacts";
 
 import Post from "./pages/post/Post";

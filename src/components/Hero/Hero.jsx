@@ -1,51 +1,155 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import "./hero.scss";
+
+import { getListSchool } from "../../api/apiServices";
 import CollapseList from "../../components/collapseList/CollapseList";
+import { useNavigate } from 'react-router-dom';
 
 const SlideSchool = () => {
-  const items = [
-    {
-      header: "Câu hỏi 1",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic living month! 1",
-    },
-    {
-      header: "Câu hỏi 2",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics 2",
-    },
-    {
-      header: "Câu hỏi 3",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the SemanticsFar far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic living month! 3",
-    },
-    {
-      header: "Câu hỏi 4",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the SemanticsFar far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic living month! 3",
-    },
-    {
-      header: "Câu hỏi 5",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the SemanticsFar far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic living month! 3",
-    },
-    {
-      header: "Câu hỏi 6",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the SemanticsFar far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic living month! 3",
-    },
-    {
-      header: "Câu hỏi 7",
-      content:
-        "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the SemanticsFar far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic living month! 3",
-    },
-  ];
+  const [provinces, setProvinces] = useState([]);
+  const [districts, setDistricts] = useState([]);
+  const [wards, setWards] = useState([]);
+  const [selectedProvince, setSelectedProvince] = useState("");
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [selectedWard, setSelectedWard] = useState("");
+  const [selectedProvinceName, setSelectedProvinceName] = useState("");
+  const [selectedDistrictName, setSelectedDistrictName] = useState("");
+  const [selectedWardName, setSelectedWardName] = useState("");
+  const [selectLevel, setSelectLevel] = useState("");
+  const [searchName, setSearchName] = useState("");
+  const [address, setAddress] = useState({
+    province: "",
+    district: "",
+    ward: "",
+    level: "",
+  });
+
+  const navigate = useNavigate();
+
+  
+
+  const [schools, setSchools] = useState([]);
+
+  useEffect(() => {
+    const fetchProvinces = async () => {
+      const response = await axios.get(
+        "https://vapi.vnappmob.com/api/province"
+      );
+      setProvinces(response.data.results);
+    };
+    fetchProvinces();
+  }, []);
+
+  useEffect(() => {
+    const fetchDistricts = async () => {
+      const response = await axios.get(
+        `https://vapi.vnappmob.com/api/province/district/${selectedProvince}`
+      );
+      setDistricts(response.data.results);
+    };
+    if (selectedProvince) {
+      fetchDistricts();
+    }
+  }, [selectedProvince]);
+
+  useEffect(() => {
+    const fetchWards = async () => {
+      const response = await axios.get(
+        `https://vapi.vnappmob.com/api/province/ward/${selectedDistrict}`
+      );
+      setWards(response.data.results);
+    };
+    if (selectedDistrict) {
+      fetchWards();
+    }
+  }, [selectedDistrict]);
+
+  useEffect(() => {
+    const fetchSchools = async () => {
+      try {
+        const response = await getListSchool(
+          selectedProvinceName,
+          selectedDistrictName,
+          selectedWardName,
+          selectLevel,
+          searchName,
+          1,
+          10
+        );
+        setSchools(response.data);
+      } catch (error) {
+        console.error("Failed to fetch schools: ", error);
+      }
+    };
+
+    fetchSchools();
+  }, [selectedProvince, selectedDistrict, selectedWard, selectLevel, searchName]);
+
+
+  const handleAddressChange = (type, value) => {
+    let newAddress = { ...address };
+    if (type === "province") {
+      setSelectedProvince(value);
+      setSelectedProvinceName(
+        provinces
+          .find((province) => province.province_id === value)
+          .province_name.replace("Tỉnh ", "")
+          .replace("Thành phố ", "")
+      );
+      newAddress.province = provinces.find(
+        (province) => province.province_id === value
+      ).province_name;
+    } else if (type === "district") {
+      setSelectedDistrict(value);
+      setSelectedDistrictName(
+        districts
+          .find((district) => district.district_id === value)
+          .district_name.replace("Quận ", "")
+          .replace("Huyện ", "")
+      );
+      newAddress.district = districts.find(
+        (district) => district.district_id === value
+      ).district_name;
+    } else if (type === "ward") {
+      setSelectedWard(value);
+      setSelectedWardName(
+        wards
+          .find((ward) => ward.ward_id === value)
+          .ward_name.replace("Phường ", "")
+      );
+      const ward = wards.find((ward) => ward.ward_id === value);
+      if (ward) {
+        newAddress.ward = ward.ward_name;
+      }
+    } else if (type === "level") {
+      setSelectLevel(value);
+    }
+    else if (type === "name") {
+      setSearchName(value);
+    }
+    setAddress(newAddress);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate({
+      pathname: "/searchResults",
+      state: {
+        address: address,
+        level: selectLevel,
+        name: searchName,
+        level: selectLevel,
+        name: document.getElementById("name") ? document.getElementById("name").value : '',
+      },
+    });
+  };
   return (
     <>
       <div className="hero">
         <div className="hero__wrapper">
-          <form className="hero__form">
+          <form className="hero__form" onSubmit={handleSubmit}>
             <div className="hero__header">
               Tìm bạn học cũ chưa bao giờ dễ dàng hơn với{" "}
               <span className="hero__header--highlight"> WeLoveSchool</span>
@@ -55,25 +159,44 @@ const SlideSchool = () => {
                 name="tinh"
                 id="tinh"
                 className=" hero__search--location hero__select"
+                value={selectedProvince}
+                onChange={(e) => handleAddressChange("province", e.target.value)}
               >
-                <option value="0">Tỉnh/Thành phố</option>
-                <option value="1">Hà Nội</option>
-                <option value="2">Hồ Chí Minh</option>
-                <option value="3">Đà Nẵng</option>
-                <option value="4">Hải Phòng</option>
+                 <option value="" disabled className="text-[1rem]">
+                        Tỉnh/thành phố
+                      </option>
+               {provinces.map((province) => (
+                
+                  <option key={province.province_id} value={province.province_id}>
+                    {province.province_name}
+                  </option>
+                ))}
               </select>
-              <select name="huyen" id="huyen" className="hero__select">
-                <option value="0">Quận/Huyện</option>
-                <option value="1">Ba Đình</option>
-                <option value="2">Cầu Giấy</option>
-                <option value="3">Hai Bà Trưng</option>
-                <option value="4">Hoàn Kiếm</option>
+              <select name="huyen" id="huyen" className="hero__select"
+                value={selectedDistrict}
+                onChange={(e) => handleAddressChange("district", e.target.value)}
+              >
+                <option value="" disabled className="text-[1rem]">  
+                      Quận/huyện
+                    </option>
+                {districts.map((district) => (
+                  <option key={district.district_id} value={district.district_id}>
+                    {district.district_name}
+                  </option>
+                ))}
               </select>
-              <select name="xa" id="xa" className="hero__select">
-                <option value="0">Xã/Phường</option>
-                <option value="1">Cống Vị</option>
-                <option value="2">Điện Biên</option>
-                <option value="3">Đội Cấn</option>
+              <select name="xa" id="xa" className="hero__select"
+                value={selectedWard}
+                onChange={(e) => handleAddressChange("ward", e.target.value)}
+              >
+                <option value="" disabled className="text-[1rem]">
+                      Phường/xã
+                    </option>
+                {wards.map((ward) => (
+                  <option key={ward.ward_id} value={ward.ward_id}>
+                    {ward.ward_name}
+                  </option>
+                ))}
               </select>
               <select name="capHoc" id="capHoc" className="hero__level">
                 <option value="0">Cấp học</option>
@@ -87,6 +210,7 @@ const SlideSchool = () => {
                   type="text"
                   placeholder="Nhập tên trường"
                   className="hero__input"
+                  onChange={(e) => handleAddressChange("name", e.target.value)}
                 />
               </div>
               <div className="hero__search--button">
