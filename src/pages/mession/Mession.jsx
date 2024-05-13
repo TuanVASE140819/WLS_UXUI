@@ -130,6 +130,23 @@ const Mession = () => {
                       {/* (Mã giới thiệu: #2105004) */}
                       <div className="steps__referral_code">
                         <p>Mã giới thiệu: #2105004</p>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.625 3.5C9.625 3.03587 9.44063 2.59075 9.11244 2.26256C8.78425 1.93437 8.33913 1.75 7.875 1.75H3.5C3.03587 1.75 2.59075 1.93437 2.26256 2.26256C1.93437 2.59075 1.75 3.03587 1.75 3.5V7.875C1.75 8.33913 1.93437 8.78425 2.26256 9.11244C2.59075 9.44063 3.03587 9.625 3.5 9.625V6.125C3.5 5.42881 3.77656 4.76113 4.26884 4.26884C4.76113 3.77656 5.42881 3.5 6.125 3.5H9.625Z"
+                            fill="#9F9F9F"
+                          />
+                          <path
+                            d="M10.5 4.375C10.9641 4.375 11.4092 4.55937 11.7374 4.88756C12.0656 5.21575 12.25 5.66087 12.25 6.125V10.5C12.25 10.9641 12.0656 11.4092 11.7374 11.7374C11.4092 12.0656 10.9641 12.25 10.5 12.25H6.125C5.66087 12.25 5.21575 12.0656 4.88756 11.7374C4.55937 11.4092 4.375 10.9641 4.375 10.5V6.125C4.375 5.66087 4.55937 5.21575 4.88756 4.88756C5.21575 4.55937 5.66087 4.375 6.125 4.375H10.5Z"
+                            fill="#9F9F9F"
+                          />
+                        </svg>
                       </div>
                     </div>
 
@@ -638,16 +655,11 @@ const Mession = () => {
           <div className="mession">
             <div className="mession__wrapper">
               <div className="mession__header">
-                <h4>Nhiệm vụ</h4>
-                <p>
-                  Thể lệ nhiệm vụ: <span>để chọn test mẫu</span>
-                </p>
-                <div>
-                  <p>
-                    Set up: <span>nhiệm vụ sau 1 tháng sẽ set up mới</span>
-                  </p>
-                  <p>3/10</p>
-                </div>
+                <h4>
+                  "Dể dàng tích xu, thực hiện các nhiệm vụ đơn giản mỗi ngày là
+                  có xu
+                  <br />- Tích càng nhiều xu, đổi quà càng giá trị."
+                </h4>
               </div>
               <div className="mession__cards">
                 <MissionList items={items} />
