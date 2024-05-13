@@ -204,6 +204,13 @@
         color: $m-01--light-01;
         margin-right: 16px;
       }
+
+      @include sm {
+        flex-direction: column;
+        img {
+          display: none;
+        }
+      }
     }
 
     .topSchool__item:last-child {

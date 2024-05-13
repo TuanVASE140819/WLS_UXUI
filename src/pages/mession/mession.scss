@@ -8,6 +8,7 @@
 
 }
 
+
 .steps {
   &__wrapper {
     padding: 0 32px;
@@ -16,9 +17,43 @@
       padding: 0 16px;
     }
   }
+
+  &__rank {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding: 0 32px;
+
+    h4 {
+      color: $m-01;
+      font-size: 24px;
+    }
+
+    p {
+      color: $neu-09;
+      font-weight: bold;
+    }
+
+    span {
+      color: $neu-09;
+      padding-left: 8px;
+    }
+  
+  }
+
+
+  
+  &__info_rank {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
 &__info {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 &__name {
@@ -44,21 +79,78 @@ font-size: 20px;
 font-weight: 700;
 margin-left: 5px;
 line-height: 25.1px;
-text-align: left;
 color: #FCAA17;
+}
+
+&__coin__icon{
+    font-family: Mulish;
+font-size: 20px;
+font-weight: 700;
+margin-left: 5px;
+line-height: 25.1px;
+text-align: center;
+color: #FCAA17;
+background-color: #F9F9F9;
+padding: 30px 40px;
+border-radius: 10px;
+
+// active
+&.active {
+  background-color: #FEFCEF;
+  border: 1px solid #FCAA17;
+ 
+}
+}
+&__coin_gift {
+text-align: center;
+color: #797979 ;
+margin: 10px 10px;
+//  hover
+&:hover {
+  color: #FCAA17;
+}
+
+}
+
+&__date {
+
+ border-radius: 10px;
+  padding : 5px 10px;
+  margin: 10px 10px;
+  color: #797979;
+
+&.active {
+  background-color: #F26F21 ;
+  border : 1px solid #F26F21;
+  border-radius: 10px;
+  padding : 5px 10px;
+  margin: 10px 10px;
+  color: white;
+  }
+
+  
 }
 
 &__created {
  font-family: Mulish;
 font-size: 13px;
 font-weight: 400;
-line-height: 16.32px;
+
 text-align: left;
 color: #666666;
 
 }
 
+&__role {
+  font-family: Mulish;
+font-size: 13px;
+font-weight: 400;
+color: #0487D9;
+margin-left: 5px;
+}
+
 &__address {
+  padding-top: 5px;
   font-family: Mulish;
 font-size: 13px;
 font-weight: 400;
@@ -68,29 +160,96 @@ color:
 #0487D9;
 
 }
+
+&__info__name__rank {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include sm {
+    padding: 0 16px;
+  }
+}
 &__gift {
 width: 140px;
 height: 32px;
 border-radius: 16px;
-background-color: #D13D3D;
+background-color: #F26F21;
 color: #FFFFFF;
 font-size: 14px;
 // căn giữa
 display: flex;
 justify-content: center;
 align-items: center;  
+
 }
 
+&__info__coin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // căn chính giữa
+  margin-left: auto;
+  // margin-top: 20px;
+}
+
+&__giftCoin {
+ background-color: white;
+ 
+}
+
+&__coin__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0;
+  padding: 0 0;
+  border-radius: 10px;
+  background-color: white;
+
+  @include sm {
+    padding: 0 16px;
+  }
+}
+
+&__info__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 32px;
+
+  @include sm {
+    padding: 0 16px;
+  }
+}
 
 &__avatar {
   margin-right: 20px; /* Để tạo khoảng cách giữa hình ảnh và text */
 }
+
+&__info__game {
+
+  margin-bottom: 32px;
+  padding: 0 32px;
+  border-radius: 50px;
+background-color: #FEFCEF;
+
+  @include sm {
+    padding: 0 16px;
+  }
+}
+
   &__heading {
-    // margin-bottom: 48px;
-    // text-align: center;
-    // grid chia 3 cột
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 32px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    
+    border-radius: 10px;
+    padding: 10px 20px;
+    grid-template-columns:  1fr 1fr;
 
     @include sm {
       grid-template-columns: 1fr;
@@ -98,6 +257,24 @@ align-items: center;
     }
   }
 
+  &__referral_code {
+    font-family: Mulish;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16.32px;
+    text-align: left;
+    color: #666666;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+
+
+  &__text_role {
+      display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
   &__avatar {
     // vòng tròn
     width: 100px;
@@ -409,9 +586,21 @@ align-items: center;
     }
   }
 
+  &__giftbyDay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    background-color: white;
+  }
+
+
+
   &__icons {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
   }
 
   &__number {
@@ -486,7 +675,7 @@ align-items: center;
 width: 140px;
 height: 32px;
 border-radius: 16px;
-background-color: #D13D3D;
+background-color: #F26F21;
 color: #FFFFFF;
 font-size: 14px;
 // căn giữa

@@ -2,6 +2,7 @@ import React from "react";
 import Ads from "../../components/ads/Ads";
 import "./forum.scss";
 import SideBarMessage from "../../components/sideBarMessage/SideBarMessage";
+import { Link } from "react-router-dom";
 
 const Forum = () => {
   return (
@@ -70,6 +71,9 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
+                  <Link to="/forum-detail" className="forum__btn">
+                    Tham gia
+                  </Link>
                   <div className="forum__btn">
                     Tham gia
                     <svg
@@ -326,7 +330,8 @@ const Forum = () => {
                     </svg>
                   </div>
                 </div>
-              </div><div className="forum__item">
+              </div>
+              <div className="forum__item">
                 <div className="forum__top">
                   <figure className="forum__image">
                     <img
@@ -406,9 +411,7 @@ const Forum = () => {
                 </div>
               </div>
               <div className="forum__btnContainer">
-                <div className="forum__btn alt">
-                  Trang tiếp theo
-                </div>
+                <div className="forum__btn alt">Trang tiếp theo</div>
               </div>
             </div>
           </div>

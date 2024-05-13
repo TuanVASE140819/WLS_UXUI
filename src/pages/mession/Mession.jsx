@@ -8,6 +8,8 @@ import MissionList from "../../components/missionList/MissionList";
 import { act } from "react";
 
 const Mession = () => {
+  const isActive = true; // Giả sử bạn có một biến boolean để kiểm tra trạng thái active
+  const isComplete = true; // Giả sử bạn có một biến boolean để kiểm tra trạng thái hoàn thành
   const items = [
     {
       header: "Rủ rê nhau tham gia Weloveschool",
@@ -94,54 +96,268 @@ const Mession = () => {
             flexDirection: "column",
           }}
         >
-          <div className="steps__heading">
-            {/* <h2 className="steps__title">Title</h2> */}
-            {/* avatar */}
-            <div className="steps__info">
-              <div className="steps__avatar">
-                <img
-                  src={require("../../assets/images/ads-2.png")}
-                  alt="avatar"
-                  className="steps__avatar"
-                />
+          <div className="steps__rank">
+            <div className="steps__info_rank">
+              <p>Bạc</p>
+              <span>0-200</span>
+            </div>
+            <div className="steps__info_rank">
+              <p>Vàng</p>
+              <span>
+                {/* dấu lớn */}
+                trên 200
+              </span>
+            </div>
+            <div className="steps__info_rank">
+              <p>Kim cương</p>
+              <span>trên 1000</span>
+            </div>
+          </div>
+          <div className="steps__info__game ">
+            <div className="steps__heading">
+              {/* <h2 className="steps__title">Title</h2> */}
+              {/* avatar */}
+              <div className="steps__info">
+                <div className="steps__info__wrapper">
+                  <img
+                    src={require("../../assets/images/avatarnv.png") || ""}
+                    alt="avatar"
+                    className="steps__avatar"
+                  />
+                  <div className="steps__infoText">
+                    <div className="steps__info__name__rank">
+                      <h4 className="steps__name">Hòa Hồ</h4>
+                      {/* (Mã giới thiệu: #2105004) */}
+                      <div className="steps__referral_code">
+                        <p>Mã giới thiệu: #2105004</p>
+                      </div>
+                    </div>
+
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.78751 1.20997C9.23551 0.132972 10.7635 0.132972 11.2115 1.20997L13.2935 6.21597L18.6975 6.64997C19.8615 6.74297 20.3335 8.19497 19.4465 8.95497L15.3295 12.482L16.5865 17.755C16.8575 18.891 15.6225 19.788 14.6265 19.18L9.99951 16.354L5.37251 19.18C4.37651 19.788 3.14151 18.89 3.41251 17.755L4.66951 12.482L0.552514 8.95497C-0.334486 8.19497 0.137514 6.74297 1.30151 6.64997L6.70551 6.21597L8.78751 1.20997Z"
+                        fill="#FCAA17"
+                      />
+                    </svg>
+                    <span className="steps__coin">1000</span>
+                    <div className="steps__text_role">
+                      <p className="steps__created">ngày hết hạn 16/04/2024</p>
+                      <p className="steps__role">Xem chính sách điểm thưởng</p>
+                    </div>
+                    <p className="steps__address">Địa chỉ nhận quà</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="steps__infoText">
-                <h4 className="steps__name">Hòa Hồ</h4>
-
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.78751 1.20997C9.23551 0.132972 10.7635 0.132972 11.2115 1.20997L13.2935 6.21597L18.6975 6.64997C19.8615 6.74297 20.3335 8.19497 19.4465 8.95497L15.3295 12.482L16.5865 17.755C16.8575 18.891 15.6225 19.788 14.6265 19.18L9.99951 16.354L5.37251 19.18C4.37651 19.788 3.14151 18.89 3.41251 17.755L4.66951 12.482L0.552514 8.95497C-0.334486 8.19497 0.137514 6.74297 1.30151 6.64997L6.70551 6.21597L8.78751 1.20997Z"
-                    fill="#FCAA17"
-                  />
-                </svg>
-                <span className="steps__coin">1000</span>
-                <p className="steps__created">ngày hết hạn 16/04/2024</p>
-                <p className="steps__address">Địa chỉ nhận quà</p>
+              <div className="steps__info__gift">
+                <div className="steps__gift">
+                  <SvgGift />
+                  <span
+                    style={{
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Đổi quà
+                  </span>
+                </div>
               </div>
             </div>
-            <div className=""></div>
-            <div className="steps__info__gift">
-              <div className="steps__gift">
-                <SvgGift />
-                <span
-                  style={{
-                    marginLeft: "10px",
-                  }}
-                >
-                  Quà đã đổi
-                </span>
+
+            <div className="steps__coin__wrapper">
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon ">
+                  <p>+100</p>
+                  {isComplete ? (
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="20" cy="20" r="20" fill="#4ABC96" />
+                      <path
+                        d="M18.4416 22.4273C18.7809 21.8423 19.0976 21.2573 19.4595 20.6952C20.6243 18.8828 22.072 17.3342 23.6892 15.9462C25.4196 14.455 27.3083 13.1932 29.3101 12.1034C29.491 12.0002 29.6833 11.9428 29.8416 12.092C29.9321 12.1837 29.9999 12.3443 29.9999 12.482C29.9999 12.5852 29.9095 12.7114 29.8303 12.7802C27.5571 14.7418 25.6571 17.0245 24.0285 19.5596C22.2529 22.3355 20.9184 25.3065 20.1267 28.5184C20.1154 28.5528 20.1041 28.5872 20.0928 28.6216C20.0589 28.8052 19.9571 28.9314 19.7761 28.9772C19.5839 29.0231 19.4482 28.9428 19.3238 28.8052C18.7583 28.1857 18.2041 27.5778 17.6386 26.9584C15.5011 24.6183 13.3636 22.2782 11.2261 19.9266C11.1922 19.8922 11.1583 19.8578 11.1243 19.8119C10.9999 19.6857 10.966 19.5137 11.0339 19.3416C11.113 19.1696 11.2601 19.0893 11.441 19.0893C11.769 19.0893 12.1083 19.0893 12.4363 19.0893C13.3863 19.0893 14.3249 19.0893 15.2749 19.0893C15.4785 19.0893 15.6368 19.1581 15.7726 19.3187C16.5982 20.2822 17.4238 21.2458 18.2493 22.2094C18.3172 22.2782 18.3738 22.3585 18.4416 22.4273Z"
+                        fill="white"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                        fill="white"
+                      />
+                    </svg>
+                  )}
+                </div>
+                <div className="steps__date">
+                  <p>Ngày 1</p>
+                </div>
+              </div>
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon active">
+                  <p>+100</p>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className={`steps__date ${isActive ? "active" : ""}`}>
+                  <p>{isActive ? "Nhận" : "Ngày 2"}</p>
+                </div>
+              </div>
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon ">
+                  <p>+100</p>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className="steps__date">
+                  <p>Ngày 3</p>
+                </div>
+              </div>
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon ">
+                  <p>+100</p>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className="steps__date">
+                  <p>Ngày 4</p>
+                </div>
+              </div>
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon ">
+                  <p>+100</p>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className="steps__date">
+                  <p>Ngày 5</p>
+                </div>
+              </div>
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon ">
+                  <p>+100</p>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className="steps__date">
+                  <p>Ngày 6</p>
+                </div>
+              </div>
+              <div className="steps__coin_gift">
+                <div className="steps__coin__icon ">
+                  <p>+100</p>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20" cy="20" r="20" fill="#FCAA17" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.9901 12.675C19.3634 11.7775 20.6368 11.7775 21.0101 12.675L22.7451 16.8466L27.2484 17.2083C28.2184 17.2858 28.6118 18.4958 27.8726 19.1291L24.4418 22.0683L25.4893 26.4625C25.7151 27.4091 24.6859 28.1566 23.8559 27.65L20.0001 25.295L16.1443 27.65C15.3143 28.1566 14.2851 27.4083 14.5109 26.4625L15.5584 22.0683L12.1276 19.1291C11.3884 18.4958 11.7818 17.2858 12.7518 17.2083L17.2551 16.8466L18.9901 12.675Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className="steps__date">
+                  <p>Ngày 7</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div className="steps__wrapper">
             <div className="steps__wrapper">
               <ul className="steps__nav">

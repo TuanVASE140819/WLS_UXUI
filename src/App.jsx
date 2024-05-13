@@ -26,8 +26,10 @@ import InforUser from "./pages/inforUser/InforUser";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import News from "./pages/news/News";
+import ProfilePage from "./pages/profilePage/ProfilePage";
 function App() {
   // const { user } = useContext(Context);
+
   return (
     <BrowserRouter>
       <MainNav />
@@ -49,6 +51,7 @@ function App() {
         <Route path="/mession" element={<Mession />} />
         <Route path="/schoolDetail" element={<SchoolDetail />} />
         <Route path="/post/:id" element={<Post />} />
+        <Route path="/forum-detail" element={<ProfilePage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

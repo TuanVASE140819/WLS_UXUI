@@ -507,8 +507,239 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
-      <BannerHome />
+      <div className="ctaBlock">
+        <div className="ctaBlock__wrapper">
+          <div className="ctaBlock__content">
+            <div className="ctaBlock__header">
+              <h4>Chuyện Trường Xưa</h4>
+              <h2>
+                HÌNH ẢNH NỮ HỌC SINH CÙNG CHIẾC ÁO DÀI <br /> QUA NHIỀU THẬP KỶ
+              </h2>
+              <p>
+                Thời sinh viên có cây đàn ghi-ta Đàn ngân lên chúng ta cùng hòa
+                ca Có anh bạn xa nhà, có cô bạn nhớ cha Cất vang cùng lời ca...
+              </p>
+            </div>
+            <figure className="ctaBlock__image">
+              <img src={require("../../assets/images/bg_fim.png")} alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div className="locationLinks">
+        <div className="locationLinks__wrapper">
+          <div className="locationLinks__links">
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hà Nội (50)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+          </div>
+          <div className="locationLinks__links">
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hà Nội (50)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+          </div>
+          <div className="locationLinks__links">
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hà Nội (50)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+          </div>
+          <div className="locationLinks__links">
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hà Nội (50)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+          </div>
+          <div className="locationLinks__links">
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hà Nội (50)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+          </div>
+          <div className="locationLinks__links">
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hà Nội (50)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+            <Link to="/" className="locationLinks__link">
+              Hồ Chí Minh (100)
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
