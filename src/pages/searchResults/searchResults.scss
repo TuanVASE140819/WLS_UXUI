@@ -29,3 +29,45 @@
     }
   }
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  a {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+   
+    }
+  }
+
+  .pagination__arrowPrev,
+  .pagination__arrowNext {
+    background-color: #f4f4f4;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #f4f4f4;
+      cursor: not-allowed;
+    }
+  }
+
+  .active {
+    background-color: #F97821;
+    
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #333;
+    text-decoration: none;
+    color: white;
+  }
+
+  
+}
