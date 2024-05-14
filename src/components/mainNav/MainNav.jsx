@@ -988,11 +988,17 @@ const MainNav = () => {
               </div>
             </div>
           </i>
-          <div className="mainNav__avatar">
+          <div className="mainNav__Login">
+            <NavLink to="/login">
+              <span>Đăng nhập</span>
+            </NavLink>
+          </div>
+
+          {/* <div className="mainNav__avatar">
             <NavLink to="/information">
               <img src={require("../../assets/images/user.png")} alt="" />
             </NavLink>
-          </div>
+          </div> */}
 
           <div className="mainNav__lang">
             <NavLink to="/?lang=vi" className="mainNav__langLink">

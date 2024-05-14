@@ -84,6 +84,24 @@
     align-items: center;
   }
 
+  &__Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $neu-09;
+    padding: 0 16px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+
+  }
+
   &__message,
   &__notification,
   &__avatar {
