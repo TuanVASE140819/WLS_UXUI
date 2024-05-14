@@ -223,7 +223,7 @@ align-items: center;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
-  padding: 0 32px;
+  // padding: 0 32px;
 
   @include sm {
     padding: 0 16px;
@@ -251,11 +251,11 @@ background-color: #FEFCEF;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 32px;
+    
     display: grid;
     
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 0;
     grid-template-columns:  1fr 1fr;
 
     @include sm {
@@ -547,10 +547,12 @@ background-color: #FEFCEF;
   &__header {
     margin-bottom: 16px;
    
+
     h4 {
-      color: $m-01;
+      color: #4ABC96;
       margin-bottom: 16px;
-      font-size: 24px;
+      font-size: 16px;
+
     }
 
     p {
