@@ -153,6 +153,8 @@ const SideBarUser = () => {
             </svg>
             <p>Thông tin tài khoản</p>
           </NavLink>
+          {/* Sign out */}
+        
         </div>
       </div>
     </div>

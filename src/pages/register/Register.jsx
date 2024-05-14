@@ -4,6 +4,7 @@ import SideBar from "../../components/sideBar/SideBar";
 import "./register.scss";
 import { Link } from "react-router-dom";
 import { Comments } from "../../components/comments/Comments";
+import Swal from "sweetalert2";
 import { registerUser } from "../../api/apiServices";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -30,12 +31,15 @@ const Register = () => {
         console.log(response);
         if (response.statusCode === 200) {
           // in ra message do api tra ve
-          alert(response.message);
+          Swal.fire(
+            "Đăng ký thành công",
+            "Chúc mừng bạn đã đăng ký thành công",
+            "success"
+          );
           navigate("/login");
         }
         if (response.statusCode === 409) {
-          // in ra message do api tra ve
-          alert(response.message);
+          Swal.fire("Đăng ký thất bại", response.message, "error");
         }
       })
       .catch((error) => {
