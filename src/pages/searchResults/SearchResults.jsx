@@ -296,7 +296,10 @@ const SearchResults = () => {
                               </div>
                             </div>
                             <div className="cards__btns">
-                              <Link to="/" className="cards__btnView">
+                              <Link
+                                to="/schoolDetail"
+                                className="cards__btnView"
+                              >
                                 Xem trường
                               </Link>
                               <div className="cards__btnPopup">

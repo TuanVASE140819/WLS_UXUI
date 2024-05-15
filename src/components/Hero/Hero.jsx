@@ -132,19 +132,22 @@ const SlideSchool = () => {
     setAddress(newAddress);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    navigate({
-      pathname: "/searchResults",
-      state: {
-        address: address,
-        level: selectLevel,
-        name: searchName,
-        level: selectLevel,
-        name: document.getElementById("name") ? document.getElementById("name").value : '',
-      },
-    });
-  };
+console.log("provinces", selectedProvinceName);
+const handleSubmit = (event) => {
+  event.preventDefault();
+  navigate({
+    pathname: "/searchResults",
+    state: {
+      province: selectedProvinceName,
+      district: selectedDistrictName,
+      ward: selectedWardName,
+      level: selectLevel,
+      name: document.getElementById("name")
+        ? document.getElementById("name").value
+        : "",
+    },
+  });
+};
   return (
     <>
       <div className="hero">
