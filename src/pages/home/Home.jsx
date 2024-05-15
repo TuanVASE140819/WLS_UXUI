@@ -25,7 +25,7 @@ const Home = () => {
         <div className="contentTopSchool__wrapper">
           <div className="contentTopSchool__left">
             <Link
-              to="/"
+              to="/topSchool"
               className="contentTopSchool__card"
               style={{ backgroundImage: `url(${topSchoolImage1})` }}
             >
@@ -40,7 +40,7 @@ const Home = () => {
               </div>
             </Link>
             <Link
-              to="/"
+              to="/topSchool"
               className="contentTopSchool__card"
               style={{ backgroundImage: `url(${topSchoolImage2})` }}
             >
@@ -55,7 +55,7 @@ const Home = () => {
               </div>
             </Link>
             <Link
-              to="/"
+              to="/topSchool"
               className="contentTopSchool__card"
               style={{ backgroundImage: `url(${topSchoolImage3})` }}
             >

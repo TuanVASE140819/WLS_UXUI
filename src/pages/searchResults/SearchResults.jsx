@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./searchResults.scss";
 import SideBar from "../../components/sideBar/SideBar";
 import Ads from "../../components/ads/Ads";
-import CardsAlt from "../../components/CardsAlt/CardsAlt";
+
 import { useLocation } from "react-router-dom";
 import { getListSchool } from "../../api/apiServices";
 import Paginate from "react-paginate";
 
 import { Link } from "react-router-dom";
-// import "./cardsAlt.scss";
+// import "./cardItemAlt.scss";
 import { date } from "yup";
 const SearchResults = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -50,8 +50,8 @@ const SearchResults = () => {
     <>
       <div style={{ display: "flex" }}>
         <SideBar />
-        <div className="cards">
-          <div className="cards__wrapper">
+        <div className="cardItem">
+          <div className="cardItem__wrapper">
             {/* nếu data rỗng thì hiển thị thông báo không tìm thấy trường */}
             {data === undefined || data.length === 0 ? (
               <>
@@ -84,18 +84,18 @@ const SearchResults = () => {
                   </p>
                   <h4>Đề xuất</h4>
                 </div>
-                <div className="cards__items">
-                  <div className="cards__item">
-                    <figure className="cards__image">
+                <div className="cardItem__items">
+                  <div className="cardItem__item">
+                    <figure className="cardItem__image">
                       <img
                         src={require("../../assets/images/cards-1.png")}
                         alt=""
                       />
                     </figure>
-                    <div className="cards__itemContent">
-                      <div className="cards__title">ĐẠI HỌC RMIT</div>
-                      <div className="cards__ratingsViews">
-                        <div className="cards__ratingsUsers">
+                    <div className="cardItem__itemContent">
+                      <div className="cardItem__title">ĐẠI HỌC RMIT</div>
+                      <div className="cardItem__ratingsViews">
+                        <div className="cardItem__ratingsUsers">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="22"
@@ -113,7 +113,7 @@ const SearchResults = () => {
                           </svg>
                           <span>8815</span>
                         </div>
-                        <div className="cards__ratingsStars">
+                        <div className="cardItem__ratingsStars">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="22"
@@ -132,11 +132,11 @@ const SearchResults = () => {
                           <span>1244</span>
                         </div>
                       </div>
-                      <div className="cards__btns">
-                        <Link to="/" className="cards__btnView">
+                      <div className="cardItem__btns">
+                        <Link to="/" className="cardItem__btnView">
                           Xem trường
                         </Link>
-                        <div className="cards__btnPopup">
+                        <div className="cardItem__btnPopup">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -152,7 +152,7 @@ const SearchResults = () => {
                               d="M2.75 2a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm6 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm6 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
                             ></path>
                           </svg>
-                          <div className="cards__popup">
+                          <div className="cardItem__popup">
                             <Link to="/">Chia sẻ</Link>
                             <Link to="/">Báo cáo</Link>
                           </div>
@@ -160,17 +160,17 @@ const SearchResults = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="cards__item">
-                    <figure className="cards__image">
+                  <div className="cardItem__item">
+                    <figure className="cardItem__image">
                       <img
                         src={require("../../assets/images/cards-2.png")}
                         alt=""
                       />
                     </figure>
-                    <div className="cards__itemContent">
-                      <div className="cards__title">ĐẠI HỌC RMIT</div>
-                      <div className="cards__ratingsViews">
-                        <div className="cards__ratingsUsers">
+                    <div className="cardItem__itemContent">
+                      <div className="cardItem__title">ĐẠI HỌC RMIT</div>
+                      <div className="cardItem__ratingsViews">
+                        <div className="cardItem__ratingsUsers">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="22"
@@ -188,7 +188,7 @@ const SearchResults = () => {
                           </svg>
                           <span>8815</span>
                         </div>
-                        <div className="cards__ratingsStars">
+                        <div className="cardItem__ratingsStars">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="22"
@@ -207,11 +207,11 @@ const SearchResults = () => {
                           <span>1244</span>
                         </div>
                       </div>
-                      <div className="cards__btns">
-                        <Link to="/" className="cards__btnView">
+                      <div className="cardItem__btns">
+                        <Link to="/" className="cardItem__btnView">
                           Xem trường
                         </Link>
-                        <div className="cards__btnPopup">
+                        <div className="cardItem__btnPopup">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -227,7 +227,7 @@ const SearchResults = () => {
                               d="M2.75 2a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm6 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm6 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
                             ></path>
                           </svg>
-                          <div className="cards__popup">
+                          <div className="cardItem__popup">
                             <Link to="/">Chia sẻ</Link>
                             <Link to="/">Báo cáo</Link>
                           </div>
@@ -240,12 +240,12 @@ const SearchResults = () => {
             ) : (
               <>
                 {" "}
-                <div className="cards__items">
+                <div className="cardItem__items">
                   {data.map((item) => {
                     return (
                       <>
-                        <div className="cards__item">
-                          <figure className="cards__image">
+                        <div className="cardItem__item">
+                          <figure className="cardItem__image">
                             <img
                               src={
                                 item.avatar
@@ -255,10 +255,10 @@ const SearchResults = () => {
                               alt=""
                             />
                           </figure>
-                          <div className="cards__itemContent">
-                            <div className="cards__title">{item.name}</div>
-                            <div className="cards__ratingsViews">
-                              <div className="cards__ratingsUsers">
+                          <div className="cardItem__itemContent">
+                            <div className="cardItem__title">{item.name}</div>
+                            <div className="cardItem__ratingsViews">
+                              <div className="cardItem__ratingsUsers">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="22"
@@ -276,7 +276,7 @@ const SearchResults = () => {
                                 </svg>
                                 <span>8815</span>
                               </div>
-                              <div className="cards__ratingsStars">
+                              <div className="cardItem__ratingsStars">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="22"
@@ -295,14 +295,14 @@ const SearchResults = () => {
                                 <span>1244</span>
                               </div>
                             </div>
-                            <div className="cards__btns">
+                            <div className="cardItem__btns">
                               <Link
                                 to="/schoolDetail"
-                                className="cards__btnView"
+                                className="cardItem__btnView"
                               >
                                 Xem trường
                               </Link>
-                              <div className="cards__btnPopup">
+                              <div className="cardItem__btnPopup">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="16"
@@ -318,7 +318,7 @@ const SearchResults = () => {
                                     d="M2.75 2a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm6 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm6 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
                                   ></path>
                                 </svg>
-                                <div className="cards__popup">
+                                <div className="cardItem__popup">
                                   <Link to="/">Chia sẻ</Link>
                                   <Link to="/">Báo cáo</Link>
                                 </div>
