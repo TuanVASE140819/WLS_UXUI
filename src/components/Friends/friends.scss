@@ -6,7 +6,10 @@
   margin-top: 100px;
   padding:0 60px ;
   padding-bottom: 120px;
-
+  @include sm {
+      padding: 0 16px;
+        padding-bottom: 120px;
+    }
   &__wrapper {
     padding: 0 32px;
 
@@ -31,7 +34,7 @@
     border: solid 1px $neu-06;
     border-radius: 8px;
     padding: 8px;
-    width: 600px;
+    // width: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -4,9 +4,12 @@
 .schools {
   width: 100%;
   margin-top: 100px;
-  padding: 0 60px;
+  
   padding-bottom: 120px;
 
+  @include sm {
+    padding: 0 16px;
+  }
   &__wrapper {
     padding: 0 32px;
 
@@ -116,6 +119,11 @@ color:#D13D3D;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+    }
+    
   }
 
   &__image {
@@ -263,6 +271,10 @@ text-align: left;
 
     &:hover {
       opacity: 0.7;
+    }
+
+    @include sm {
+      width: 100%;
     }
   }
 

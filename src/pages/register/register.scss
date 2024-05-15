@@ -10,6 +10,13 @@
   background-position: center;
   position: relative;
 
+
+  &__radio{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-gap: 20px;
+    
+  }
   &:before {
     content: "";
     position: absolute;
@@ -45,7 +52,10 @@
     margin-bottom: 32px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    // padding: 64px;
+    
+    @include sm {
+      box-shadow: none;
+    }
   }
   &__left {
     padding: 64px;
