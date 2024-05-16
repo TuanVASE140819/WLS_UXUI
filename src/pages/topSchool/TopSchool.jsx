@@ -2,11 +2,20 @@ import React from "react";
 import SideBar from "../../components/sideBar/SideBar";
 import Ads from "../../components/ads/Ads";
 import "./topSchool.scss";
+import { Helmet } from "react-helmet";
 
 const TopSchool = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
+        <Helmet>
+          <title>Top School</title>
+          <meta name="description" content="Top trường học truyền cảm hứng" />
+          <meta
+            name="keywords"
+            content="Top trường học, trường học, truyền cảm hứng"
+          />
+        </Helmet>
         <SideBar />
         <div className="topSchool">
           <div className="topSchool__wrapper">

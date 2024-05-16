@@ -27,11 +27,24 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import News from "./pages/news/News";
 import ProfilePage from "./pages/profilePage/ProfilePage";
+
+import { Helmet } from "react-helmet";
 function App() {
   // const { user } = useContext(Context);
 
   return (
     <BrowserRouter>
+      <Helmet>
+        <title>We Love School</title>
+        <meta
+          name="description"
+          content="We Love School - Nơi chia sẻ thông tin về các trường đại học, cao đẳng, trung học, tiểu học trên cả nước"
+        />
+        <meta
+          name="keywords"
+          content="We Love School, trường đại học, trường cao đẳng, trường trung học, trường tiểu học"
+        />
+      </Helmet>
       <MainNav />
       <ScrollToTop />
       <Routes>

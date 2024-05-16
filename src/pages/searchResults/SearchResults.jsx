@@ -10,6 +10,7 @@ import Paginate from "react-paginate";
 import { Link } from "react-router-dom";
 // import "./cardItemAlt.scss";
 import { date } from "yup";
+import { Helmet } from "react-helmet";
 const SearchResults = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const productsPerPage = 20; // Số lượng sản phẩm trên mỗi trang
@@ -49,6 +50,11 @@ const SearchResults = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
+        <Helmet>
+          <title>Search Results</title>
+          <meta name="description" content="Search Results" />
+          <meta name="keywords" content="Search Results" />
+        </Helmet>
         <SideBar />
         <div className="cardItem">
           <div className="cardItem__wrapper">
