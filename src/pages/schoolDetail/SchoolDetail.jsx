@@ -70,7 +70,7 @@ const SchoolDetail = () => {
                 </div>
                 <div className="schoolDetail__right">
                   <div className="schoolDetail__btn">Follow</div>
-                  <Link className="schoolDetail__btn" to="/">
+                  <Link className="schoolDetail__btn2" to="/">
                     Bình chọn
                   </Link>
                 </div>
