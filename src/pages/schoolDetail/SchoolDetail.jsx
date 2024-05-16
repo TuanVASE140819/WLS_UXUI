@@ -70,7 +70,9 @@ const SchoolDetail = () => {
                 </div>
                 <div className="schoolDetail__right">
                   <div className="schoolDetail__btn">Follow</div>
-                  <Link to="/">Bình chọn</Link>
+                  <Link className="schoolDetail__btn" to="/">
+                    Bình chọn
+                  </Link>
                 </div>
               </div>
             </div>
