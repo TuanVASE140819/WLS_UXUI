@@ -7,7 +7,7 @@ const SchoolFollow = () => {
   return (
     <div className="schools">
       <div className="schools__wrapper">
-        <h3 className="schools__titleHeader">Bạn bè </h3>
+        <h3 className="schools__titleHeader">Hội nhóminformation </h3>
         <div className="schools__comboItem">
           <div className="schools__item">
             <figure className="schools__image">
