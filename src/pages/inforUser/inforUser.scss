@@ -39,7 +39,9 @@
   &__listItem {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 24px;
+
   }
 
   &__image {
@@ -264,7 +266,22 @@
   padding: 0 24px;
   background-color: $neu-04;
 
+&__lang {
+  
 
+    @include xs {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $neu-09;
+    font-weight: bold;
+    }
+
+    span {
+      margin: 0 4px;
+      @include font-xs;
+    }
+  }
   &__logout {
     display: flex;
     justify-content: center;
@@ -377,7 +394,7 @@
   &__links{
     display: flex;
     gap: 16px;
-   
+   justify-content: center;
     background-color: beige;
     border-radius: 8px;
     padding:  16px 0;

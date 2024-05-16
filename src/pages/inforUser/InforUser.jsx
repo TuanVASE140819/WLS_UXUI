@@ -4,7 +4,7 @@ import Friends from "../../components/Friends/Friends";
 import Ads from "../../components/ads/Ads";
 import SchoolFllow from "../../components/schoolFollow/SchoolFollow";
 import PersonalPosts from "../../components/Posts/PersonalPosts";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { SvgAccount } from "../../components/svgs/Menu/SvgAccount";
 import { SvgFriend } from "../../components/svgs/Menu/SvgFriend";
@@ -169,6 +169,15 @@ const InforUser = () => {
               </div>
               <div className="information__logout" onClick={handleSignOut}>
                 <p>Đăng xuất</p>
+              </div>
+              <div className="information__lang">
+                <NavLink to="/?lang=vi" className="information__langLink">
+                  VI
+                </NavLink>
+                <span>|</span>
+                <NavLink to="/?lang=en" className="information__langLink">
+                  EN
+                </NavLink>
               </div>
             </div>
             <div className="information__links">

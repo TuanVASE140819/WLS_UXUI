@@ -24,6 +24,7 @@
     "react-scripts": "^5.0.1",
     "react-slidedown": "^2.4.7",
     "sass": "^1.50.0",
+    "sitemap": "^7.1.1",
     "slugify": "^1.6.5",
     "speakingurl": "^14.0.1",
     "sweetalert2": "^11.11.0",
@@ -33,6 +34,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "generate-sitemap": "node src/generate-sitemap.js",
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
