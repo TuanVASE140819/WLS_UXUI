@@ -147,6 +147,9 @@
     justify-content: center;
     align-items: center;
    
+    @include sm {
+    padding: 20px;
+    }
   }
   &__input{
     background-color: #F4F4F4;

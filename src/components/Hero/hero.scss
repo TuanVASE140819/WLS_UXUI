@@ -82,6 +82,10 @@
   // dưới có đường gạch
   border-bottom: 2px solid#D9D9D9;
 
+  @include sm {
+   display: inline;
+  }
+
   }
 
   &__header--highlight {
