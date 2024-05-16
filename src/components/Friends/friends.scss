@@ -6,10 +6,12 @@
   margin-top: 100px;
   padding:0 60px ;
   padding-bottom: 120px;
+
   @include sm {
-      padding: 0 16px;
-        padding-bottom: 120px;
-    }
+    margin-top: 20px;
+    padding:0 0 ;
+    padding-bottom: 120px;
+  }
   &__wrapper {
     padding: 0 32px;
 
