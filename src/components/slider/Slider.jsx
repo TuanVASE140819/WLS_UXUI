@@ -6,7 +6,7 @@ import "./slider.scss";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useTranslation } from "react-i18next";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,11 +14,12 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Sider = () => {
+  const { t, i18n } = useTranslation("common");
   return (
     <Swiper
       className="highlightSlider"
       // install Swiper modules
-    
+
       spaceBetween={24}
       slidesPerView={1}
       loop={true}
@@ -38,9 +39,9 @@ const Sider = () => {
             <img src={require("../../assets/images/slider-1.png")} alt="" />
           </figure>
           <div className="highlightSlider__text">
-            <h4 className="highlightSlider__title">Trường Tiểu Học</h4>
+            <h4 className="highlightSlider__title">{t("primary_school")}</h4>
             <p className="highlightSlider__desc">
-              Nơi ươm mầm tri thức đầu đời, chắp cánh ước mơ
+              {t("primary_school_content")}
             </p>
           </div>
         </Link>
@@ -51,9 +52,9 @@ const Sider = () => {
             <img src={require("../../assets/images/slider-2.png")} alt="" />
           </figure>
           <div className="highlightSlider__text">
-            <h4 className="highlightSlider__title">Trường Trung Học Cơ Sở</h4>
+            <h4 className="highlightSlider__title">{t("secondary_school")}</h4>
             <p className="highlightSlider__desc">
-              Bước đệm vững chắc, khơi nguồn sáng tạo
+              {t("secondary_school_content")}
             </p>
           </div>
         </Link>
@@ -64,12 +65,8 @@ const Sider = () => {
             <img src={require("../../assets/images/slider-3.png")} alt="" />
           </figure>
           <div className="highlightSlider__text">
-            <h4 className="highlightSlider__title">
-              Trường Trung Học Phổ Thông
-            </h4>
-            <p className="highlightSlider__desc">
-              Ngã rẽ tương lai, chinh phục ước mơ
-            </p>
+            <h4 className="highlightSlider__title">{t("high_school")}</h4>
+            <p className="highlightSlider__desc">{t("high_school_content")}</p>
           </div>
         </Link>
       </SwiperSlide>

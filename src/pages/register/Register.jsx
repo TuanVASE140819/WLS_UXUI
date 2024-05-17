@@ -8,7 +8,9 @@ import Swal from "sweetalert2";
 import { registerUser } from "../../api/apiServices";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const Register = () => {
+  const { t, i18n } = useTranslation("common");
   const navigate = useNavigate();
   const handleSumbit = (values, { setSubmitting }) => {
     const data = {
@@ -100,7 +102,7 @@ const Register = () => {
             <Form className="register__form">
               <div className="register__grid">
                 <div className="register__left">
-                  <h2 className="register__title">Đăng ký</h2>
+                  <h2 className="register__title">{t("register")}</h2>
 
                   <Field
                     type="text"
@@ -176,9 +178,10 @@ const Register = () => {
                     className="error-message"
                   />
 
-                  <button type="submit" className="register__butonRegister">
-                    Đăng ký
-                  </button>
+                  <button
+                    type="submit"
+                    className="register__butonRegister"
+                  ></button>
                 </div>
                 <div className="register__right">
                   <img

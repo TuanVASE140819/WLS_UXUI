@@ -8,8 +8,9 @@ import { Comments } from "../../components/comments/Comments";
 import { loginUser } from "../../api/apiServices";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 const Login = () => {
+  const { t, i18n } = useTranslation("common");
   const navigate = useNavigate();
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
@@ -57,10 +58,10 @@ const Login = () => {
             validate={(values) => {
               const errors = {};
               if (!values.username) {
-                errors.username = "Vui lòng nhập tên tài khoản";
+                errors.username = t("username_required");
               }
               if (!values.password) {
-                errors.password = "Vui lòng nhập mật khẩu";
+                errors.password = t("password_required");
               }
               return errors;
             }}
@@ -69,10 +70,8 @@ const Login = () => {
             <Form className="login__form">
               <div className="login__grid">
                 <div className="login__left">
-                  <h2 className="login__title">Đăng nhập tài khoản của bạn</h2>
-                  <span className="login__subTitle">
-                    Chào mừng bạn trở lại! Chọn cách đăng nhập
-                  </span>
+                  <h2 className="login__title">{t("login_content1")}</h2>
+                  <span className="login__subTitle">{t("login_content2")}</span>
                   <div className="login__login">
                     <button className="login__buttonLogin">
                       <span className="login__span">
@@ -96,13 +95,13 @@ const Login = () => {
                     </button>
                   </div>
                   <span className="login__subTitle_1">
-                    hoặc tiếp tục với email của bạn
+                    {t("login_content3")}
                   </span>
                   <Field
                     type="text"
                     name="username"
                     className="login__input"
-                    placeholder="Tên tài khoản"
+                    placeholder={t("username")}
                   />
                   <ErrorMessage
                     name="username"
@@ -113,7 +112,7 @@ const Login = () => {
                     type="password"
                     name="password"
                     className="login__input"
-                    placeholder="Mật khẩu"
+                    placeholder={t("password")}
                   />
                   <ErrorMessage
                     name="password"
@@ -130,19 +129,19 @@ const Login = () => {
                       value="remember"
                     />
                     <label htmlFor="remember" className="login__label">
-                      Lưu mật khẩu
+                      {t("remember_password")}
                     </label>
 
-                    <Link to="/login">Quên mật khẩu?</Link>
+                    <Link to="/login">{t("forgot_password")}</Link>
                   </div>
 
                   <button type="submit" className="login__butonLogin">
-                    Đăng nhập
+                    {t("login")}
                   </button>
                   <span className="login__subTitle_2">
-                    Bạn chưa có tài khoản?
+                    {t("login_content4")}
                     <Link to="/register" className="login__link">
-                      Đăng ký
+                      {t("register")}
                     </Link>
                   </span>
                 </div>

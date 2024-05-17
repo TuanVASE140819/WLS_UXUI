@@ -16,7 +16,9 @@ import topSchoolImage3 from "../../assets/images/topSchool-3.png";
 // home.scss
 import "./home.scss";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const Home = () => {
+  const { t, i18n } = useTranslation("common");
   return (
     <>
       <Hero />
@@ -34,8 +36,8 @@ const Home = () => {
                   Top <p>10</p>
                 </div>
                 <div className="contentTopSchool__contentText">
-                  <h4>Trường học</h4>
-                  <h2>Truyền cảm hứng</h2>
+                  <h4>{t("school")}</h4>
+                  <h2>{t("inspiration")}</h2>
                 </div>
               </div>
             </Link>
@@ -49,8 +51,8 @@ const Home = () => {
                   Top <p>10</p>
                 </div>
                 <div className="contentTopSchool__contentText">
-                  <h4>Trường học</h4>
-                  <h2>Truyền cảm hứng</h2>
+                  <h4>{t("school")}</h4>
+                  <h2>{t("inspiration")}</h2>
                 </div>
               </div>
             </Link>
@@ -64,8 +66,8 @@ const Home = () => {
                   Top <p>10</p>
                 </div>
                 <div className="contentTopSchool__contentText">
-                  <h4>Trường học</h4>
-                  <h2>Truyền cảm hứng</h2>
+                  <h4>{t("school")}</h4>
+                  <h2>{t("inspiration")}</h2>
                 </div>
               </div>
             </Link>
@@ -75,7 +77,7 @@ const Home = () => {
               <div className="topSchool__ratings">
                 <div className="topSchool__ratingsTop">
                   <h2>
-                    Bảng <br /> Xếp Hạng
+                    {t("table")} <br /> {t("ranking")}
                   </h2>
                   <img
                     src={require("../../assets/images/topSchoolHeader.png")}

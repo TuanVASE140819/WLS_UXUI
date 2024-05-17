@@ -3,6 +3,7 @@ import "./mainNav.scss";
 // import { Link } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/logos/logo-we-love-school.png";
+import { useTranslation } from "react-i18next";
 
 const MainNav = () => {
   const [open, setOpen] = useState(true);
@@ -16,6 +17,13 @@ const MainNav = () => {
     } else {
       setOpenIndex(index);
     }
+  };
+
+  const { t, i18n } = useTranslation("common");
+
+  const changeLanguage = (lng) => {
+    localStorage.setItem("i18nextLng", lng);
+    i18n.changeLanguage(lng);
   };
 
   // consolog localstorage
@@ -177,7 +185,7 @@ const MainNav = () => {
                 d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198c.031-.028.061-.056.091-.086L12 5.432z"
               ></path>
             </svg>
-            <p>Trường của tôi</p>
+            <p>{t("my_school")}</p>
           </NavLink>
           <NavLink to="/search" className="mainNav__linkItem">
             <svg
@@ -198,7 +206,7 @@ const MainNav = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <p>Tìm trường</p>
+            <p>{t("search_school")}</p>
           </NavLink>
           <NavLink to="/news" className="mainNav__linkItem">
             <svg
@@ -215,7 +223,7 @@ const MainNav = () => {
                 fill="#666666"
               />
             </svg>
-            <p>Tin tức</p>
+            <p>{t("news")}</p>
           </NavLink>
           {dataUser !== null ? (
             <>
@@ -234,7 +242,7 @@ const MainNav = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <p>Sự kiện</p>
+                <p>{t("events")}</p>
               </NavLink>
               <NavLink to="/mession" className="mainNav__linkItem">
                 <svg
@@ -256,7 +264,7 @@ const MainNav = () => {
                   />
                 </svg>
 
-                <p>Nhiệm vụ</p>
+                <p>{t("mession")}</p>
               </NavLink>
             </>
           ) : null}
@@ -1030,17 +1038,25 @@ const MainNav = () => {
           ) : (
             <div className="mainNav__Login">
               <NavLink to="/login">
-                <span>Đăng nhập</span>
+                <span>{t("login")}</span>
               </NavLink>
             </div>
           )}
 
           <div className="mainNav__lang">
-            <NavLink to="/?lang=vi" className="mainNav__langLink">
+            <NavLink
+              to="/?lang=vi"
+              onClick={() => changeLanguage("vi")}
+              className="mainNav__langLink"
+            >
               VI
             </NavLink>
             <span>|</span>
-            <NavLink to="/?lang=en" className="mainNav__langLink">
+            <NavLink
+              to="/?lang=en"
+              onClick={() => changeLanguage("en")}
+              className="mainNav__langLink"
+            >
               EN
             </NavLink>
           </div>
