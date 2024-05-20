@@ -109,8 +109,52 @@
     
   }
 
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+        transform: translateY(-40px);
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f1f1;
+
+    @include sm {
+      display: inline ;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    h4 {
+      font-size: 24px;
+      color: $m-01;
+    }
+
+    p {
+      color: $neu-09;
+      margin-left: 16px;
+    }
+
+    a {
+      color: #ed7d29;
+    }
+  }
+
+  &__bottomLeft {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+      // cột
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }
   &__btn {
     padding: 0 32px;
+   margin-right: 16px;
     height: 32px;
     background-color: #05aff2;
     border-radius: 20px;
@@ -127,6 +171,55 @@
     @include sm {
        display: flex;
         justify-content: center;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  &__btn_2 {
+    padding: 0 32px;
+    margin-right: 16px;
+    height: 32px;
+    background-color: #ED7D29;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sm {
+       display: flex;
+        justify-content: center;
+      width: 100%;
+        margin-right: 0;
+    }
+  }
+
+  &__btn_3 {
+    padding: 0 32px;
+    height: 32px;
+    background-color: 
+#F1F1F1;
+    border-radius: 20px;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sm {
+       display: flex;
+        justify-content: center;
+      width: 100%;
+      
     }
   }
 

@@ -64,16 +64,43 @@ const SchoolDetail = () => {
                           </defs>
                         </svg>
                       </div>
-                      <Link to="/">Xem thành viên</Link>
+                      {/* <Link to="/">Xem thành viên</Link> */}
                     </div>
                   </div>
                 </div>
-                <div className="schoolDetail__right">
+                {/* <div className="schoolDetail__right">
                   <div className="schoolDetail__btn">Follow</div>
                   <Link className="schoolDetail__btn2" to="/">
                     Bình chọn
                   </Link>
+                </div> */}
+              </div>
+              <div className="schoolDetail__bottom">
+                <div className="schoolDetail__bottomLeft">
+                  <button className="schoolDetail__btn">Follow</button>
+                  <button className="schoolDetail__btn_2">Tặng sao</button>
+                  <button className="schoolDetail__btn_3">
+                    Chia sẽ:
+                    <span>httpt//hoahoweloves...</span>
+                    <svg
+                      width="15"
+                      height="16"
+                      viewBox="0 0 15 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.3125 4.51902C10.3125 4.04593 10.115 3.59222 9.76333 3.25769C9.41169 2.92316 8.93478 2.73523 8.4375 2.73523H3.75C3.25272 2.73523 2.77581 2.92316 2.42417 3.25769C2.07254 3.59222 1.875 4.04593 1.875 4.51902V8.97851C1.875 9.4516 2.07254 9.90532 2.42417 10.2398C2.77581 10.5744 3.25272 10.7623 3.75 10.7623V7.19472C3.75 6.48508 4.04632 5.80451 4.57376 5.30272C5.10121 4.80093 5.81658 4.51902 6.5625 4.51902H10.3125Z"
+                        fill="#8F8F8F"
+                      />
+                      <path
+                        d="M11.25 5.41089C11.7473 5.41089 12.2242 5.59882 12.5758 5.93335C12.9275 6.26788 13.125 6.72159 13.125 7.19468V11.6542C13.125 12.1273 12.9275 12.581 12.5758 12.9155C12.2242 13.25 11.7473 13.438 11.25 13.438H6.5625C6.06522 13.438 5.58831 13.25 5.23667 12.9155C4.88504 12.581 4.6875 12.1273 4.6875 11.6542V7.19468C4.6875 6.72159 4.88504 6.26788 5.23667 5.93335C5.58831 5.59882 6.06522 5.41089 6.5625 5.41089H11.25Z"
+                        fill="#8F8F8F"
+                      />
+                    </svg>
+                  </button>
                 </div>
+                <Link to="/">Xem thành viên</Link>
               </div>
             </div>
             <p>
