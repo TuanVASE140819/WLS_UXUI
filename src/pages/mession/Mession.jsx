@@ -7,6 +7,7 @@ import CollapseList from "../../components/collapseList/CollapseList";
 import MissionList from "../../components/missionList/MissionList";
 import { act } from "react";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Mession = () => {
   const handleCopyReferralCode = () => {
@@ -215,7 +216,7 @@ const Mession = () => {
                       marginLeft: "10px",
                     }}
                   >
-                    Đổi quà
+                    <Link to="/gift">Nhận quà</Link>
                   </span>
                 </div>
               </div>

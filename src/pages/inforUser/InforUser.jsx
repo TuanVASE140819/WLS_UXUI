@@ -17,6 +17,7 @@ import Information from "../../components/Information/Information";
 import Account from "../../components/Account/Account";
 
 import { useNavigate } from "react-router-dom";
+import Policy from "../../components/policy/policy";
 const InforUser = () => {
   const navigate = useNavigate();
   const handleSignOut = () => {
@@ -291,6 +292,7 @@ const InforUser = () => {
         {selectedInterface === "friends" && <Friends />}
         {selectedInterface === "information" && <Information />}
         {selectedInterface === "account" && <Account />}
+        <Policy />
       </div>
     </>
   );

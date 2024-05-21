@@ -29,6 +29,8 @@ import News from "./pages/news/News";
 import ProfilePage from "./pages/profilePage/ProfilePage";
 
 import { Helmet } from "react-helmet";
+
+import Gift from "./pages/gift/Gift";
 function App() {
   // const { user } = useContext(Context);
 
@@ -65,6 +67,7 @@ function App() {
         <Route path="/schoolDetail" element={<SchoolDetail />} />
         <Route path="/post/:id" element={<Post />} />
         <Route path="/forum-detail" element={<ProfilePage />} />
+        <Route path="/gift" element={<Gift />} />
       </Routes>
       <Footer />
     </BrowserRouter>

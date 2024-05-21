@@ -240,9 +240,10 @@ const SideBar = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <select className="sideBar__input"
-             onChange={(e) => setSelectedProvince(e.target.value)}
-              >
+            <select
+              className="sideBar__input"
+              onChange={(e) => setSelectedProvince(e.target.value)}
+            >
               <option style={{ display: "none" }}>Chọn Tỉnh</option>
               {provinces.map((province) => (
                 <option key={province.province_id} value={province.province_id}>
@@ -252,9 +253,10 @@ const SideBar = () => {
             </select>
           </div>
           <div className="sideBar__inputWrapper">
-            <select className="sideBar__input"
-                disabled={!selectedProvince}
-                 onChange={(e) => setSelectedDistrict(e.target.value)}
+            <select
+              className="sideBar__input"
+              disabled={!selectedProvince}
+              onChange={(e) => setSelectedDistrict(e.target.value)}
             >
               <option style={{ display: "none" }}>Chọn quận / huyện</option>
               {districts.map((district) => (
@@ -265,9 +267,10 @@ const SideBar = () => {
             </select>
           </div>
           <div className="sideBar__inputWrapper">
-            <select className="sideBar__input"
+            <select
+              className="sideBar__input"
               disabled={!selectedDistrict}
-                  onChange={(e) => setSelectedWard(e.target.value)}
+              onChange={(e) => setSelectedWard(e.target.value)}
             >
               <option style={{ display: "none" }}>Chọn phường / xã</option>
               {wards.map((ward) => (
@@ -298,8 +301,10 @@ const SideBar = () => {
                 d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 01-1.286 1.794.75.75 0 01-1.06-1.06l-.001-.001z"
               ></path>
             </svg>
-            <select className="sideBar__input" style={{ border: "none" }}
-            disabled
+            <select
+              className="sideBar__input"
+              style={{ border: "none" }}
+              disabled
             >
               <option style={{ display: "none" }}>Chọn trường</option>
               <option value="fpt">Đại Học FPT</option>
@@ -307,14 +312,18 @@ const SideBar = () => {
               <option value="fpt">Đại Học Cần Thơ</option>
             </select>
           </div>
-          <div type="submit" className="sideBar__btnSearch" onClick={() => setSearchValue(
-            {
-              province: selectedProvinceName,
-              district: selectedDistrictName,
-              ward: selectedWardName,
-              level: selectLevel,
+          <div
+            type="submit"
+            className="sideBar__btnSearch"
+            onClick={() =>
+              setSearchValue({
+                province: selectedProvinceName,
+                district: selectedDistrictName,
+                ward: selectedWardName,
+                level: selectLevel,
+              })
             }
-          )}>
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
@@ -335,7 +344,10 @@ const SideBar = () => {
 
         <section className="sideBar__ratings">
           <h4 className="sideBar__ratingsHeader">
-            Bảng xếp hạng trường học <span>truyền cảm hứng</span>
+            Bảng xếp hạng trường học{" "}
+            <Link to="/topSchool">
+              <span>truyền cảm hứng</span>
+            </Link>
           </h4>
           <form className="sideBar__ratingsSelect">
             <select>
@@ -403,7 +415,7 @@ const SideBar = () => {
                   </svg>
                 </i>
                 <div className="sideBar__ratingsListItemText">
-                  <Link to="/">Đại học FPT</Link>
+                  <Link to="/schoolDetail">Đại học FPT</Link>
                   <div className="sideBar__ratingsListViews">
                     <div className="sideBar__ratingsListUsers">
                       <svg
@@ -504,7 +516,7 @@ const SideBar = () => {
                   </svg>
                 </i>
                 <div className="sideBar__ratingsListItemText">
-                  <Link to="/">THCS-THPT Nguyễn Khu...</Link>
+                  <Link to="/schoolDetail">THCS-THPT Nguyễn Khu...</Link>
                   <div className="sideBar__ratingsListViews">
                     <div className="sideBar__ratingsListUsers">
                       <svg
@@ -605,7 +617,7 @@ const SideBar = () => {
                   </svg>
                 </i>
                 <div className="sideBar__ratingsListItemText">
-                  <Link to="/">THPT Chuyên Lê Hồng P..</Link>
+                  <Link to="/schoolDetail">THPT Chuyên Lê Hồng P..</Link>
                   <div className="sideBar__ratingsListViews">
                     <div className="sideBar__ratingsListUsers">
                       <svg
@@ -656,7 +668,7 @@ const SideBar = () => {
                   <span>4</span>
                 </i>
                 <div className="sideBar__ratingsListItemText">
-                  <Link to="/">THPT Chuyên Lê Hồng P...</Link>
+                  <Link to="/schoolDetail">THPT Chuyên Lê Hồng P...</Link>
                   <div className="sideBar__ratingsListViews">
                     <div className="sideBar__ratingsListUsers">
                       <svg
@@ -707,7 +719,7 @@ const SideBar = () => {
                   <span>5</span>
                 </i>
                 <div className="sideBar__ratingsListItemText">
-                  <Link to="/">THPT Chuyên Lê Hồng P...</Link>
+                  <Link to="/schoolDetail">THPT Chuyên Lê Hồng P...</Link>
                   <div className="sideBar__ratingsListViews">
                     <div className="sideBar__ratingsListUsers">
                       <svg
@@ -763,7 +775,9 @@ const SideBar = () => {
                 <div className="sideBar__relatedPostsListItemUser">
                   <img src={require("../../assets/images/user.png")} alt="" />
                   <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/"><h4>Hồ Lê Bảo Hân</h4></Link>
+                    <Link to="/">
+                      <h4>Hồ Lê Bảo Hân</h4>
+                    </Link>
                     <p>1 phút trước</p>
                   </div>
                 </div>
@@ -784,7 +798,9 @@ const SideBar = () => {
                 </svg>
               </div>
               <div className="sideBar__relatedPostsText">
-                <Link to="/"><h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4></Link>
+                <Link to="/">
+                  <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
+                </Link>
                 <p>
                   Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin hãy
                   chia sẻ để chúng tôi có thể tìm lại nhau. Một lời nhắn...
@@ -796,7 +812,9 @@ const SideBar = () => {
                 <div className="sideBar__relatedPostsListItemUser">
                   <img src={require("../../assets/images/user.png")} alt="" />
                   <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/"><h4>Hồ Lê Bảo Hân</h4></Link>
+                    <Link to="/">
+                      <h4>Hồ Lê Bảo Hân</h4>
+                    </Link>
                     <p>1 phút trước</p>
                   </div>
                 </div>
@@ -817,7 +835,9 @@ const SideBar = () => {
                 </svg>
               </div>
               <div className="sideBar__relatedPostsText">
-              <Link to="/"><h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4></Link>
+                <Link to="/">
+                  <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
+                </Link>
                 <p>
                   Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin hãy
                   chia sẻ để chúng tôi có thể tìm lại nhau. Một lời nhắn...
@@ -829,7 +849,9 @@ const SideBar = () => {
                 <div className="sideBar__relatedPostsListItemUser">
                   <img src={require("../../assets/images/user.png")} alt="" />
                   <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/"><h4>Hồ Lê Bảo Hân</h4></Link>
+                    <Link to="/">
+                      <h4>Hồ Lê Bảo Hân</h4>
+                    </Link>
                     <p>1 phút trước</p>
                   </div>
                 </div>
@@ -850,7 +872,9 @@ const SideBar = () => {
                 </svg>
               </div>
               <div className="sideBar__relatedPostsText">
-              <Link to="/"><h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4></Link>
+                <Link to="/">
+                  <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
+                </Link>
                 <p>
                   Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin hãy
                   chia sẻ để chúng tôi có thể tìm lại nhau. Một lời nhắn...
