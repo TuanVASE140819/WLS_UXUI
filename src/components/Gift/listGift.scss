@@ -320,4 +320,12 @@
       opacity: 0.7;
     }
   }
+
+  &__status--done {
+    color: #4ABC96;
+  }
+
+  &__status--waiting {
+    color: #0487D9;
+  }
 }

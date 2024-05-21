@@ -25,7 +25,7 @@ const Exchange = () => {
                 50ML
               </div>
               <div className="giftList__status">
-                <span className="giftList__status--done">
+                <span className="giftList__status--title">
                   Tình trạng giao hàng{" "}
                 </span>
                 <span className="giftList__status--done">Đã xác nhận</span>
@@ -48,10 +48,10 @@ const Exchange = () => {
                 50ML
               </div>
               <div className="giftList__status">
-                <span className="giftList__status--done">
+                <span className="giftList__status--title">
                   Tình trạng giao hàng{" "}
                 </span>
-                <span className="giftList__status--done">Chưa xác nhận</span>
+                <span className="giftList__status--waiting">Chưa xác nhận</span>
               </div>
             </div>
           </div>
@@ -69,6 +69,12 @@ const Exchange = () => {
               <div className="giftList__name">
                 Thanh Lăn Nâng Cơ, Cải Thiện Nếp Nhăn Vùng Cổ Guasha Neck Cream
                 50ML
+              </div>
+              <div className="giftList__status">
+                <span className="giftList__status--title">
+                  Tình trạng giao hàng{" "}
+                </span>
+                <span className="giftList__status--waiting">Chưa xác nhận</span>
               </div>
             </div>
           </div>
@@ -88,10 +94,10 @@ const Exchange = () => {
                 50ML
               </div>
               <div className="giftList__status">
-                <span className="giftList__status--done">
+                <span className="giftList__status--title">
                   Tình trạng giao hàng{" "}
                 </span>
-                <span className="giftList__status--done">Chưa xác nhận</span>
+                <span className="giftList__status--waiting">Chưa xác nhận</span>
               </div>
             </div>
           </div>
@@ -111,10 +117,10 @@ const Exchange = () => {
                 50ML
               </div>
               <div className="giftList__status">
-                <span className="giftList__status--done">
+                <span className="giftList__status--title">
                   Tình trạng giao hàng{" "}
                 </span>
-                <span className="giftList__status--done">Chưa xác nhận</span>
+                <span className="giftList__status--waiting">Chưa xác nhận</span>
               </div>
             </div>
           </div>
