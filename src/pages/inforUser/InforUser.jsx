@@ -18,6 +18,7 @@ import Account from "../../components/Account/Account";
 
 import { useNavigate } from "react-router-dom";
 import Policy from "../../components/policy/policy";
+import Bank from "../../components/Bank/Bank";
 const InforUser = () => {
   const navigate = useNavigate();
   const handleSignOut = () => {
@@ -156,6 +157,15 @@ const InforUser = () => {
               </Link>
 
               <Link
+                to="/information?filter=bankCard"
+                className={`inforNav__linkItem
+              ${selectedInterface === "bankCard" ? "active" : ""}`}
+                onClick={() => setSelectedInterface("bankCard")}
+              >
+                <SvgInfomation color="#626262" />
+                <p>Quản lý thẻ</p>
+              </Link>
+              <Link
                 to="/information?filter=account"
                 className={`inforNav__linkItem
               ${selectedInterface === "account" ? "active" : ""}`}
@@ -292,6 +302,7 @@ const InforUser = () => {
         {selectedInterface === "friends" && <Friends />}
         {selectedInterface === "information" && <Information />}
         {selectedInterface === "account" && <Account />}
+        {selectedInterface === "bankCard" && <Bank />}
         <Policy />
       </div>
     </>
