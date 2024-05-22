@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Ads from "../../components/ads/Ads";
 import "./forum.scss";
 import SideBarMessage from "../../components/sideBarMessage/SideBarMessage";
 import { Link } from "react-router-dom";
+import Popup from "../../components/Popup/popup";
 
 const Forum = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleJoinClick = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -71,8 +77,26 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
-
-                  <Link to="/forum-detail" className="forum__btn">
+                  <div>
+                    {showPopup && (
+                      <Popup
+                        onClose={() => setShowPopup(false)}
+                        isOpen={showPopup}
+                        info={{
+                          title:
+                            "Yêu cầu tham gia nhóm của bạn đang chờ phê duyệt",
+                          subTitle:
+                            "Hãy xác nhận câu trả lời những câu hỏi sau",
+                          text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+                        }}
+                      />
+                    )}
+                  </div>
+                  <button
+                    to="/forum-detail"
+                    className="forum__btn"
+                    onClick={handleJoinClick}
+                  >
                     Tham gia
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +113,7 @@ const Forum = () => {
                         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                       ></path>
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
               <div className="forum__item">
@@ -151,7 +175,11 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="forum__btn">
+                  <button
+                    to="/forum-detail"
+                    className="forum__btn"
+                    onClick={handleJoinClick}
+                  >
                     Tham gia
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +196,7 @@ const Forum = () => {
                         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                       ></path>
                     </svg>
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="forum__item">
@@ -230,7 +258,11 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="forum__btn">
+                  <button
+                    to="/forum-detail"
+                    className="forum__btn"
+                    onClick={handleJoinClick}
+                  >
                     Tham gia
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +279,7 @@ const Forum = () => {
                         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                       ></path>
                     </svg>
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="forum__item">
@@ -309,7 +341,11 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="forum__btn">
+                  <button
+                    to="/forum-detail"
+                    className="forum__btn"
+                    onClick={handleJoinClick}
+                  >
                     Tham gia
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -326,7 +362,7 @@ const Forum = () => {
                         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                       ></path>
                     </svg>
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="forum__item">
@@ -388,7 +424,11 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="forum__btn">
+                  <button
+                    to="/forum-detail"
+                    className="forum__btn"
+                    onClick={handleJoinClick}
+                  >
                     Tham gia
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +445,7 @@ const Forum = () => {
                         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                       ></path>
                     </svg>
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="forum__btnContainer">

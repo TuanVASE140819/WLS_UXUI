@@ -19,14 +19,27 @@ i18next.init({
   },
 });
 
+
+
 const Root = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [isOverlayActive, setIsOverlayActive] = useState(false);
+
+  const showPopup = localStorage.getItem("showPopup");
+
+  // Kích hoạt overlay nếu showPopup là true
+  if (showPopup === "true") {
+    setIsOverlayActive(true);
+  }
+
+  console.log("isOverlayActive", isOverlayActive);
 
   return (
     <React.StrictMode>
       <ContextProvider>
         <SearchContext.Provider value={{ searchValue, setSearchValue }}>
           <I18nextProvider i18n={i18next}>
+            {isOverlayActive && <div className="overlay"></div>}
             <App />
           </I18nextProvider>
         </SearchContext.Provider>
