@@ -100,7 +100,7 @@ const SchoolDetail = () => {
                     </svg>
                   </button>
                 </div>
-                <Link to="/">Xem thành viên</Link>
+                <Link to="/menber">Xem thành viên</Link>
               </div>
             </div>
             <p>
