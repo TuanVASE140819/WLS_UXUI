@@ -4,7 +4,7 @@
 .chats {
   width: 100%;
   margin-top: 100px;
-  padding:0 60px ;
+  // padding:0 60px ;
   padding-bottom: 120px;
 
   @include sm {
@@ -13,7 +13,7 @@
     padding-bottom: 120px;
   }
    &__wrapper {
-    padding: 0 32px;
+    // padding: 0 32px;
 
     @include sm {
       padding: 0 16px;
@@ -27,7 +27,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0 32px;
+    // padding: 0 32px;
 
     @include sm {
       padding: 0 16px;
@@ -36,17 +36,22 @@
 
   &__header {
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 32px;
-
+    padding-bottom: 32px;
+    border-bottom: 2px solid #D1D1D1;
+    // cố định header
+  
     @include sm {
       padding: 0 16px;
     }
 
   }
  &__infor{
+     
     display: flex;
     align-items: center;
     img {
@@ -58,4 +63,88 @@
  }
 
 
+
+
+}
+
+.chats__right{
+ width: 100%;
+  max-width: 350px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: #F9F9F9;
+  border-left: solid 1px $neu-06;
+  &__wrapper {
+    
+    position: sticky;
+    top: 100px;
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__header {
+    padding: 0 24px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #D1D1D1;
+    // cố định header
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__item {
+    padding: 16px 8px;
+        display: flex;
+    align-items: center;
+    justify-content: 
+    space-between;  
+    border-bottom: 1px solid #D1D1D1;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+    // hover
+    &:hover {
+      background-color: #F1F1F1;
+    }
+  }
+
+
+
+  &__name {
+    min-width: 200px;
+    margin-right: 5px;
+    
+    &__wrapper {
+    font-family: Mulish;
+   font-size: 18px;
+    font-weight: 700;
+    line-height: 22.59px;
+    text-align: left;
+  
+    }
+
+  
+    }
+  
+  &__time {
+    margin-left: 10px;
+      font-family: Mulish;
+font-size: 14px;
+&__wrapper__dot {
+  
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #D13D3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+  }
 }

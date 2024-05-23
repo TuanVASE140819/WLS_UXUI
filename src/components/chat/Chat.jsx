@@ -26,14 +26,105 @@ const Chat = () => {
                   <p>Online</p>
                 </div>
               </div>
-              <div className="chats_dot">
+              <div className="chats__dot">
                 <i className="fas fa-ellipsis-h"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Policy />
+      <div className="chats__right">
+        <div className="chats__right__wrapper">
+          <div className="chats__right__header">
+            <input
+              type="text"
+              placeholder="Tìm kiếm"
+              className="chats__right__search"
+            />
+            <div className="chats__right__setting">
+              <i className="fas fa-cog"></i>
+              {/* create */}
+              <Link to="/create" className="chats__right__create">
+                <i className="fas fa-plus"></i>
+              </Link>
+            </div>
+          </div>
+          <div className="chats__right__body">
+            <div className="chats__right__item">
+              <img src={require("../../assets/images/article-2.png")} alt="" />
+
+              <div className="chats__right__name">
+                <div className="chats__right__name__wrapper">
+                  Anti những đứa tên Hòa
+                </div>
+                <p>Tao gọi chơi</p>
+              </div>
+              <div className="chats__right__time">
+                <div className="chats__right__time__wrapper">
+                  <p>3 giờ</p>
+                </div>
+                <div className="chats__right__time__wrapper">
+                  <div className="chats__right__time__wrapper__dot">4</div>
+                </div>
+              </div>
+            </div>
+            <div className="chats__right__item">
+              <img src={require("../../assets/images/article-2.png")} alt="" />
+
+              <div className="chats__right__name">
+                <div className="chats__right__name__wrapper">
+                  Anti những đứa tên Hòa
+                </div>
+                <p>Tao gọi chơi</p>
+              </div>
+              <div className="chats__right__time">
+                <div className="chats__right__time__wrapper">
+                  <p>3 giờ</p>
+                </div>
+                <div className="chats__right__time__wrapper">
+                  <div className="chats__right__time__wrapper__dot">4</div>
+                </div>
+              </div>
+            </div>
+            <div className="chats__right__item">
+              <img src={require("../../assets/images/article-2.png")} alt="" />
+
+              <div className="chats__right__name">
+                <div className="chats__right__name__wrapper">
+                  Anti những đứa tên Hòa
+                </div>
+                <p>Tao gọi chơi</p>
+              </div>
+              <div className="chats__right__time">
+                <div className="chats__right__time__wrapper">
+                  <p>3 giờ</p>
+                </div>
+                <div className="chats__right__time__wrapper">
+                  <div className="chats__right__time__wrapper__dot">4</div>
+                </div>
+              </div>
+            </div>
+            <div className="chats__right__item">
+              <img src={require("../../assets/images/article-2.png")} alt="" />
+
+              <div className="chats__right__name">
+                <div className="chats__right__name__wrapper">
+                  Anti những đứa tên Hòa
+                </div>
+                <p>Tao gọi chơi</p>
+              </div>
+              <div className="chats__right__time">
+                <div className="chats__right__time__wrapper">
+                  <p>3 giờ</p>
+                </div>
+                <div className="chats__right__time__wrapper">
+                  <div className="chats__right__time__wrapper__dot">4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

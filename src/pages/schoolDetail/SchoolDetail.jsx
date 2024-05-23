@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Ads from "../../components/ads/Ads";
 import SideBar from "../../components/sideBar/SideBar";
 import "./schoolDetail.scss";
 import { Link } from "react-router-dom";
 import { Comments } from "../../components/comments/Comments";
+import PopupSuggest from "../../components/Popup/popup-suggest";
 
 const SchoolDetail = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleJoinClick = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -134,7 +140,11 @@ const SchoolDetail = () => {
                     d="M15.75 15.75l-3.897-3.898m0 0a5.625 5.625 0 10-7.955-7.955 5.625 5.625 0 007.955 7.955z"
                   ></path>
                 </svg>
-                <input type="text" placeholder="Nhập tên nhóm bạn muốn tìm" />
+                <input
+                  className="schoolDetail__searchBar__input"
+                  type="text"
+                  placeholder="Nhập tên nhóm bạn muốn tìm"
+                />
                 <select name="" id="">
                   <option style={{ display: "none" }}>Niên khoá</option>
                   <option value="2022">2022</option>
@@ -143,8 +153,23 @@ const SchoolDetail = () => {
                 </select>
 
                 <div className="schoolDetail__btnSearch">Tìm kiếm</div>
-
-                <div className="schoolDetail__btnSuggest"> Đề xuất</div>
+                {showPopup && (
+                  <PopupSuggest
+                    onClose={() => setShowPopup(false)}
+                    isOpen={showPopup}
+                    info={{
+                      title: "Trường đại học FPT",
+                      subTitle: "Đề xuất tên group",
+                    }}
+                  />
+                )}
+                <div
+                  className="schoolDetail__btnSuggest"
+                  onClick={handleJoinClick}
+                >
+                  {" "}
+                  Đề xuất
+                </div>
               </div>
               <div className="schoolDetail__cardsWrapper">
                 <Link to="/forum" className="schoolDetail__card">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./popup.scss";
-const Popup = ({ info, isOpen, onClose }) => {
+const PopupSuggest = ({ info, isOpen, onClose }) => {
   console.log("showPopup", isOpen);
   if (!isOpen) {
     return null;
@@ -15,7 +15,7 @@ const Popup = ({ info, isOpen, onClose }) => {
         <div className="popup__wrapper">
           <div className="popup__content">
             <div className="popup__header">
-              <button className="popup__close" onClick={onClose}>
+              <button className="popup__close_suggest" onClick={onClose}>
                 <svg
                   width="24"
                   height="24"
@@ -38,67 +38,35 @@ const Popup = ({ info, isOpen, onClose }) => {
               <form className="popup__form">
                 <input
                   type="text"
-                  placeholder="Họ và tên"
+                  placeholder="Đặt tên group"
                   className="popup__input"
                 />
                 <input
                   type="text"
-                  placeholder="Bạn học niêm khóa nào"
+                  placeholder="Bạn học khóa nào"
                   className="popup__input"
                 />
-                <input
-                  type="text"
-                  placeholder="MSSV của bạn"
-                  className="popup__input"
-                />
+
                 <textarea
-                  placeholder="
-              Tham gia với mục đích gì"
+                  placeholder="Mục đích tạo nhóm này"
                   className="popup__textarea"
                 />
               </form>
             </div>
             <div className="popup__footer">
-              <div className="popup__title--footer">Quy tắc nhóm:</div>
+              <div
+                className="popup__title--footer"
+                style={{
+                  marginBottom: "10px",
+                }}
+              >
+                Lưu ý:
+                <span>
+                  Khi duyệt bạn sẽ trở thành quản trị viên quản lí group này
+                </span>
+              </div>
               {/* checkbox */}
-              <div className="popup__checkbox">
-                <input
-                  type="checkbox"
-                  id="rule"
-                  name="rule"
-                  className="popup__input--checkbox"
-                />
-                <label htmlFor="rule">Tôi đồng ý</label>
-              </div>
-              <div className="popup__rule">
-                <ul className="popup__ruleList">
-                  <li className="popup__ruleItem">
-                    <span>1.</span>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                      magna aliquam erat volutpat
-                    </p>
-                  </li>
-                  <li className="popup__ruleItem">
-                    <span>2.</span>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                      magna aliquam erat volutpat.
-                    </p>
-                  </li>
-                  <li className="popup__ruleItem">
-                    <span>3.</span>
-                    <p>
-                      {" "}
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                      magna aliquam erat volutpat..
-                    </p>
-                  </li>
-                </ul>
-              </div>
+
               <button className="popup__button" to="/forum-detail">
                 Gửi
               </button>
@@ -110,4 +78,4 @@ const Popup = ({ info, isOpen, onClose }) => {
   );
 };
 
-export default Popup;
+export default PopupSuggest;
