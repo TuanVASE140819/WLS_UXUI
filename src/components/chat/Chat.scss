@@ -1,0 +1,61 @@
+// variables
+@import "../../styles/variables.scss";
+
+.chats {
+  width: 100%;
+  margin-top: 100px;
+  padding:0 60px ;
+  padding-bottom: 120px;
+
+  @include sm {
+    margin-top: 20px;
+    padding:0 0 ;
+    padding-bottom: 120px;
+  }
+   &__wrapper {
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+
+  }
+ &__infor{
+    display: flex;
+    align-items: center;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+ }
+
+
+}

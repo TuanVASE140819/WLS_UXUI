@@ -175,28 +175,30 @@ const Forum = () => {
                       </svg>
                     </div>
                   </div>
-                  <button
-                    to="/forum-detail"
-                    className="forum__btn"
-                    onClick={handleJoinClick}
-                  >
-                    Tham gia
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                  <Link to="/forum-detail">
+                    <button
+                      to="/forum-detail"
+                      className="forum__btn"
+                      // onClick={handleJoinClick}
                     >
-                      <path
-                        stroke="#fff"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      ></path>
-                    </svg>
-                  </button>
+                      Tham gia
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="#fff"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                        ></path>
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="forum__item">
@@ -261,7 +263,7 @@ const Forum = () => {
                   <button
                     to="/forum-detail"
                     className="forum__btn"
-                    onClick={handleJoinClick}
+                    // onClick={handleJoinClick}
                   >
                     Tham gia
                     <svg

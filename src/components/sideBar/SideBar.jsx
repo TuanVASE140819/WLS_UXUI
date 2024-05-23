@@ -768,7 +768,9 @@ const SideBar = () => {
         </section>
 
         <section className="sideBar__relatedPosts">
-          <h4 className="sideBar__relatedPostsHeader">Góc kết nối bạn cũ</h4>
+          <h4 className="sideBar__relatedPostsHeader">
+            <Link to="/"> Góc kết nối bạn cũ</Link>
+          </h4>
           <div className="sideBar__relatedPostsLists">
             <div className="sideBar__relatedPostsListItem">
               <div className="sideBar__relatedPostsListItemHeader">

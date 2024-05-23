@@ -19,6 +19,7 @@ import Account from "../../components/Account/Account";
 import { useNavigate } from "react-router-dom";
 import Policy from "../../components/policy/policy";
 import Bank from "../../components/Bank/Bank";
+import Chat from "../../components/chat/Chat";
 const InforUser = () => {
   const navigate = useNavigate();
   const handleSignOut = () => {
@@ -116,6 +117,16 @@ const InforUser = () => {
             </div>
 
             <div className="inforNav__links">
+              <Link
+                to="/information?filter=chat"
+                className={`inforNav__linkItem ${
+                  selectedInterface === "chat" ? "active" : ""
+                }`}
+                onClick={() => setSelectedInterface("chat")}
+              >
+                <SvgNews color="#626262" />
+                <p>Trò chuyện</p>
+              </Link>
               <Link
                 to="/information?filter=posts"
                 className={`inforNav__linkItem ${
@@ -297,13 +308,15 @@ const InforUser = () => {
             </Link>
           </div>
         </div>
+        {selectedInterface === "chat" && <Chat />}
         {selectedInterface === "posts" && <PersonalPosts />}
         {selectedInterface === "groups" && <SchoolFllow />}
         {selectedInterface === "friends" && <Friends />}
         {selectedInterface === "information" && <Information />}
         {selectedInterface === "account" && <Account />}
         {selectedInterface === "bankCard" && <Bank />}
-        <Policy />
+
+        {selectedInterface !== "chat" && <Policy />}
       </div>
     </>
   );

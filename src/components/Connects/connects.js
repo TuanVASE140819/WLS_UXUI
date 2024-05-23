@@ -5,7 +5,7 @@ import "./schoolDetail.scss";
 import { Link } from "react-router-dom";
 import { Comments } from "../../components/comments/Comments";
 
-const SchoolDetail = () => {
+const Connects = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -79,7 +79,6 @@ const SchoolDetail = () => {
                 <div className="schoolDetail__bottomLeft">
                   <button className="schoolDetail__btn">Follow</button>
                   <button className="schoolDetail__btn_2">Tặng sao</button>
-                  <button className="schoolDetail__btn">Bình chọn</button>
                   <button className="schoolDetail__btn_3">
                     Chia sẽ:
                     <span>httpt//hoahoweloves...</span>
@@ -141,10 +140,7 @@ const SchoolDetail = () => {
                   <option value="2023">2023</option>
                   <option value="2024">2024</option>
                 </select>
-
                 <div className="schoolDetail__btnSearch">Tìm kiếm</div>
-
-                <div className="schoolDetail__btnSuggest"> Đề xuất</div>
               </div>
               <div className="schoolDetail__cardsWrapper">
                 <Link to="/forum" className="schoolDetail__card">
@@ -250,4 +246,4 @@ const SchoolDetail = () => {
   );
 };
 
-export default SchoolDetail;
+export default Connects;

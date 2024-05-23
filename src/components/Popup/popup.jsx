@@ -99,7 +99,10 @@ const Popup = ({ info, isOpen, onClose }) => {
                   </li>
                 </ul>
               </div>
-              <button className="popup__button">Gửi</button>
+
+              <button className="popup__button" to="/forum-detail">
+                Gửi
+              </button>
             </div>
           </div>
         </div>
