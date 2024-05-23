@@ -32,6 +32,7 @@ import { Helmet } from "react-helmet";
 
 import Gift from "./pages/gift/Gift";
 import Member from "./pages/member/Member";
+import Connects from "./pages/connects/Connects";
 function App() {
   // const { user } = useContext(Context);
 
@@ -70,6 +71,7 @@ function App() {
         <Route path="/forum-detail" element={<ProfilePage />} />
         <Route path="/gift" element={<Gift />} />
         <Route path="/menber" element={<Member />} />
+        <Route path="/connect-friends" element={<Connects />} />
       </Routes>
       <Footer />
     </BrowserRouter>
