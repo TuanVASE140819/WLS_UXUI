@@ -110,7 +110,7 @@
   }
 
   &__bottom {
-    display: flex;
+    // display: flex;
     justify-content: space-between;
         transform: translateY(-40px);
     align-items: center;
@@ -142,8 +142,10 @@
   }
 
   &__bottomLeft {
+    
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @include sm {
       // cột
@@ -202,9 +204,66 @@
 
   &__btn_3 {
     padding: 0 32px;
+     margin-right: 16px;
     height: 32px;
     background-color: 
-#F1F1F1;
+#4abc96;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sm {
+       display: flex;
+        justify-content: center;
+      width: 100%;
+      
+    }
+  }
+
+  &__link{
+    color: #0487D9 !important;
+    text-decoration: none;
+       display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+
+   &__btn_4 {
+    padding: 0 32px;
+     margin-right: 16px;
+    height: 32px;
+    background-color: #D4D4D4;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sm {
+       display: flex;
+        justify-content: center;
+      width: 100%;
+      
+    }
+  }
+    &__btn_share {
+    padding: 0 32px;
+ 
+    height: 32px;
+    background-color: #F1F1F1;
     border-radius: 20px;
     color: #666666;
     cursor: pointer;
@@ -212,7 +271,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-
+    margin-left: auto; // Add this line to align the button to the right
+    
     &:hover {
       opacity: 0.7;
     }
