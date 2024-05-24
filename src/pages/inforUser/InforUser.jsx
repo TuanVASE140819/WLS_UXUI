@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import Policy from "../../components/policy/policy";
 import Bank from "../../components/Bank/Bank";
 import Chat from "../../components/chat/Chat";
+import { SvgChat } from "../../components/svgs/Menu/SvgChat";
 const InforUser = () => {
   const navigate = useNavigate();
   const handleSignOut = () => {
@@ -124,7 +125,8 @@ const InforUser = () => {
                 }`}
                 onClick={() => setSelectedInterface("chat")}
               >
-                <SvgNews color="#626262" />
+                <SvgChat color="#626262" />
+
                 <p>Trò chuyện</p>
               </Link>
               <Link
