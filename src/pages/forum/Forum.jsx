@@ -456,6 +456,7 @@ const Forum = () => {
             </div>
           </div>
         </div>
+        SideBarMessage
         <Ads />
       </div>
     </>

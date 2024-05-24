@@ -52,7 +52,7 @@ const SideBarProfile = () => {
             consequat.
           </p>
         </div>
-        <div className="sideBarProfile__awards">
+        {/* <div className="sideBarProfile__awards">
           <div className="sideBarProfile__lists">
             <div className="sideBarProfile__list">
               <i>
@@ -123,7 +123,7 @@ const SideBarProfile = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
