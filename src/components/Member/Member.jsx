@@ -10,7 +10,18 @@ const Members = () => {
   return (
     <div className="members">
       <div className="members__wrapper">
-        <h3 className="members__titleHeader">Danh sách thành viên </h3>
+        <div className="members__header">
+          <h3 className="members__titleHeader">Danh sách thành viên </h3>
+          {/* select */}
+          <div className="members__select">
+            <select name="members" id="members" className="members__select">
+              <option value="all">Tỉnh Thành</option>
+              <option value="top">Top 10</option>
+              <option value="top">Top 20</option>
+              <option value="top">Top 30</option>
+            </select>
+          </div>
+        </div>
         <div className="members__items">
           <div className="members__item">
             <div className="members__info">

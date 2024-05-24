@@ -129,4 +129,24 @@
     }
   }
 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+select{
+  width: 140px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 1px $neu-06;
+  padding: 0 16px;
+  font-size: 16px;
+  color: $neu-09;
+  background-color: #F1F1F1;
+  margin-top: 16px;
+  margin-right: auto;
+}
+
 }
