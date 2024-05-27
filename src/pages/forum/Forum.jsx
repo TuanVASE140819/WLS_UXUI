@@ -461,6 +461,6 @@ const Forum = () => {
       </div>
     </>
   );
-};
+}
 
 export default Forum;

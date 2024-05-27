@@ -5,13 +5,20 @@ import "./schoolDetail.scss";
 import { Link } from "react-router-dom";
 import { Comments } from "../../components/comments/Comments";
 import PopupSuggest from "../../components/Popup/popup-suggest";
+import PopupDonate from "../../components/Popup/popup-donate";
 
 const SchoolDetail = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopupDonate, setShowPopupDonate] = useState(false);
 
   const handleJoinClick = () => {
     setShowPopup(!showPopup);
   };
+
+  const handleDonateClick = () => {
+    setShowPopupDonate(!showPopupDonate);
+  };
+
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -87,7 +94,12 @@ const SchoolDetail = () => {
                 <div className="schoolDetail__bottomLeft">
                   <div>
                     <button className="schoolDetail__btn">Follow</button>
-                    <button className="schoolDetail__btn_2">Tặng sao</button>
+                    <button
+                      className="schoolDetail__btn_2"
+                      onClick={handleDonateClick}
+                    >
+                      Tặng sao
+                    </button>
                     <button className="schoolDetail__btn_3">Bình chọn</button>
                     <button className="schoolDetail__btn_4">
                       <svg
@@ -204,6 +216,17 @@ const SchoolDetail = () => {
                     info={{
                       title: "Trường đại học FPT",
                       subTitle: "Đề xuất tên group",
+                    }}
+                  />
+                )}
+
+                {showPopupDonate && (
+                  <PopupDonate
+                    onClose={() => setShowPopupDonate(false)}
+                    isOpen={showPopupDonate}
+                    info={{
+                      title: "Chọn số sao tặng",
+                      subTitle: "Số khác",
                     }}
                   />
                 )}
