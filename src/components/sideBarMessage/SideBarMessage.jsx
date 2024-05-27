@@ -64,7 +64,7 @@ const SideBarMessage = () => {
               <p>Niên khóa K23</p>
             </div>
           </div>
-          <div className="sideBarMessage__btn">
+          {/* <div className="sideBarMessage__btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -93,10 +93,10 @@ const SideBarMessage = () => {
               </defs>
             </svg>
             Tạo nhóm chat
-          </div>
-          <Link to="/">
+          </div> */}
+          {/* <Link to="/">
             <h4 className="sideBarMessage__settings">Cài đặt quyền riêng tư</h4>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
