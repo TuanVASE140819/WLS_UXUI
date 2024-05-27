@@ -17,6 +17,44 @@
     display: none;
   }
 
+
+  &__textItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    color: #666666;
+    span {
+      padding-right: 16px;
+    }
+  }
+
+  &__textItem--1 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    margin-right: 24px;
+    height: 32px;
+    color: #FCAA17;
+    span {
+      padding-right: 16px;
+    }
+  }
+
+
+   &__textItem--2 {
+    display: flex;
+     font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 24px;
+    height: 32px;
+    color: #0487D9;
+    span {
+      padding-right: 16px;
+    }
+  }
   &__code {
     display: flex;
     justify-content: space-between;

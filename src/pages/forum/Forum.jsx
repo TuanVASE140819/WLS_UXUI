@@ -4,6 +4,7 @@ import "./forum.scss";
 import SideBarMessage from "../../components/sideBarMessage/SideBarMessage";
 import { Link } from "react-router-dom";
 import Popup from "../../components/Popup/popup";
+import SideBar from "../../components/sideBar/SideBar";
 
 const Forum = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -14,7 +15,7 @@ const Forum = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <SideBarMessage />
+        <SideBar />
         <div className="forum">
           <div className="forum__wrapper">
             <div className="forum__cards">
@@ -461,6 +462,6 @@ const Forum = () => {
       </div>
     </>
   );
-}
+};
 
 export default Forum;

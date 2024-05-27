@@ -11,7 +11,18 @@
   top: 72px;
   left: 0;
   border-right: solid 1px $neu-06;
-
+  
+  &__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 160px;
+    height:  40px;
+    background-color:  #0487D9;
+    color: white;
+    margin-bottom: 24px;
+  }
   @include sm {
     display: none;
   }

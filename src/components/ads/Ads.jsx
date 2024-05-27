@@ -3,7 +3,7 @@ import "./ads.scss";
 import { Link } from "react-router-dom";
 
 const Ads = () => {
-  return(
+  return (
     <div className="ads">
       <div className="ads__wrapper">
         <div className="ads__cards">

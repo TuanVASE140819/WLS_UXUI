@@ -279,3 +279,41 @@
     }
   }
 }
+
+.sideBar__makeFriends {
+ 
+}
+
+
+  .sideBar__makeFriendsHeader {
+    margin: 24px 0;
+    font-size: 18px;
+
+    @include xs {
+      font-size: 16px;
+    }
+  }
+   .sideBar__makeFriendsListItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  .sideBar__makeFriendsListItemUser {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .sideBar__relatedPostsListItemUserText {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      @include font-xs;
+    }
+  }

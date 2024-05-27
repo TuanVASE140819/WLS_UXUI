@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Ads from "../../components/ads/Ads";
+import AdsGroup from "../../components/adsGroup/Ads";
 import SideBar from "../../components/sideBar/SideBar";
 import "./schoolDetail.scss";
 import { Link } from "react-router-dom";
@@ -329,7 +329,7 @@ const SchoolDetail = () => {
             <Comments />
           </div>
         </div>
-        <Ads />
+        <AdsGroup />
       </div>
     </>
   );
