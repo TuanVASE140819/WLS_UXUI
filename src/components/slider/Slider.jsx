@@ -34,7 +34,7 @@ const Sider = () => {
       }}
     >
       <SwiperSlide>
-        <Link to="/" className="highlightSlider__card">
+        <Link to="/search" className="highlightSlider__card">
           <figure className="highlightSlider__image">
             <img src={require("../../assets/images/slider-1.png")} alt="" />
           </figure>
@@ -47,7 +47,7 @@ const Sider = () => {
         </Link>
       </SwiperSlide>
       <SwiperSlide>
-        <Link to="/" className="highlightSlider__card">
+        <Link to="/search" className="highlightSlider__card">
           <figure className="highlightSlider__image">
             <img src={require("../../assets/images/slider-2.png")} alt="" />
           </figure>
@@ -60,7 +60,7 @@ const Sider = () => {
         </Link>
       </SwiperSlide>
       <SwiperSlide>
-        <Link to="/" className="highlightSlider__card">
+        <Link to="/search" className="highlightSlider__card">
           <figure className="highlightSlider__image">
             <img src={require("../../assets/images/slider-3.png")} alt="" />
           </figure>
@@ -72,7 +72,7 @@ const Sider = () => {
       </SwiperSlide>
 
       <SwiperSlide>
-        <Link to="/" className="highlightSlider__card">
+        <Link to="/search" className="highlightSlider__card">
           <figure className="highlightSlider__image">
             <img src={require("../../assets/images/slider-2.png")} alt="" />
           </figure>
