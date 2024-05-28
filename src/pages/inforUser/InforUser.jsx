@@ -21,7 +21,15 @@ import Policy from "../../components/policy/policy";
 import Bank from "../../components/Bank/Bank";
 import Chat from "../../components/chat/Chat";
 import { SvgChat } from "../../components/svgs/Menu/SvgChat";
+import { SvgWallet } from "../../components/svgs/Menu/SvgWallet";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import HistoryTransaction from "../../components/HistoryTransaction/Transaction";
 const InforUser = () => {
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const toggleSubMenu = () => {
+    setIsSubMenuOpen(!isSubMenuOpen);
+  };
+
   const navigate = useNavigate();
   const handleSignOut = () => {
     localStorage.removeItem("dataUser");
@@ -206,16 +214,6 @@ const InforUser = () => {
                 <SvgInfomation color="#626262" />
                 <p>Thông tin cá nhân</p>
               </Link>
-
-              <Link
-                to="/information?filter=bankCard"
-                className={`inforNav__linkItem
-              ${selectedInterface === "bankCard" ? "active" : ""}`}
-                onClick={() => setSelectedInterface("bankCard")}
-              >
-                <SvgInfomation color="#626262" />
-                <p>Quản lý thẻ</p>
-              </Link>
               <Link
                 to="/information?filter=account"
                 className={`inforNav__linkItem
@@ -225,6 +223,52 @@ const InforUser = () => {
                 <SvgAccount color="#626262" />
                 <p>Thông tin tài khoản</p>
               </Link>
+              <div className="sidebar">
+                <div
+                  className={`inforNav__linkItem ${
+                    selectedInterface === "account" ? "active" : ""
+                  }`}
+                  onClick={toggleSubMenu}
+                >
+                  <SvgWallet color="#626262" />
+                  <p>Ví liên kết</p>
+                  <div
+                    style={{
+                      marginLeft: "20px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      itemAlign: "center",
+                    }}
+                  >
+                    {isSubMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </div>
+                </div>
+                {isSubMenuOpen && (
+                  <div className="submenu">
+                    <Link
+                      to="/information?filter=transaction"
+                      className={`inforNav__linkItem ${
+                        selectedInterface === "transaction" ? "active" : ""
+                      }`}
+                      style={{ marginLeft: "50px" }}
+                      onClick={() => setSelectedInterface("transaction")}
+                    >
+                      <p>Tài khoản ví</p>
+                    </Link>
+                    <Link
+                      to="/information?filter=history"
+                      className={`inforNav__linkItem ${
+                        selectedInterface === "history" ? "active" : ""
+                      }`}
+                      style={{ marginLeft: "50px" }}
+                      onClick={() => setSelectedInterface("history")}
+                    >
+                      <p>Lịch sử giao dịch</p>
+                    </Link>
+                  </div>
+                )}
+              </div>
               <div className="inforNav__linkItem" onClick={handleSignOut}>
                 <svg
                   width="25"
@@ -355,6 +399,8 @@ const InforUser = () => {
         {selectedInterface === "information" && <Information />}
         {selectedInterface === "account" && <Account />}
         {selectedInterface === "bankCard" && <Bank />}
+        {selectedInterface === "transaction" && <Bank />}
+        {selectedInterface === "history" && <HistoryTransaction />}
 
         {selectedInterface !== "chat" && <Policy />}
       </div>

@@ -1,0 +1,13 @@
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Hiển thị submenu bên dưới */
+  left: 100%; /* Hiển thị submenu bên phải */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.submenu.active {
+  display: block;
+}
