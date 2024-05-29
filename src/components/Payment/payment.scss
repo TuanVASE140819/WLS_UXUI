@@ -1,0 +1,131 @@
+@import "../../styles/variables.scss";
+.payments{
+ width: 100%;
+  margin-top: 100px;
+  padding:0 60px ;
+  padding-bottom: 120px;
+
+    @include sm {
+        margin-top: 20px;
+        padding:0 0 ;
+        padding-bottom: 120px;
+    }
+    &__wrapper {
+    //  grid :2
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__left{
+        padding: 0 16px;
+    }
+
+    &__right{
+        padding: 0 16px;
+    }
+
+    &__radio {
+        display: flex;
+        margin-top: 16px; 
+        padding: 8px 16px;
+        justify-content: space-between;
+        align-items: center;
+        border: 3px solid #F4F5F8;
+        border-radius: 8px;
+
+        input {
+            margin-right: 16px;
+        }
+    }
+
+    &__rightContent{
+        margin-top: 16px;
+       
+        border: 2px solid #F4F5F8;
+        border-radius: 8px;
+    }
+
+    &__rightContentItem{
+        padding: 8px 16px;
+        border-bottom: 1px solid #F4F5F8;
+    }
+
+    &__rightContentItem--btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: #0487D9;
+        color: white;
+        border-radius: 8px;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    &__deleteTransaction{
+    //   căn góc phải
+        display: flex;
+        justify-content: flex-end;
+        color: #D13D3D;
+        font-size: 14px;
+        align-items: center;
+    }
+
+    &__rightContentItem--unit{
+        margin-bottom: 16px;
+    }
+
+    &__rightContentItem--total{   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+         padding: 8px 16px;
+        border-top: 3px solid #F4F5F8;
+    }
+
+    &__googlePay {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 16px;
+        border: 1px solid #F4F5F8;
+        border-radius: 20px;
+    }
+
+    &__googlePay--content {
+       margin-left: 3px;
+    }
+
+    &__choose {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__leftHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #F4F5F8;
+    // bold
+    font-size: Bold;
+    color: #505050;
+    }
+
+     &__rightHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #F4F5F8;
+    }
+
+    
+
+}

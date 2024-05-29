@@ -24,6 +24,7 @@ import { SvgChat } from "../../components/svgs/Menu/SvgChat";
 import { SvgWallet } from "../../components/svgs/Menu/SvgWallet";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import HistoryTransaction from "../../components/HistoryTransaction/Transaction";
+import Payments from "../../components/Payment/payment";
 const InforUser = () => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const toggleSubMenu = () => {
@@ -252,7 +253,7 @@ const InforUser = () => {
                         selectedInterface === "transaction" ? "active" : ""
                       }`}
                       style={{ marginLeft: "50px" }}
-                      onClick={() => setSelectedInterface("transaction")}
+                      onClick={() => setSelectedInterface("payment")}
                     >
                       <p>Tài khoản ví</p>
                     </Link>
@@ -399,6 +400,7 @@ const InforUser = () => {
         {selectedInterface === "information" && <Information />}
         {selectedInterface === "account" && <Account />}
         {selectedInterface === "bankCard" && <Bank />}
+        {selectedInterface === "payment" && <Payments />}
         {selectedInterface === "transaction" && <Bank />}
         {selectedInterface === "history" && <HistoryTransaction />}
 
