@@ -20,6 +20,25 @@
     font-weight: bold;
   }
 
+  &__percent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4ABC96;
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4abc96;
+    }
+     
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-left: 8px;
+    }
+  }
+
   &__ratings {
     max-width: 800px;
     margin: 0 auto;
@@ -113,11 +132,11 @@
     align-items: center;
     justify-content: center;
     background-color: #0487d9;
-    padding: 0 40px;
+    padding: 0 20px;
     height: 32px;
     border-radius: 40px;
     color: white;
-
+    margin-right: 8px;
     svg {
       margin-left: 10px;
     }

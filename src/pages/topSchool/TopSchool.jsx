@@ -109,6 +109,21 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
+                    </svg>
+                  </div>
                 </Link>
 
                 <Link to="/schoolDetail" className="topSchool__item top2">
@@ -187,6 +202,21 @@ const TopSchool = () => {
                         d="M8.99 2.675c.373-.897 1.646-.897 2.02 0l1.735 4.172 4.503.361c.97.078 1.363 1.288.624 1.921l-3.43 2.94 1.047 4.394c.226.946-.804 1.694-1.634 1.187L10 15.295 6.144 17.65c-.83.507-1.86-.242-1.634-1.187l1.048-4.395-3.43-2.939c-.74-.633-.347-1.843.623-1.92l4.504-.362L8.99 2.675z"
                         clipRule="evenodd"
                       ></path>
+                    </svg>
+                  </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
                     </svg>
                   </div>
                 </Link>
@@ -268,6 +298,21 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
+                    </svg>
+                  </div>
                 </Link>
                 <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">4</div>
@@ -293,6 +338,21 @@ const TopSchool = () => {
                         d="M8.99 2.675c.373-.897 1.646-.897 2.02 0l1.735 4.172 4.503.361c.97.078 1.363 1.288.624 1.921l-3.43 2.94 1.047 4.394c.226.946-.804 1.694-1.634 1.187L10 15.295 6.144 17.65c-.83.507-1.86-.242-1.634-1.187l1.048-4.395-3.43-2.939c-.74-.633-.347-1.843.623-1.92l4.504-.362L8.99 2.675z"
                         clipRule="evenodd"
                       ></path>
+                    </svg>
+                  </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
                     </svg>
                   </div>
                 </Link>
@@ -322,6 +382,21 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
+                    </svg>
+                  </div>
                 </Link>
                 <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">6</div>
@@ -347,6 +422,21 @@ const TopSchool = () => {
                         d="M8.99 2.675c.373-.897 1.646-.897 2.02 0l1.735 4.172 4.503.361c.97.078 1.363 1.288.624 1.921l-3.43 2.94 1.047 4.394c.226.946-.804 1.694-1.634 1.187L10 15.295 6.144 17.65c-.83.507-1.86-.242-1.634-1.187l1.048-4.395-3.43-2.939c-.74-.633-.347-1.843.623-1.92l4.504-.362L8.99 2.675z"
                         clipRule="evenodd"
                       ></path>
+                    </svg>
+                  </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
                     </svg>
                   </div>
                 </Link>
@@ -376,6 +466,21 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
+                    </svg>
+                  </div>
                 </Link>
                 <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">8</div>
@@ -401,6 +506,21 @@ const TopSchool = () => {
                         d="M8.99 2.675c.373-.897 1.646-.897 2.02 0l1.735 4.172 4.503.361c.97.078 1.363 1.288.624 1.921l-3.43 2.94 1.047 4.394c.226.946-.804 1.694-1.634 1.187L10 15.295 6.144 17.65c-.83.507-1.86-.242-1.634-1.187l1.048-4.395-3.43-2.939c-.74-.633-.347-1.843.623-1.92l4.504-.362L8.99 2.675z"
                         clipRule="evenodd"
                       ></path>
+                    </svg>
+                  </div>
+                  <div className="topSchool__percent">
+                    2.78%
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.13397 0.500001C3.51887 -0.166666 4.48113 -0.166667 4.86603 0.5L7.4641 5C7.849 5.66667 7.36788 6.5 6.59808 6.5H1.40192C0.632124 6.5 0.150998 5.66667 0.535898 5L3.13397 0.500001Z"
+                        fill="#4ABC96"
+                      />
                     </svg>
                   </div>
                 </Link>
