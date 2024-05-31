@@ -39,7 +39,7 @@ const InforUser = () => {
     navigate("/");
     window.location.reload(); // refresh trang
   };
-  const [selectedInterface, setSelectedInterface] = useState("posts");
+  const [selectedInterface, setSelectedInterface] = useState("chat");
   console.log("selectedInterface", selectedInterface);
   return (
     <>
@@ -373,16 +373,7 @@ const InforUser = () => {
             >
               <p>Hội nhóm</p>
             </Link>
-
-            <Link
-              to="/information?filter=information"
-              className={`information__linkItem
-              ${selectedInterface === "information" ? "active" : ""}`}
-              onClick={() => setSelectedInterface("information")}
-            >
-              <p>Cá nhân</p>
-            </Link>
-
+            Quản lí bài viết
             <Link
               to="/information?filter=account"
               className={`information__linkItem

@@ -3,6 +3,7 @@ import SideBar from "../../components/sideBar/SideBar";
 import Ads from "../../components/ads/Ads";
 import "./topSchool.scss";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const TopSchool = () => {
   return (
@@ -30,7 +31,7 @@ const TopSchool = () => {
               </div>
 
               <div className="topSchool__lists">
-                <div className="topSchool__item top1">
+                <Link to="/schoolDetail" className="topSchool__item top1">
                   <div className="topSchool__itemNumber">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -108,8 +109,9 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item top2">
+                </Link>
+
+                <Link to="/schoolDetail" className="topSchool__item top2">
                   <div className="topSchool__itemNumber">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -187,8 +189,8 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item top3">
+                </Link>
+                <Link to="/schoolDetail" className="topSchool__item top3">
                   <div className="topSchool__itemNumber">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -266,8 +268,8 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item">
+                </Link>
+                <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">4</div>
                   <div className="topSchool__logoText">
                     <img
@@ -293,8 +295,8 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item">
+                </Link>
+                <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">5</div>
                   <div className="topSchool__logoText">
                     <img
@@ -320,8 +322,8 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item">
+                </Link>
+                <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">6</div>
                   <div className="topSchool__logoText">
                     <img
@@ -347,8 +349,8 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item">
+                </Link>
+                <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">7</div>
                   <div className="topSchool__logoText">
                     <img
@@ -374,8 +376,8 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="topSchool__item">
+                </Link>
+                <Link to="/schoolDetail" className="topSchool__item">
                   <div className="topSchool__itemNumber">8</div>
                   <div className="topSchool__logoText">
                     <img
@@ -401,7 +403,7 @@ const TopSchool = () => {
                       ></path>
                     </svg>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             <div className="topSchool__pagination">

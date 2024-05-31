@@ -893,7 +893,7 @@ const SideBar = () => {
                 <div className="sideBar__relatedPostsListItemUser">
                   <img src={require("../../assets/images/user.png")} alt="" />
                   <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/">
+                    <Link to="/information?filter=friends">
                       <h4>Hồ Lê Bảo Hân</h4>
                     </Link>
                     <p>1 phút trước</p>
