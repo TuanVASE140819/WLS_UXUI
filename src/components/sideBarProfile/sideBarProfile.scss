@@ -86,6 +86,7 @@
         margin-right: 0px;
       }
       span {
+        
         font-weight: bold;
         margin-right: 2px;
       }
@@ -102,7 +103,7 @@
     p {
       width: 40px;
       height: 40px;
-      background-color: #a3a3a3;
+      background-color: #a3a3a32e;
       border-radius: 100%;
       display: flex;
       justify-content: center;
@@ -119,7 +120,8 @@
     span {
       padding: 6px 20px;
       border-radius: 20px;
-      background-color: #a3a3a3;
+      background-color: #a3a3a32e;
+      border-radius: 100%;
       margin: 0 4px;
       font-weight: bold;
       cursor: pointer;
@@ -130,6 +132,8 @@
       cursor: pointer;
     }
   }
+
+  
 
   &__desc {
     padding-bottom: 32px;
@@ -169,4 +173,151 @@
       }
     }
   }
+}
+
+
+.chat {
+  &__wrapper {
+
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: rgba(163, 163, 163, 0.1803921569);
+    border-radius: 100%;
+    margin: 0 4px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+    &:hover {
+      .chat__popup {
+        opacity: 1;
+        pointer-events: inherit;
+      }
+    }
+
+    @include sm {
+      font-size: 22px;
+      line-height: 40px;
+    }
+
+    @include xs {
+      width: 36px;
+      height: 36px;
+      border-radius: 15px;
+    }
+
+    &.active {
+      border: solid 2px #f26f21;
+    }
+  }
+
+  
+
+  &__popup {
+    position: absolute;
+    width: 350px;
+    z-index: 4;
+    top: 50px;
+    left: -40px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    
+  }
+
+  &__popupItem {
+    display: flex;
+    align-items: center;
+  
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+   
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 8px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+&__popupIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__popupText {
+    font-family: Mulish;
+font-size: 14px;
+font-weight: 500;
+color: #404040 !important;
+line-height: 17.57px;
+text-align: left;
+
+  }
+
+  &__popupWrapper {
+    padding: 10px 32px;
+     
+    background-color: white;
+  
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    &:before {
+      width: 64px;
+      height: 64px;
+      background-color: white;  
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -8px;
+      left: 26px;
+      transform: rotate(135deg);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+
 }
