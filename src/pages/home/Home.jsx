@@ -27,7 +27,7 @@ const Home = () => {
         <div className="contentTopSchool__wrapper">
           <div className="contentTopSchool__left">
             <Link
-              to="/topSchool"
+              to="/voting-category"
               className="contentTopSchool__card"
               style={{ backgroundImage: `url(${topSchoolImage1})` }}
             >
@@ -42,7 +42,7 @@ const Home = () => {
               </div>
             </Link>
             <Link
-              to="/topSchool"
+              to="/voting-category"
               className="contentTopSchool__card"
               style={{ backgroundImage: `url(${topSchoolImage2})` }}
             >
@@ -57,7 +57,7 @@ const Home = () => {
               </div>
             </Link>
             <Link
-              to="/topSchool"
+              to="/voting-category"
               className="contentTopSchool__card"
               style={{ backgroundImage: `url(${topSchoolImage3})` }}
             >

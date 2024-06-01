@@ -34,6 +34,7 @@ import Gift from "./pages/gift/Gift";
 import Member from "./pages/member/Member";
 import Connects from "./pages/connects/Connects";
 import ConnectFriends from "./pages/connect-friends/Connect-friends";
+import VotingCategory from "./pages/voting-category/voting-category";
 function App() {
   // const { user } = useContext(Context);
 
@@ -73,6 +74,7 @@ function App() {
         <Route path="/gift" element={<Gift />} />
         <Route path="/menber" element={<Member />} />
         <Route path="/connect-friends" element={<ConnectFriends />} />
+        <Route path="/voting-category" element={<VotingCategory />} />
       </Routes>
       <Footer />
     </BrowserRouter>

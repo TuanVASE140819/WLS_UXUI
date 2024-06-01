@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+.voteCategory {
+  margin-top: 100px;
+  width: 100%;
+
+  padding: 0 200px;
+  &__wrapper {
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+    &__btnPopup {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neu-06;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  &__popup {
+    width: 140px;
+    height: 80px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 4px 10px;
+    border: solid 1px $neu-06;
+    color: $neu-09;
+    background-color: white;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: absolute;
+    top: 40px;
+    left: -16px;
+    opacity: 0;
+    transition: all 0.2s 0.1s ease;
+    pointer-events: none;
+
+    &:before {
+      width: 20px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      background-color: white;
+      border-left: solid 1px $neu-06;
+      border-top: solid 1px $neu-06;
+      top: -10px;
+      left: 20px;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    &:after {
+      width: 140px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      z-index: 2;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+      
+
+      &:hover {
+        opacity: 0.7;
+        color: $m-01;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+        transform: translateX(2px);
+      }
+    }
+
+  }
+
+  &__btnPopup {
+    &:hover {
+      .cards__popup {
+        opacity: 1;
+        pointer-events: inherit;
+      }
+    }
+  }
+
+}
+
+
