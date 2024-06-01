@@ -75,6 +75,7 @@ function App() {
         <Route path="/menber" element={<Member />} />
         <Route path="/connect-friends" element={<ConnectFriends />} />
         <Route path="/voting-category" element={<VotingCategory />} />
+        
       </Routes>
       <Footer />
     </BrowserRouter>

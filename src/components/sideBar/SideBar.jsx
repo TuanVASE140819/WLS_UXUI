@@ -885,7 +885,7 @@ const SideBar = () => {
 
         <section className="sideBar__relatedPosts">
           <h4 className="sideBar__relatedPostsHeader">
-            <Link to="/information?filter=chat"> Góc kết nối bạn cũ</Link>
+            <Link to="/connect-friends"> Góc kết nối bạn cũ</Link>
           </h4>
           <div className="sideBar__relatedPostsLists">
             <div className="sideBar__relatedPostsListItem">
@@ -893,7 +893,7 @@ const SideBar = () => {
                 <div className="sideBar__relatedPostsListItemUser">
                   <img src={require("../../assets/images/user.png")} alt="" />
                   <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/information?filter=friends">
+                    <Link to="/connect-friends">
                       <h4>Hồ Lê Bảo Hân</h4>
                     </Link>
                     <p>1 phút trước</p>
@@ -953,7 +953,7 @@ const SideBar = () => {
                 </svg>
               </div>
               <div className="sideBar__relatedPostsText">
-                <Link to="/">
+                <Link to="/connect-friends">
                   <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
                 </Link>
                 <p>
@@ -967,7 +967,7 @@ const SideBar = () => {
                 <div className="sideBar__relatedPostsListItemUser">
                   <img src={require("../../assets/images/user.png")} alt="" />
                   <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/">
+                    <Link to="/connect-friends">
                       <h4>Hồ Lê Bảo Hân</h4>
                     </Link>
                     <p>1 phút trước</p>
