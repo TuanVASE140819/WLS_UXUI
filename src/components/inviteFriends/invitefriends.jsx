@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBarEvents from "../../components/sideBarEvents/SideBarEvents";
 import Ads from "../../components/ads/Ads";
 import "./invitefriends.scss";
@@ -8,60 +8,35 @@ import topSchoolImage2 from "../../assets/images/topSchool-2.png";
 import topSchoolImage3 from "../../assets/images/topSchool-3.png";
 import { useTranslation } from "react-i18next";
 import SideBar from "../../components/sideBar/SideBar";
+import MultiSelect from "../MutiSelect/MutiSelect";
 const InviteFriends = () => {
   const { t, i18n } = useTranslation("common");
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleChange = (selectedOptions) => {
+    setSelectedOptions(selectedOptions);
+  };
+
+  const options = [
+    { label: "Option 1", value: "option1" },
+    { label: "Option 2", value: "option2" },
+    { label: "Option 3", value: "option3" },
+    { label: "Option 4", value: "option4" },
+  ];
   return (
     <>
       <div style={{ display: "flex" }}>
         <SideBar />
         <div className="invitefriends">
-          <div className="invite-friends">
-            <div>Mời bạn bè</div>
-            {/* input search */}
-            <div className="invitefriends__inputWrapper">
-              <input type="text" placeholder="Search..." />
-              <button>
-                <i className="fas fa-search"></i>
-              </button>
+          <div className="invitefriends__content">
+            <div className="invitefriends__header">
+              <h2>Mời bạn bè</h2>
+              <p value={selectedOptions.join(", ")} readOnly />
+              <button>{t("invite")}</button>
             </div>
 
-            <button className="invite-button">Mời</button>
-          </div>
-          <div className="freinds-list">
-            <div>Danh sách bạn bè</div>
-            <div className="freinds-list__item">
-              <div className="freinds-list__item__info">
-                <h3>Nguyễn Văn A</h3>
-                <p>Đã mời</p>
-              </div>
-              <div className="freinds-list__item__action">
-                <button className="invite-button">Mời</button>
-              </div>
-            </div>
-            <div className="freinds-list__item">
-              <div className="freinds-list__item__info">
-                <h3>Nguyễn Văn A</h3>
-                <p>Đã mời</p>
-              </div>
-              <div className="freinds-list__item__action">
-                <button className="invite-button">Mời</button>
-              </div>
-            </div>
-            <div className="freinds-list__item">
-              <div className="freinds-list__item__info">
-                <h3>Nguyễn Văn A</h3>
-                <p>Đã mời</p>
-              </div>
-              <div className="freinds-list__item__action">
-                <button className="invite-button">Mời</button>
-              </div>
-            </div>
-            <div className="freinds-list__item">
-              <div className="freinds-list__item__info">
-                <h3>Nguyễn Văn A</h3>
-                <p>Đã mời</p>
-              </div>
-            </div>
+            <MultiSelect data={options} onChange={handleChange} />
+            <p>Selected Options: {selectedOptions.join(", ")}</p>
           </div>
         </div>
         <Ads />

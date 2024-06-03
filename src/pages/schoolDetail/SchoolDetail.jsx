@@ -179,7 +179,9 @@ const SchoolDetail = () => {
                   </svg>
                   Đề xuất tạo nhóm
                 </div>
-                <div className="schoolDetail__btnJoin">Xem tất cả nhóm</div>
+                <Link to="/forum" className="schoolDetail__btnJoin">
+                  <div>Xem tất cả nhóm</div>
+                </Link>
               </div>
 
               <div className="schoolDetail__searchBar">
@@ -234,7 +236,7 @@ const SchoolDetail = () => {
                 )}
               </div>
               <div className="schoolDetail__cardsWrapper">
-                <Link to="/forum" className="schoolDetail__card">
+                <Link to="/forum-detail" className="schoolDetail__card">
                   <figure className="schoolDetail__image">
                     <img
                       src={require("../../assets/images/card-1.png")}
@@ -265,7 +267,7 @@ const SchoolDetail = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/forum" className="schoolDetail__card">
+                <Link to="/forum-detail" className="schoolDetail__card">
                   <figure className="schoolDetail__image">
                     <img
                       src={require("../../assets/images/card-2.png")}
@@ -296,7 +298,7 @@ const SchoolDetail = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/forum" className="schoolDetail__card">
+                <Link to="/forum-detail" className="schoolDetail__card">
                   <figure className="schoolDetail__image">
                     <img
                       src={require("../../assets/images/card-3.png")}
