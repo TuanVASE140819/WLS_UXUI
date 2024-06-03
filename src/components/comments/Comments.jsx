@@ -3,6 +3,7 @@ import "./comments.scss";
 import { SvgIconHeart } from "../svgs/Post/SvgIconHeart";
 import { SvgComment } from "../svgs/Post/SvgComment";
 import { SvgShare } from "../svgs/Post/SvgShare";
+import { Link } from "react-router-dom";
 export const Comments = () => {
   return (
     <div className="comments">
@@ -117,7 +118,9 @@ export const Comments = () => {
           </div>
           <div className="comments__content">
             <h4>"Điểm Dừng Kỷ Niệm: Gặp Lại Bạn Học Cũ Trên Đường Đời"</h4>
-            <img src={require("../../assets/images/postImg.png")} alt="" />
+            <Link to="/detail-content">
+              <img src={require("../../assets/images/postImg.png")} alt="" />
+            </Link>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
