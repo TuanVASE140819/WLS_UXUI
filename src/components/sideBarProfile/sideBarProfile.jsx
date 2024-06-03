@@ -22,17 +22,31 @@ const SideBarProfile = () => {
           <h4 className="sideBarProfile__name">FPT và những con bot</h4>
           <div className="sideBarProfile__infos">
             <div>
-              <span>120</span> bài viết
+              <span
+                style={{
+                  marginRight: "5px",
+                }}
+              >
+                120
+              </span>{" "}
+              bài viết
             </div>
             <div>
-              <span>11k</span> follow
+              <span
+                style={{
+                  marginRight: "5px",
+                }}
+              >
+                11k
+              </span>{" "}
+              follow
             </div>
             {/* <div>
               <span>11k</span> like
             </div> */}
           </div>
           <div className="sideBarProfile__action">
-            <div className="chat__icon">
+            {/* <div className="chat__icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -97,10 +111,39 @@ const SideBarProfile = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <span>Follow</span>
-            <div>Mời bạn bè</div>
+            </div> */}
+            <button className="sideBarProfile__btn--follow">Follow</button>
+            <Link to="/inviteFriends">
+              <button className="sideBarProfile__btn--invite ">
+                Mời bạn bè
+              </button>
+            </Link>
           </div>
+
+          <button
+            className="sideBarProfile__btn--join "
+            onClick={handleJoinClick}
+          >
+            Tham gia nhóm chat tổng của nhóm
+          </button>
+
+          <button className="sideBarProfile__btn--suggest">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 0.841797C3.96125 0.841797 0.6875 4.11555 0.6875 8.1543C0.6875 12.193 3.96125 15.4668 8 15.4668C12.0387 15.4668 15.3125 12.193 15.3125 8.1543C15.3125 4.11555 12.0387 0.841797 8 0.841797ZM8.5625 5.9043C8.5625 5.75511 8.50324 5.61204 8.39775 5.50655C8.29226 5.40106 8.14918 5.3418 8 5.3418C7.85082 5.3418 7.70774 5.40106 7.60225 5.50655C7.49676 5.61204 7.4375 5.75511 7.4375 5.9043V7.5918H5.75C5.60082 7.5918 5.45774 7.65106 5.35225 7.75655C5.24676 7.86204 5.1875 8.00511 5.1875 8.1543C5.1875 8.30348 5.24676 8.44656 5.35225 8.55204C5.45774 8.65753 5.60082 8.7168 5.75 8.7168H7.4375V10.4043C7.4375 10.5535 7.49676 10.6966 7.60225 10.802C7.70774 10.9075 7.85082 10.9668 8 10.9668C8.14918 10.9668 8.29226 10.9075 8.39775 10.802C8.50324 10.6966 8.5625 10.5535 8.5625 10.4043V8.7168H10.25C10.3992 8.7168 10.5423 8.65753 10.6477 8.55204C10.7532 8.44656 10.8125 8.30348 10.8125 8.1543C10.8125 8.00511 10.7532 7.86204 10.6477 7.75655C10.5423 7.65106 10.3992 7.5918 10.25 7.5918H8.5625V5.9043Z"
+                fill="#0487D9"
+              />
+            </svg>
+            Đề xuất tạo nhóm chat
+          </button>
           <p className="sideBarProfile__desc">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
@@ -298,6 +341,16 @@ const SideBarProfile = () => {
           </div>
         </div> */}
       </div>
+      {showPopup && (
+        <PopupSuggest
+          onClose={() => setShowPopup(false)}
+          isOpen={showPopup}
+          info={{
+            title: "Trường đại học FPT",
+            subTitle: "Đề xuất tên group",
+          }}
+        />
+      )}
     </div>
   );
 };

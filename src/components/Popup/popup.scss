@@ -20,6 +20,30 @@
         background-color: #f9f9f9;
     }
 
+
+    &__image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+
+    &__image__icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-right: 8px;
+        background-color: #f9f9f9;
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
  &__ruleItem {
     display: flex;
     align-items: center;
@@ -110,6 +134,7 @@ color: #0487D9;
     color: white;
     padding: 8px 64px;
     border-radius: 5px;
+    margin-top: 10px;
     
 }
 
