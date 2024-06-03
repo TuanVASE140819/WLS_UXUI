@@ -18,10 +18,37 @@ const InviteFriends = () => {
   };
 
   const options = [
-    { label: "Option 1", value: "option1" },
-    { label: "Option 2", value: "option2" },
-    { label: "Option 3", value: "option3" },
-    { label: "Option 4", value: "option4" },
+    {
+      image:
+        "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg?w=800&h=533&crop=1",
+      label: "Phan Thu Hà",
+      value: "Phan Thu Hà1",
+    },
+    {
+      image:
+        "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg?w=800&h=533&crop=1",
+      label: "Phan Thu Hà",
+      value: "Phan Thu Hà2",
+    },
+    {
+      image:
+        "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg?w=800&h=533&crop=1",
+      label: "Phan Thu Hà",
+      value: "Phan Thu Hà3",
+    },
+
+    {
+      image:
+        "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg?w=800&h=533&crop=1",
+      label: "Phan Thu Hà",
+      value: "Phan Thu Hà4",
+    },
+    {
+      image:
+        "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg?w=800&h=533&crop=1",
+      label: "Phan Thu Hà",
+      value: "Phan Thu Hà5",
+    },
   ];
   return (
     <>
@@ -29,14 +56,24 @@ const InviteFriends = () => {
         <SideBar />
         <div className="invitefriends">
           <div className="invitefriends__content">
-            <div className="invitefriends__header">
-              <h2>Mời bạn bè</h2>
-              <p value={selectedOptions.join(", ")} readOnly />
-              <button>{t("invite")}</button>
+            <div className="invitefriends__inputWrapper">
+              <h2
+                className="invitefriends__title"
+                style={{ marginBottom: "20px" }}
+              >
+                Mời bạn bè
+              </h2>
+              <div className="invitefriends__input">
+                {/* <p>Selected Options: {selectedOptions.join(", ")}</p> */}
+                <input
+                  type="text"
+                  placeholder="Tìm kiếm trong danh sách bạn bè"
+                  value={selectedOptions.join(", ")}
+                />
+                <button className="invitefriends__button">Mời</button>
+              </div>
             </div>
-
             <MultiSelect data={options} onChange={handleChange} />
-            <p>Selected Options: {selectedOptions.join(", ")}</p>
           </div>
         </div>
         <Ads />

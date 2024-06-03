@@ -3,36 +3,83 @@
   margin-top: 100px;
   width: 100%;
 
-  padding: 0 200px;
-  &__wrapper {
-    padding: 0 32px;
+  padding: 0 100px;
 
-    @include sm {
-      padding: 0 16px;
-    }
-  }
-
-    &__inputWrapper {
-    display: flex;
-    align-items: center;
+  &__inputWrapper {
+  
+    background-color: #F4F4F4;
     width: 100%;
-    
-    bg
-    svg {
-      position: absolute;
-      left: 16px;
-    }
-
-    input {
-      height: 40px;
-      padding: 0 24px 0 40px;
-      border: solid 1px $neu-06;
-      border-radius: 8px;
-      width: 100%;
-    }
+    padding: 32px 16px;
   }
+&__input {
+    display: flex;
+    justify-content: space-between;
+  
+  height: 50px;
+  border: none;
+  background-color: #F4F4F4;
+  
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  outline: none;
 
- 
+  input {
+    width: 100%;
+    border: none;
+    background-color: #F4F4F4;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    outline: none;
+    border-radius: 40px;
+    // màu border màu 
+    padding: 0 16px;
+    border: 1px solid #7C7C7C;
+  }
+  &::placeholder {
+    color: #000000;
+    font-weight: 500;
+  }
+}
+
+&__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ width: 28px;
+ margin-left: 10px;
+  height: 28px;
+  background-color: #F4F4F4;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+ padding:  0 60px;
+  height: 50px;
+  background-color: #148EDB;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+
+  :hover {
+    background-color: #c7d6e0;
+  } 
+} 
+
+&__title {
+  
+  font-family: Mulish;
+font-size: 24px;
+font-weight: 800;
+line-height: 25.1px;
+text-align: left;
+  color: #0487D9;
+
+}
 }
 
 
