@@ -95,6 +95,13 @@
     }
   }
 
+  &__btnWrapper {
+  //  căn góc bên phải
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+
   &__infoHeader {
     background-color: #f4f5f8;
     display: flex;
