@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sideBarProfile.scss";
 import { Link } from "react-router-dom";
+import PopupPropose from "../Popup/popup-propose";
+import PopupSuggest from "../Popup/popup-suggest";
 
 const SideBarProfile = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const handleJoinClick = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <div className="sideBarProfile">
       <figure className="sideBarProfile__bg">
@@ -85,7 +91,9 @@ const SideBarProfile = () => {
                         />
                       </svg>
                     </div>
-                    <div className="chat__popupText">Đề xuất tạo nhóm chat</div>
+                    <div className="chat__popupText" onClick={handleJoinClick}>
+                      Đề xuất tạo nhóm chat
+                    </div>
                   </div>
                 </div>
               </div>
