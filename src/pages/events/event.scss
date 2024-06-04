@@ -3,7 +3,8 @@
 
 .events {
   margin-top: 100px;
-
+width: 100%;
+padding : 0 100px;
   &__wrapper {
     padding: 0 32px;
 
@@ -23,9 +24,16 @@
 
   &__content {
     border-radius: 8px;
+    font-size: 14px;
     padding: 10px;
-    background-color: white;
+    font-family: Mulish;
+font-size: 16px;
+font-weight: 800;
+line-height: 20.08px;
+text-align: left;
+
   }
+  
 
   &__header {
     img {
@@ -205,14 +213,15 @@
   }
 
   &__item {
-    display: flex;
     align-items: center;
     margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: solid 1px $neu-06;
-
-    &:last-child {
-      border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F3F3F3;
+//    hover
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      background-color: aliceblue;
     }
   }
 
@@ -237,6 +246,17 @@
 
     img {
       margin-right: 8px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 20px;
+    margin-top: 32px;
+
+    @include sm {
+      grid-template-columns: 1fr;
     }
   }
 

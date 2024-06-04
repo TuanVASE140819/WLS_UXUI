@@ -82,6 +82,7 @@ function App() {
         <Route path="/inviteFriends" element={<InviteFriends />} />
         <Route path="/detail-content" element={<DetailContent />} />
         <Route path="/suggest-to-friends" element={<SuggestToFriends />} />
+        <Route path="/event-vote" element={<EventVote />} />
       </Routes>
       <Footer />
     </BrowserRouter>
