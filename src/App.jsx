@@ -40,6 +40,7 @@ import DetailContent from "./pages/detail-content/DetailContent";
 import SuggestToFriends from "./pages/SuggestToFriends/SuggestToFriends";
 import Events from "./pages/Events/Events";
 import Minigame from "./pages/miniGame/miniGame";
+import Quiz from "./pages/Quiz/quiz";
 function App() {
   // const { user } = useContext(Context);
 
@@ -85,6 +86,7 @@ function App() {
         <Route path="/suggest-to-friends" element={<SuggestToFriends />} />
         <Route path="/event-vote" element={<EventVote />} />
         <Route path="/miniGame" element={<Minigame />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
       <Footer />
     </BrowserRouter>
