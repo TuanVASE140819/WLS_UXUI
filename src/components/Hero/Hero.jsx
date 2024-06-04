@@ -31,66 +31,66 @@ const SlideSchool = () => {
 
   const [schools, setSchools] = useState([]);
 
-  useEffect(() => {
-    const fetchProvinces = async () => {
-      const response = await axios.get(
-        "https://vapi.vnappmob.com/api/province"
-      );
-      setProvinces(response.data.results);
-    };
-    fetchProvinces();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProvinces = async () => {
+  //     const response = await axios.get(
+  //       "https://vapi.vnappmob.com/api/province"
+  //     );
+  //     setProvinces(response.data.results);
+  //   };
+  //   fetchProvinces();
+  // }, []);
 
-  useEffect(() => {
-    const fetchDistricts = async () => {
-      const response = await axios.get(
-        `https://vapi.vnappmob.com/api/province/district/${selectedProvince}`
-      );
-      setDistricts(response.data.results);
-    };
-    if (selectedProvince) {
-      fetchDistricts();
-    }
-  }, [selectedProvince]);
+  // useEffect(() => {
+  //   const fetchDistricts = async () => {
+  //     const response = await axios.get(
+  //       `https://vapi.vnappmob.com/api/province/district/${selectedProvince}`
+  //     );
+  //     setDistricts(response.data.results);
+  //   };
+  //   if (selectedProvince) {
+  //     fetchDistricts();
+  //   }
+  // }, [selectedProvince]);
 
-  useEffect(() => {
-    const fetchWards = async () => {
-      const response = await axios.get(
-        `https://vapi.vnappmob.com/api/province/ward/${selectedDistrict}`
-      );
-      setWards(response.data.results);
-    };
-    if (selectedDistrict) {
-      fetchWards();
-    }
-  }, [selectedDistrict]);
+  // useEffect(() => {
+  //   const fetchWards = async () => {
+  //     const response = await axios.get(
+  //       `https://vapi.vnappmob.com/api/province/ward/${selectedDistrict}`
+  //     );
+  //     setWards(response.data.results);
+  //   };
+  //   if (selectedDistrict) {
+  //     fetchWards();
+  //   }
+  // }, [selectedDistrict]);
 
-  useEffect(() => {
-    const fetchSchools = async () => {
-      try {
-        const response = await getListSchool(
-          selectedProvinceName,
-          selectedDistrictName,
-          selectedWardName,
-          selectLevel,
-          searchName,
-          1,
-          10
-        );
-        setSchools(response.data);
-      } catch (error) {
-        console.error("Failed to fetch schools: ", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchSchools = async () => {
+  //     try {
+  //       const response = await getListSchool(
+  //         selectedProvinceName,
+  //         selectedDistrictName,
+  //         selectedWardName,
+  //         selectLevel,
+  //         searchName,
+  //         1,
+  //         10
+  //       );
+  //       setSchools(response.data);
+  //     } catch (error) {
+  //       console.error("Failed to fetch schools: ", error);
+  //     }
+  //   };
 
-    fetchSchools();
-  }, [
-    selectedProvince,
-    selectedDistrict,
-    selectedWard,
-    selectLevel,
-    searchName,
-  ]);
+  //   fetchSchools();
+  // }, [
+  //   selectedProvince,
+  //   selectedDistrict,
+  //   selectedWard,
+  //   selectLevel,
+  //   searchName,
+  // ]);
 
   const handleAddressChange = (type, value) => {
     let newAddress = { ...address };

@@ -12,7 +12,6 @@ import LogoTDT from "../../assets/logos/logo-tonducthang.png";
 import LogoIGC from "../../assets/logos/logo-igc.png";
 
 const SideBar = () => {
- 
   const [provinces, setProvinces] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [wards, setWards] = useState([]);
@@ -52,50 +51,43 @@ const SideBar = () => {
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
-  
 
+  // useEffect(() => {
+  //   const fetchProvinces = async () => {
+  //     const response = await axios.get(
+  //       "https://vapi.vnappmob.com/api/province"
+  //     );
+  //     setProvinces(response.data.results);
+  //   };
 
+  //   fetchProvinces();
+  // }, []);
 
-  useEffect(() => {
-    const fetchProvinces = async () => {
-      const response = await axios.get(
-        "https://vapi.vnappmob.com/api/province"
-      );
-      setProvinces(response.data.results); 
-    };
+  // useEffect(() => {
+  //   const fetchDistricts = async () => {
+  //     const response = await axios.get(
+  //       `https://vapi.vnappmob.com/api/province/district/${selectedProvince}`
+  //     );
+  //     setDistricts(response.data.results);
+  //   };
 
-    fetchProvinces();
-  }, []);
+  //   if (selectedProvince) {
+  //     fetchDistricts();
+  //   }
+  // }, [selectedProvince, selectedDistrict]);
 
-  useEffect(() => {
-    const fetchDistricts = async () => {
-      const response = await axios.get(
-        `https://vapi.vnappmob.com/api/province/district/${selectedProvince}`
-      );
-      setDistricts(response.data.results); 
-    };
+  // useEffect(() => {
+  //   const fetchWards = async () => {
+  //     const response = await axios.get(
+  //       `https://vapi.vnappmob.com/api/province/ward/${selectedDistrict}`
+  //     );
+  //     setWards(response.data.results);
+  //   };
 
-    if (selectedProvince) {
-      fetchDistricts();
-    }
-  }, [selectedProvince, selectedDistrict]);
-
-  useEffect(() => {
-    const fetchWards = async () => {
-      const response = await axios.get(
-        `https://vapi.vnappmob.com/api/province/ward/${selectedDistrict}`
-      );
-      setWards(response.data.results);
-    };
-
-    if (selectedDistrict) {
-      fetchWards();
-    }
-  }, [selectedDistrict, selectedWard]);
-
-
-
-
+  //   if (selectedDistrict) {
+  //     fetchWards();
+  //   }
+  // }, [selectedDistrict, selectedWard]);
 
   // const handleAddressChange = (type, value) => {
   //   let newAddress = { ...address };
@@ -138,7 +130,6 @@ const SideBar = () => {
   //   setAddress(newAddress);
   // };
 
-
   // useEffect(() => {
   //   const fetchSchools = async () => {
   //     try {
@@ -151,7 +142,7 @@ const SideBar = () => {
   //         1,
   //         10
   //       );
-       
+
   //     } catch (error) {
   //       console.error("Failed to fetch schools: ", error);
   //     }
@@ -167,23 +158,21 @@ const SideBar = () => {
         (province) => province.province_id === selectedProvince
       );
       if (province) {
-        setSelectedProvinceName(province.province_name
-          .replace("Tỉnh ", "")
-          .replace("Thành phố ", "")
+        setSelectedProvinceName(
+          province.province_name.replace("Tỉnh ", "").replace("Thành phố ", "")
         );
       }
     }
   }, [selectedProvince]);
   // nhận giá trị DistrictName từ selectedDistrict
   useEffect(() => {
-    if (selectedDistrict) { 
+    if (selectedDistrict) {
       const district = districts.find(
         (district) => district.district_id === selectedDistrict
       );
       if (district) {
-        setSelectedDistrictName(district.district_name
-          .replace("Quận ", "")
-          .replace("Huyện ", "")
+        setSelectedDistrictName(
+          district.district_name.replace("Quận ", "").replace("Huyện ", "")
         );
       }
     }
@@ -194,9 +183,8 @@ const SideBar = () => {
     if (selectedWard) {
       const ward = wards.find((ward) => ward.ward_id === selectedWard);
       if (ward) {
-        setSelectedWardName(ward.ward_name
-          .replace("Phường ", "")
-          .replace("Xã ", "")
+        setSelectedWardName(
+          ward.ward_name.replace("Phường ", "").replace("Xã ", "")
         );
       }
     }
@@ -206,7 +194,7 @@ const SideBar = () => {
     event.preventDefault();
 
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append("file", file);
     const response = await getSchool(
       selectedProvinceName || "",
       selectedDistrictName || "",
@@ -216,8 +204,8 @@ const SideBar = () => {
       1,
       10
     );
-    
-   console.log("response", response);
+
+    console.log("response", response);
   };
 
   console.log("Wards: ", wards);
