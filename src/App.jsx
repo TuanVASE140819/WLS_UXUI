@@ -37,6 +37,7 @@ import ConnectFriends from "./pages/connect-friends/Connect-friends";
 import VotingCategory from "./pages/voting-category/voting-category";
 import InviteFriends from "./components/inviteFriends/invitefriends";
 import DetailContent from "./pages/detail-content/DetailContent";
+import SuggestToFriends from "./pages/SuggestToFriends/SuggestToFriends";
 function App() {
   // const { user } = useContext(Context);
 
@@ -79,6 +80,7 @@ function App() {
         <Route path="/voting-category" element={<VotingCategory />} />
         <Route path="/inviteFriends" element={<InviteFriends />} />
         <Route path="/detail-content" element={<DetailContent />} />
+        <Route path="/suggest-to-friends" element={<SuggestToFriends />} />
       </Routes>
       <Footer />
     </BrowserRouter>

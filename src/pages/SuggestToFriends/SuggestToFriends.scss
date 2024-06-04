@@ -1,0 +1,132 @@
+// variables
+@import "../../styles/variables.scss";
+
+.suggestToFriends {
+  width: 100%;
+  margin-top: 100px;
+  padding:0 60px ;
+  padding-bottom: 120px;
+
+  @include sm {
+    margin-top: 20px;
+    padding:0 0 ;
+    padding-bottom: 120px;
+  }
+  &__wrapper {
+    padding: 0 32px;
+
+    @include sm {
+      padding: 0 16px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    width: 100%;
+   
+    @include sm {
+      margin-top: 16px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 20px;
+    margin-top: 32px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  &__item {
+    border: solid 1px $neu-06;
+    border-radius: 8px;
+    padding: 8px;
+    // width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // hover effect
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: aliceblue;
+  }
+  }
+
+  &__image {
+    margin-right: 8px;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  &__itemContent {
+    width: 100%;
+  }
+
+   &__titleHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #F4F5F8;
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  &__school {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+  
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    // background-color: $m-01;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+}

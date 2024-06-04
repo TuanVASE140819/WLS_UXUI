@@ -769,7 +769,7 @@ const SideBar = () => {
 
         <section className="sideBar__makeFriends">
           <h4 className="sideBar__makeFriendsHeader">
-            <Link to="/information?filter=chat"> Gợi ý bạn bè</Link>
+            <Link to="/suggest-to-friends"> Gợi ý bạn bè</Link>
           </h4>
           <div className="sideBar__makeFriendsListItemHeader">
             <div className="sideBar__makeFriendsListItemUser">
