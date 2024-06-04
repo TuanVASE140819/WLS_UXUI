@@ -1,7 +1,7 @@
 import React from "react";
 import SideBarEvents from "../../components/sideBarEvents/SideBarEvents";
 import Ads from "../../components/ads/Ads";
-import "./event.scss";
+import "./event-vote.scss";
 import { Helmet } from "react-helmet";
 
 const EventVote = () => {
@@ -24,39 +24,39 @@ const EventVote = () => {
         />
 
         <SideBarEvents />
-        <div className="events">
-          <div className="events__wrapper">
-            <div className="events__bg">
-              <div className="events__content">
-                <div className="events__header">
+        <div className="eventVote">
+          <div className="eventVote__wrapper">
+            <div className="eventVote__bg">
+              <div className="eventVote__content">
+                <div className="eventVote__header">
                   <img
                     src={require("../../assets/images/black-pink.png")}
                     alt=""
                   />
                 </div>
-                <div className="events__gridUsers">
-                  <figure className="events__user">
+                <div className="eventVote__gridUsers">
+                  <figure className="eventVote__user">
                     <img
                       src={require("../../assets/images/user-lissa.png")}
                       alt=""
                     />
                     Lissa
                   </figure>
-                  <figure className="events__user">
+                  <figure className="eventVote__user">
                     <img
                       src={require("../../assets/images/user-jisso.png")}
                       alt=""
                     />
                     Jisso
                   </figure>
-                  <figure className="events__user">
+                  <figure className="eventVote__user">
                     <img
                       src={require("../../assets/images/user-jenni.png")}
                       alt=""
                     />
                     Jenni
                   </figure>
-                  <figure className="events__user">
+                  <figure className="eventVote__user">
                     <img
                       src={require("../../assets/images/user-rose.png")}
                       alt=""
@@ -64,11 +64,11 @@ const EventVote = () => {
                     Rose
                   </figure>
                 </div>
-                <div className="events__title">
+                <div className="eventVote__title">
                   Lời Mời Đặc Biệt cho Blackpink: Chọn 1 Trong 3 Nước Để Biểu
                   Diễn
                 </div>
-                <p className="events__desc">
+                <p className="eventVote__desc">
                   Chúng tôi, đại diện cho một số quốc gia đam mê âm nhạc trên
                   thế giới, đang rất háo hức gửi đến các bạn một lời mời đặc
                   biệt. Trải qua những thành công ngoạn mục và sức ảnh hưởng
@@ -76,50 +76,50 @@ const EventVote = () => {
                   toàn cầu trong ngành công nghiệp giải trí
                 </p>
               </div>
-              <div className="events__bottom">
-                <div className="events__countDown">
-                  <div className="events__timer">
-                    <div className="events__number">10</div>
+              <div className="eventVote__bottom">
+                <div className="eventVote__countDown">
+                  <div className="eventVote__timer">
+                    <div className="eventVote__number">10</div>
                     <p>Ngày</p>
                   </div>
-                  <div className="events__timer">
-                    <div className="events__number">01</div>
+                  <div className="eventVote__timer">
+                    <div className="eventVote__number">01</div>
                     <p>Giờ</p>
                   </div>
-                  <div className="events__timer">
-                    <div className="events__number">34</div>
+                  <div className="eventVote__timer">
+                    <div className="eventVote__number">34</div>
                     <p>Phút</p>
                   </div>
-                  <div className="events__timer">
-                    <div className="events__number">04</div>
+                  <div className="eventVote__timer">
+                    <div className="eventVote__number">04</div>
                     <p>Giây</p>
                   </div>
                 </div>
-                <div className="events__btn">Bình chọn</div>
+                <div className="eventVote__btn">Bình chọn</div>
               </div>
             </div>
-            <div className="events__ratings">
-              <div className="events__ratingsTitle">
+            <div className="eventVote__ratings">
+              <div className="eventVote__ratingsTitle">
                 Sức hút của Blackpink
                 <span>thông qua cuộc tham gia các nước thời điểm hiện tại</span>
               </div>
-              <div className="events__ratingsHeader">
+              <div className="eventVote__ratingsHeader">
                 <p>Stt</p>
                 <p>Quốc gia</p>
                 <p>Lượt bình chọn</p>
               </div>
 
-              <div className="events__lists">
-                <div className="events__item">
-                  <div className="events__itemNumber">1</div>
-                  <div className="events__logoText">
+              <div className="eventVote__lists">
+                <div className="eventVote__item">
+                  <div className="eventVote__itemNumber">1</div>
+                  <div className="eventVote__logoText">
                     <img
                       src={require("../../assets/logos/logo-vn.png")}
                       alt=""
                     />
                     Việt Nam
                   </div>
-                  <div className="events__asideNumber">
+                  <div className="eventVote__asideNumber">
                     1.405.1020
                     <span>
                       14%
@@ -138,16 +138,16 @@ const EventVote = () => {
                     </span>
                   </div>
                 </div>
-                <div className="events__item">
-                  <div className="events__itemNumber">2</div>
-                  <div className="events__logoText">
+                <div className="eventVote__item">
+                  <div className="eventVote__itemNumber">2</div>
+                  <div className="eventVote__logoText">
                     <img
                       src={require("../../assets/logos/logo-cp.png")}
                       alt=""
                     />
                     Campuchia
                   </div>
-                  <div className="events__asideNumber">
+                  <div className="eventVote__asideNumber">
                     1.405.1020
                     <span>
                       14%
@@ -166,16 +166,16 @@ const EventVote = () => {
                     </span>
                   </div>
                 </div>
-                <div className="events__item">
-                  <div className="events__itemNumber">3</div>
-                  <div className="events__logoText">
+                <div className="eventVote__item">
+                  <div className="eventVote__itemNumber">3</div>
+                  <div className="eventVote__logoText">
                     <img
                       src={require("../../assets/logos/logo-tl.png")}
                       alt=""
                     />
                     Thái Lan
                   </div>
-                  <div className="events__asideNumber">
+                  <div className="eventVote__asideNumber">
                     1.405.1020
                     <span>
                       14%
@@ -194,16 +194,16 @@ const EventVote = () => {
                     </span>
                   </div>
                 </div>
-                <div className="events__item">
-                  <div className="events__itemNumber">4</div>
-                  <div className="events__logoText">
+                <div className="eventVote__item">
+                  <div className="eventVote__itemNumber">4</div>
+                  <div className="eventVote__logoText">
                     <img
                       src={require("../../assets/logos/logo-cn.png")}
                       alt=""
                     />
                     Trung Quốc
                   </div>
-                  <div className="events__asideNumber">
+                  <div className="eventVote__asideNumber">
                     1.405.1020
                     <span>
                       14%
@@ -222,16 +222,16 @@ const EventVote = () => {
                     </span>
                   </div>
                 </div>
-                <div className="events__item">
-                  <div className="events__itemNumber">5</div>
-                  <div className="events__logoText">
+                <div className="eventVote__item">
+                  <div className="eventVote__itemNumber">5</div>
+                  <div className="eventVote__logoText">
                     <img
                       src={require("../../assets/logos/logo-lao.png")}
                       alt=""
                     />
                     Lào
                   </div>
-                  <div className="events__asideNumber">
+                  <div className="eventVote__asideNumber">
                     1.405.1020
                     <span>
                       14%
@@ -250,16 +250,16 @@ const EventVote = () => {
                     </span>
                   </div>
                 </div>
-                <div className="events__item">
-                  <div className="events__itemNumber">6</div>
-                  <div className="events__logoText">
+                <div className="eventVote__item">
+                  <div className="eventVote__itemNumber">6</div>
+                  <div className="eventVote__logoText">
                     <img
                       src={require("../../assets/logos/logo-philip.png")}
                       alt=""
                     />
                     Philiphin
                   </div>
-                  <div className="events__asideNumber">
+                  <div className="eventVote__asideNumber">
                     1.405.1020
                     <span>
                       14%

@@ -14,7 +14,7 @@ import Contacts from "./pages/contacts/Contacts";
 
 import Post from "./pages/post/Post";
 import Search from "./pages/search/Search";
-import Events from "./pages/events/Events";
+import EventVote from "./pages/event-vote/event-vote";
 import TopSchool from "./pages/topSchool/TopSchool";
 import SearchResults from "./pages/searchResults/SearchResults";
 import UserInfo from "./pages/userInfo/UserInfo";
@@ -38,6 +38,7 @@ import VotingCategory from "./pages/voting-category/voting-category";
 import InviteFriends from "./components/inviteFriends/invitefriends";
 import DetailContent from "./pages/detail-content/DetailContent";
 import SuggestToFriends from "./pages/SuggestToFriends/SuggestToFriends";
+import Events from "./pages/Events/Events";
 function App() {
   // const { user } = useContext(Context);
 
