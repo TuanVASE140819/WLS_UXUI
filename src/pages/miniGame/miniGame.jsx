@@ -3,24 +3,35 @@ import "./miniGame.scss";
 
 const Minigame = () => {
   return (
-    <section className="minigame">
-      <h1>Minigame</h1>
-      <div className="rules">
-        <h2>Chính sách điểm thưởng</h2>
-        <p>Chính sách đổi quà</p>
-        <h2>Trắc nghiệm</h2>
-        <p>Thời gian: 15:00</p>
-        <p>Lượt chơi: 2 lượt</p>
+    <>
+      <div className="MinigamePage">
+        <div className="SidbarGame"></div>
+        <section className="Minigame">
+          <img src={require("../../assets/images/quiz.png")} alt="minigame" />
+          <h3 className="Minigame__title">Làm bài kiểm tra nhận ngay điểm</h3>
+          <div className="Minigame__rule">
+            <div className="Minigame__time">
+              <div className="Minigame__time--content">
+                <div className="Minigame__title--content">Thời gian </div>
+              </div>
+              <div className="Minigame__time--content">
+                <h4>10 phút</h4>
+              </div>
+            </div>
+            <div className="Minigame__point">
+              <div className="Minigame__title--content">Lượt chơi</div>
+              <div className="Minigame__point--content">2 Lượt</div>
+            </div>
+          </div>
+          <div className="Minigame__btn">
+            <button className="Minigame__btn--choose">Kiểm tra 15 phút</button>
+            <button className="Minigame__btn--choose">1 tiết</button>
+            <button className="Minigame__btn--choose">Học kì</button>
+          </div>
+        </section>
+        <div className="SidbarRole"></div>
       </div>
-      <div className="quiz">
-        <h2>Làm bài kiểm tra nhận ngay điểm</h2>
-        <ul>
-          <li>Kiểm tra 15 phút</li>
-          <li>1 tiết</li>
-          <li>Học kì</li>
-        </ul>
-      </div>
-    </section>
+    </>
   );
 };
 
