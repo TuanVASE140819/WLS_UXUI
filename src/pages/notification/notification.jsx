@@ -3,6 +3,7 @@ import AdsGroup from "../../components/adsGroup/Ads";
 import SideBar from "../../components/sideBar/SideBar";
 import "./notification.scss";
 import { Link } from "react-router-dom";
+import Ads from "../../components/ads/Ads";
 
 const notification = [
   {
@@ -144,7 +145,7 @@ const Notification = () => {
               ))}
           </div>
         </div>
-        <AdsGroup />
+        <Ads />
       </div>
     </>
   );
