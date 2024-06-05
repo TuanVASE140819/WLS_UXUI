@@ -1,9 +1,11 @@
-
-.quiz {
+// variables
+@import "../../styles/variables.scss";
+.examResults {
     margin-top: 100px;
     width: 100%;
+    height: 100vh;
     &__wrapper {
-        padding : 0 100px;
+        // padding : 0 100px;
         display: flex;
         flex-direction: column;
     }
@@ -25,24 +27,6 @@
      
     }
 
-    &__title_point--content {
-       font-family: Mulish;
-        font-size: 48px;
-        font-weight: 900;
-        line-height: 60.24px;
-        text-align: left;
-        padding: 0 10px;
-    }
-
-    &__title--content {
-        font-family: Mulish;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17.57px;
-        text-align: left;
-       color: #8E8E8E;
-       padding: 0 2% ;
-    }
     &__submit {
         display: block;
         margin: 0 auto;
@@ -136,48 +120,7 @@ color:#666666;
         line-height: 25.1px;
         text-align: left;
         color: #0487D9;
+;
     }   
-
-    &__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 100px;
-    }
       
-}
-
-.SidbarRole {
-    // height: 100vh;
-    width: 20%;
-    border-left: 1px solid #D1D1D1;
-
-    &__wrapper {
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
-        padding: 20px 20px;
-        
-        font-family: Mulish;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 25.1px;
-        text-align: left;
-    }
-
-    &__item {
-        margin-top: 20px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-
-        svg {
-            margin-right: 10px;
-        }
-        &:hover {
-            color: #F26F21;
-        }
-    }
 }

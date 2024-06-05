@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./quiz.scss";
+import { Link } from "react-router-dom";
 const Quiz = () => {
   const questions = [
     {
@@ -151,15 +152,17 @@ const Quiz = () => {
             </div>
           ))}
 
-          {submitted && (
+          {/* {submitted && (
             <h2>
               Your score: {score}/{questions.length}
             </h2>
-          )}
+          )} */}
         </div>
-        <button className="quiz__submit" onClick={handleSubmit}>
-          Hoàn thành
-        </button>
+        <Link to="/exam-results">
+          <button className="quiz__submit" onClick={handleSubmit}>
+            Hoàn thành
+          </button>
+        </Link>
       </div>
       <div className="SidbarRole"></div>
     </div>
