@@ -41,7 +41,7 @@ import SuggestToFriends from "./pages/SuggestToFriends/SuggestToFriends";
 
 import Minigame from "./pages/miniGame/miniGame";
 import Quiz from "./pages/Quiz/quiz";
-import Events from "./pages/Events/Events";
+import Events from "./pages/EventAll/Events";
 function App() {
   // const { user } = useContext(Context);
 
