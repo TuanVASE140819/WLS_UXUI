@@ -1,0 +1,82 @@
+// variables
+@import "../../styles/variables.scss";
+
+.notification {
+  margin-top: 100px;
+  width: 100%;
+  padding : 0 100px;
+
+  &__wrapper {
+    
+    padding: 20px 40px;
+    background-color:#FAFAFA;
+    border-radius: 20px;
+   
+  }
+
+  &__filter-button {
+   
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #8B8B8B;
+    font-weight: 600;
+    &.active {
+      color: #0487D9;
+    }
+  }
+
+  &__time-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &__content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    // border-bottom: 1px solid $border-color;
+    background-color: white;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  &__avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__info {
+    display: flex;
+    padding: 0 20px;
+   
+  }
+
+  &__type {
+    margin-right: 20px;
+  }
+
+  &__content {
+    font-size: 1.2rem;
+  }
+
+}
+
+  .unread {
+    color: #0487D9;
+  }
