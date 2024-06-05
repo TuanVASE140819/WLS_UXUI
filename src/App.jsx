@@ -38,7 +38,7 @@ import VotingCategory from "./pages/voting-category/voting-category";
 import InviteFriends from "./components/inviteFriends/invitefriends";
 import DetailContent from "./pages/detail-content/DetailContent";
 import SuggestToFriends from "./pages/SuggestToFriends/SuggestToFriends";
-import Events from "./pages/Events/Events";
+// import Events from "./pages/Events/Events";
 import Minigame from "./pages/miniGame/miniGame";
 import Quiz from "./pages/Quiz/quiz";
 function App() {
@@ -68,7 +68,7 @@ function App() {
         <Route path="/information" element={<InforUser />} />
         <Route path="/search" element={<Search />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/events" element={<Events />} />
+        {/* <Route path="/events" element={<Events />} /> */}
         <Route path="/topSchool" element={<TopSchool />} />
         <Route path="/searchResults" element={<SearchResults />} />
         <Route path="/userInfo" element={<UserInfo />} />
