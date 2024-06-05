@@ -284,22 +284,26 @@ const MainNav = () => {
         </div>
         <div className="mainNav__aside">
           <>
-            <i className="mainNav__message">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#3D92D1"
-                  fillRule="evenodd"
-                  d="M4.848 2.771a49.319 49.319 0 0114.304-.001c1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97-1.154.17-2.313.297-3.476.383a.389.389 0 00-.297.17l-2.755 4.133a.751.751 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.895 48.895 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 110 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 100 1.5H12a.75.75 0 100-1.5H7.5z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              <div className="popupMessage">
+            <Link
+              to="/information?filter=chat"
+              // className="mainNav__notification"
+            >
+              <i className="mainNav__message">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#3D92D1"
+                    fillRule="evenodd"
+                    d="M4.848 2.771a49.319 49.319 0 0114.304-.001c1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97-1.154.17-2.313.297-3.476.383a.389.389 0 00-.297.17l-2.755 4.133a.751.751 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.895 48.895 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 110 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 100 1.5H12a.75.75 0 100-1.5H7.5z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+                {/* <div className="popupMessage">
                 <div className="popupMessage__wrapper">
                   <div className="popupMessage__top">
                     <div className="popupMessage__left">
@@ -632,8 +636,10 @@ const MainNav = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </i>
+              </div> */}
+              </i>
+            </Link>
+
             <i className="mainNav__notification">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

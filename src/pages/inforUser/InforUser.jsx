@@ -161,7 +161,12 @@ const InforUser = () => {
                   />
                 </svg>
               </div>
-              <button className="sideBarUser__recharge">Nạp</button>
+              <Link
+                to="/information?filter=transaction"
+                onClick={() => setSelectedInterface("payment")}
+              >
+                <button className="sideBarUser__recharge">Nạp</button>
+              </Link>
             </div>
 
             <div className="inforNav__links">

@@ -763,7 +763,7 @@ const SideBar = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -785,7 +785,7 @@ const SideBar = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -807,7 +807,7 @@ const SideBar = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -829,7 +829,7 @@ const SideBar = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -851,7 +851,7 @@ const SideBar = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -876,117 +876,123 @@ const SideBar = () => {
             <Link to="/connect-friends"> Góc kết nối bạn cũ</Link>
           </h4>
           <div className="sideBar__relatedPostsLists">
-            <div className="sideBar__relatedPostsListItem">
-              <div className="sideBar__relatedPostsListItemHeader">
-                <div className="sideBar__relatedPostsListItemUser">
-                  <img src={require("../../assets/images/user.png")} alt="" />
-                  <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/connect-friends">
+            <Link to="/connect-friends">
+              <div className="sideBar__relatedPostsListItem">
+                <div className="sideBar__relatedPostsListItemHeader">
+                  <div className="sideBar__relatedPostsListItemUser">
+                    <img src={require("../../assets/images/user.png")} alt="" />
+                    <div className="sideBar__relatedPostsListItemUserText">
                       <h4>Hồ Lê Bảo Hân</h4>
-                    </Link>
-                    <p>1 phút trước</p>
+
+                      <p>1 phút trước</p>
+                    </div>
                   </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    fill="none"
+                    viewBox="0 0 34 34"
+                  >
+                    <path
+                      stroke="#6B7280"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M12.219 17a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.531m5.843 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0H17m5.844 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.532m7.438 0c0 6.454-5.71 11.688-12.75 11.688-1.222.001-2.44-.16-3.62-.478a8.46 8.46 0 01-5.716 1.497 8.432 8.432 0 01-.671-.092 6.347 6.347 0 001.385-2.868c.128-.648-.188-1.277-.661-1.737C5.567 22.919 4.25 20.1 4.25 17 4.25 10.546 9.96 5.312 17 5.312S29.75 10.546 29.75 17z"
+                    ></path>
+                  </svg>
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
-                  fill="none"
-                  viewBox="0 0 34 34"
-                >
-                  <path
-                    stroke="#6B7280"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M12.219 17a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.531m5.843 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0H17m5.844 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.532m7.438 0c0 6.454-5.71 11.688-12.75 11.688-1.222.001-2.44-.16-3.62-.478a8.46 8.46 0 01-5.716 1.497 8.432 8.432 0 01-.671-.092 6.347 6.347 0 001.385-2.868c.128-.648-.188-1.277-.661-1.737C5.567 22.919 4.25 20.1 4.25 17 4.25 10.546 9.96 5.312 17 5.312S29.75 10.546 29.75 17z"
-                  ></path>
-                </svg>
+                <div className="sideBar__relatedPostsText">
+                  <Link to="/">
+                    <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
+                  </Link>
+                  <p>
+                    Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin
+                    hãy chia sẻ để chúng tôi có thể tìm lại nhau. Một lời
+                    nhắn...
+                  </p>
+                </div>
               </div>
-              <div className="sideBar__relatedPostsText">
-                <Link to="/">
-                  <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
-                </Link>
-                <p>
-                  Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin hãy
-                  chia sẻ để chúng tôi có thể tìm lại nhau. Một lời nhắn...
-                </p>
-              </div>
-            </div>
-            <div className="sideBar__relatedPostsListItem">
-              <div className="sideBar__relatedPostsListItemHeader">
-                <div className="sideBar__relatedPostsListItemUser">
-                  <img src={require("../../assets/images/user.png")} alt="" />
-                  <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/">
+            </Link>
+            <Link to="/connect-friends">
+              <div className="sideBar__relatedPostsListItem">
+                <div className="sideBar__relatedPostsListItemHeader">
+                  <div className="sideBar__relatedPostsListItemUser">
+                    <img src={require("../../assets/images/user.png")} alt="" />
+                    <div className="sideBar__relatedPostsListItemUserText">
                       <h4>Hồ Lê Bảo Hân</h4>
-                    </Link>
-                    <p>1 phút trước</p>
+
+                      <p>1 phút trước</p>
+                    </div>
                   </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    fill="none"
+                    viewBox="0 0 34 34"
+                  >
+                    <path
+                      stroke="#6B7280"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M12.219 17a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.531m5.843 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0H17m5.844 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.532m7.438 0c0 6.454-5.71 11.688-12.75 11.688-1.222.001-2.44-.16-3.62-.478a8.46 8.46 0 01-5.716 1.497 8.432 8.432 0 01-.671-.092 6.347 6.347 0 001.385-2.868c.128-.648-.188-1.277-.661-1.737C5.567 22.919 4.25 20.1 4.25 17 4.25 10.546 9.96 5.312 17 5.312S29.75 10.546 29.75 17z"
+                    ></path>
+                  </svg>
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
-                  fill="none"
-                  viewBox="0 0 34 34"
-                >
-                  <path
-                    stroke="#6B7280"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M12.219 17a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.531m5.843 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0H17m5.844 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.532m7.438 0c0 6.454-5.71 11.688-12.75 11.688-1.222.001-2.44-.16-3.62-.478a8.46 8.46 0 01-5.716 1.497 8.432 8.432 0 01-.671-.092 6.347 6.347 0 001.385-2.868c.128-.648-.188-1.277-.661-1.737C5.567 22.919 4.25 20.1 4.25 17 4.25 10.546 9.96 5.312 17 5.312S29.75 10.546 29.75 17z"
-                  ></path>
-                </svg>
+                <div className="sideBar__relatedPostsText">
+                  <Link to="/">
+                    <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
+                  </Link>
+                  <p>
+                    Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin
+                    hãy chia sẻ để chúng tôi có thể tìm lại nhau. Một lời
+                    nhắn...
+                  </p>
+                </div>
               </div>
-              <div className="sideBar__relatedPostsText">
-                <Link to="/connect-friends">
-                  <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
-                </Link>
-                <p>
-                  Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin hãy
-                  chia sẻ để chúng tôi có thể tìm lại nhau. Một lời nhắn...
-                </p>
-              </div>
-            </div>
-            <div className="sideBar__relatedPostsListItem">
-              <div className="sideBar__relatedPostsListItemHeader">
-                <div className="sideBar__relatedPostsListItemUser">
-                  <img src={require("../../assets/images/user.png")} alt="" />
-                  <div className="sideBar__relatedPostsListItemUserText">
-                    <Link to="/connect-friends">
+            </Link>
+            <Link to="/connect-friends">
+              <div className="sideBar__relatedPostsListItem">
+                <div className="sideBar__relatedPostsListItemHeader">
+                  <div className="sideBar__relatedPostsListItemUser">
+                    <img src={require("../../assets/images/user.png")} alt="" />
+                    <div className="sideBar__relatedPostsListItemUserText">
                       <h4>Hồ Lê Bảo Hân</h4>
-                    </Link>
-                    <p>1 phút trước</p>
+
+                      <p>1 phút trước</p>
+                    </div>
                   </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    fill="none"
+                    viewBox="0 0 34 34"
+                  >
+                    <path
+                      stroke="#6B7280"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M12.219 17a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.531m5.843 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0H17m5.844 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.532m7.438 0c0 6.454-5.71 11.688-12.75 11.688-1.222.001-2.44-.16-3.62-.478a8.46 8.46 0 01-5.716 1.497 8.432 8.432 0 01-.671-.092 6.347 6.347 0 001.385-2.868c.128-.648-.188-1.277-.661-1.737C5.567 22.919 4.25 20.1 4.25 17 4.25 10.546 9.96 5.312 17 5.312S29.75 10.546 29.75 17z"
+                    ></path>
+                  </svg>
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
-                  fill="none"
-                  viewBox="0 0 34 34"
-                >
-                  <path
-                    stroke="#6B7280"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M12.219 17a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.531m5.843 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0H17m5.844 0a.532.532 0 11-1.063 0 .532.532 0 011.063 0zm0 0h-.532m7.438 0c0 6.454-5.71 11.688-12.75 11.688-1.222.001-2.44-.16-3.62-.478a8.46 8.46 0 01-5.716 1.497 8.432 8.432 0 01-.671-.092 6.347 6.347 0 001.385-2.868c.128-.648-.188-1.277-.661-1.737C5.567 22.919 4.25 20.1 4.25 17 4.25 10.546 9.96 5.312 17 5.312S29.75 10.546 29.75 17z"
-                  ></path>
-                </svg>
+                <div className="sideBar__relatedPostsText">
+                  <Link to="/">
+                    <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
+                  </Link>
+                  <p>
+                    Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin
+                    hãy chia sẻ để chúng tôi có thể tìm lại nhau. Một lời
+                    nhắn...
+                  </p>
+                </div>
               </div>
-              <div className="sideBar__relatedPostsText">
-                <Link to="/">
-                  <h4>"Hành Trình Tìm Bạn Cũ Tại Trường FPT"</h4>
-                </Link>
-                <p>
-                  Nếu ai đó có thông tin về Minh hoặc biết anh ấy ở đâu, xin hãy
-                  chia sẻ để chúng tôi có thể tìm lại nhau. Một lời nhắn...
-                </p>
-              </div>
-            </div>
+            </Link>
           </div>
         </section>
       </div>

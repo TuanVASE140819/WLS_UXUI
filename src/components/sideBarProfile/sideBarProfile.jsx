@@ -161,7 +161,7 @@ const SideBarProfile = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -183,7 +183,7 @@ const SideBarProfile = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -205,7 +205,7 @@ const SideBarProfile = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -227,7 +227,7 @@ const SideBarProfile = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>
@@ -249,7 +249,7 @@ const SideBarProfile = () => {
             <div className="sideBar__makeFriendsListItemUser">
               <img src={require("../../assets/images/user2.png")} alt="" />
               <div className="sideBar__relatedPostsListItemUserText">
-                <Link to="/">
+                <Link to="/suggest-to-friends">
                   <h4>Minh Châu</h4>
                 </Link>
               </div>

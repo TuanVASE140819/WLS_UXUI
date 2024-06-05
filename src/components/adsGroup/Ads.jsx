@@ -15,7 +15,7 @@ const Ads = () => {
             />
           </figure>
           <div className="sideBarMessageRight__text">
-            <Link to="/">
+            <Link to="/information?filter=chat">
               <h4>Hội họa</h4>
             </Link>
 
@@ -30,7 +30,7 @@ const Ads = () => {
             />
           </figure>
           <div className="sideBarMessageRight__text">
-            <Link to="/">
+            <Link to="/information?filter=chat">
               <h4>Thanh lí bàn ghế nhà trường</h4>
             </Link>
             <p>Niên khóa K23</p>
@@ -44,7 +44,7 @@ const Ads = () => {
             />
           </figure>
           <div className="sideBarMessageRight__text">
-            <Link to="/">
+            <Link to="/information?filter=chat">
               <h4>Tiếng Trung easy</h4>
             </Link>
             <p>Niên khóa K23</p>
@@ -58,7 +58,7 @@ const Ads = () => {
             />
           </figure>
           <div className="sideBarMessageRight__text">
-            <Link to="/">
+            <Link to="/information?filter=chat">
               <h4>Yêu Trường Mến Bạn</h4>
             </Link>
             <p>Niên khóa K23</p>
@@ -94,7 +94,7 @@ const Ads = () => {
             </svg>
             Tạo nhóm chat
           </div> */}
-        <Link to="/">
+        <Link to="/information?filter=chat">
           <h4 className="sideBarMessageRight__more">Xem thêm</h4>
         </Link>
       </div>

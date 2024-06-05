@@ -1,7 +1,158 @@
 
 .quiz {
     margin-top: 100px;
+    width: 100%;
     &__wrapper {
         padding : 0 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        margin: 20px 100px; 
+        background-color: #FEFCEF;
+    }
+
+    &__header--content{
+        margin: 20px 20px;
+    }
+    &__header--info{
+
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-top : 10px;
+     
+    }
+
+    &__submit {
+        display: block;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #0487D9;
+        border-radius: 40px;
+        cursor: pointer;
+        color: white;
+        font-family: Mulish;
+        margin-bottom: 20px;       
+    }
+    &__header--content {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    // __teacher flex 30% 70%
+    &__teacher {
+        display: flex;
+        flex: 30%;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+       
+    }
+
+    &__point {
+        height: 150px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    &__title--point {
+    font-family: Mulish;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 15.06px;
+    text-align: left;
+    color:  #F26F21;
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #F7F7F7;
+
+    }
+
+    &__title {
+        font-family: Mulish;
+font-size: 20px;
+font-weight: 700;
+line-height: 25.1px;
+text-align: left;
+color:#666666;
+    }
+
+    &__comment {
+        flex : 70%;
+       height: 150px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+
+    }
+
+    &__title--comment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Mulish;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 15.06px;
+        text-align: center;
+        color: #F26F21;
+        margin: 10px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        background-color: #F7F7F7;
+    }
+
+    span {
+        font-family: Mulish;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25.1px;
+        text-align: left;
+        color: #0487D9;
+;
+    }   
+      
+}
+
+.SidbarRole {
+    // height: 100vh;
+    width: 20%;
+    border-left: 1px solid #D1D1D1;
+
+    &__wrapper {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 20px 20px;
+        
+        font-family: Mulish;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25.1px;
+        text-align: left;
+    }
+
+    &__item {
+        margin-top: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: #F26F21;
+        }
     }
 }

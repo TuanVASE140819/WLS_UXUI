@@ -98,7 +98,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -113,7 +113,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -128,7 +128,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -143,7 +143,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -246,7 +246,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -261,7 +261,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -276,7 +276,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>
@@ -291,7 +291,7 @@ const SchoolFollow = () => {
             <div>Rmit và những con bot</div>
             <div className="schools__links">
               <span>
-                <Link to="/schoolDetail" className="schools__link">
+                <Link to="/forum-detail" className="schools__link">
                   Xem nhóm
                 </Link>
               </span>

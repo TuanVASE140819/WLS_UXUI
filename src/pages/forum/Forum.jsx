@@ -45,33 +45,35 @@ const Forum = () => {
                 </button>
               </div>
             </div>
-            <div className="schoolDetail__card">
-              <figure className="schoolDetail__image">
-                <img src={require("../../assets/images/card-2.png")} alt="" />
-              </figure>
-              <h4>
-                Khoa Quan hệ công chúng - Hướng dẫn PR đẳng cấp như Thái Công
-              </h4>
-              <div className="schoolDetail__cardBottom">
-                <div>
-                  <img
-                    src={require("../../assets/logos/logo-fpt.png")}
-                    alt=""
-                  />
-                  <div className="schoolDetail__cardText">
-                    <h5>FPT</h5>
-                    <p>Niên khóa K23</p>
+            <Link to="/forum-detail">
+              <div className="schoolDetail__card">
+                <figure className="schoolDetail__image">
+                  <img src={require("../../assets/images/card-2.png")} alt="" />
+                </figure>
+                <h4>
+                  Khoa Quan hệ công chúng - Hướng dẫn PR đẳng cấp như Thái Công
+                </h4>
+                <div className="schoolDetail__cardBottom">
+                  <div>
+                    <img
+                      src={require("../../assets/logos/logo-fpt.png")}
+                      alt=""
+                    />
+                    <div className="schoolDetail__cardText">
+                      <h5>FPT</h5>
+                      <p>Niên khóa K23</p>
+                    </div>
                   </div>
-                </div>
-                <Link to="/forum-detail">
-                  <img
+
+                  {/* <img
                     className="schoolDetail__iconArrow"
                     src={require("../../assets/images/arrow-right.png")}
                     alt=""
-                  />
-                </Link>
+                  /> */}
+                </div>
               </div>
-            </div>
+            </Link>
+
             <div className="schoolDetail__card">
               <figure className="schoolDetail__image">
                 <img src={require("../../assets/images/card-3.png")} alt="" />

@@ -58,11 +58,6 @@ const Quiz = () => {
       options: ["+2", "+4", "+6", "+7"],
       answer: "+7",
     },
-    {
-      question: "Chất nào sau đây là hiđrocacbon no?",
-      options: ["C2H4", "C2H2", "C6H6", "CH4"],
-      answer: "CH4",
-    },
   ];
   const [answers, setAnswers] = useState(Array(questions.length).fill(""));
   const [submitted, setSubmitted] = useState(false);
@@ -89,6 +84,48 @@ const Quiz = () => {
     <div className="MinigamePage">
       <div className="SidbarGame"></div>
       <div className="quiz">
+        <div className="quiz__header">
+          <div className="quiz__header--wrapper">
+            <div className="quiz__header--info">
+              <div className="quiz__header--content">
+                <img
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    borderRadius: "50%",
+                    marginRight: "20px",
+                  }}
+                  src={require("../../assets/images/quiz.png")}
+                  alt="quiz"
+                />
+                <div>
+                  <div className="quiz__title">Hòa Hồ</div>
+                  <div className="quiz__name">
+                    Bài kiểm tra: <span> 15 phút</span>
+                  </div>
+                  <div className="quiz__time">
+                    Thời gian: <span> 15 phút</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="quiz__teacher">
+              <div className="quiz__point">
+                <div className="quiz__point--content">
+                  <div className="quiz__title--point">Điểm thưởng</div>
+                  <div className="quiz__title--content"></div>
+                </div>
+              </div>
+
+              <div className="quiz__comment">
+                <div className="quiz__comment--content">
+                  <div className="quiz__title--comment">Lời phê</div>
+                  <div className="quiz__title--content"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="quiz__wrapper">
           {questions.map((q, index) => (
             <div key={index}>
@@ -100,7 +137,7 @@ const Quiz = () => {
                 </span>
                 {" " + q.question}
               </div>
-              {q.options.map((option) => (
+              {q.options.map((option, optionIndex) => (
                 <div key={option}>
                   <input
                     type="radio"
@@ -108,19 +145,23 @@ const Quiz = () => {
                     checked={answers[index] === option}
                     onChange={(e) => handleChange(e, index)}
                   />
-                  {option}
+                  {String.fromCharCode(97 + optionIndex)}. {option}
                 </div>
               ))}
             </div>
           ))}
-          <button onClick={handleSubmit}>Submit</button>
+
           {submitted && (
             <h2>
               Your score: {score}/{questions.length}
             </h2>
           )}
         </div>
+        <button className="quiz__submit" onClick={handleSubmit}>
+          Hoàn thành
+        </button>
       </div>
+      <div className="SidbarRole"></div>
     </div>
   );
 };
