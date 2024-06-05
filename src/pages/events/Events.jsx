@@ -5,7 +5,7 @@ import "./event.scss";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
-const EventVote = () => {
+const Events = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -93,4 +93,4 @@ const EventVote = () => {
   );
 };
 
-export default EventVote;
+export default Events;
