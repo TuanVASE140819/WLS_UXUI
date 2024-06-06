@@ -1,0 +1,388 @@
+// variables
+@import "../../styles/variables.scss";
+
+
+.exchangehistory{ 
+  margin-top: 100px;
+  width: 100%;
+  max-width: 100%;
+  &__wrapper {
+    background-color: 
+#FAFAFA;
+    margin: 0 80px;   
+    padding: 20px;
+
+    @include sm {
+      padding: 0 0;
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+
+    transition: all 0.2s ease;
+    color:#0487D9;
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      margin-right: 8px;
+    }
+  }
+  &__point {
+       display: flex;
+    align-items: center;
+    color: #FCAA17;
+    font-weight: bold;
+  }
+
+  &__name {
+    font-size: 24px;
+    padding-bottom: 20px;
+    color: #666666;
+
+    @include sm {
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    img {
+
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @include sm {
+      display:  none;
+    }
+  }
+&__body {
+    // width: 1000px;
+    // height: 40px;
+    padding: 0 40px;
+}
+
+  &__back {
+    display: flex;
+    align-items: center;
+
+    transition: all 0.2s ease;
+    color:#0487D9;
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  color:#F26F21;
+  &:hover {
+    opacity: 0.7;
+  }
+
+  img {
+    margin-right: 8px;
+  }
+}
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    padding: 12px 0;
+  
+    position: sticky;
+    top: 72px;
+    background-color: white;
+    z-index: 2;
+
+    @include sm {
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEDED;
+    color:  #676767;
+    padding: 8px 24px;
+    margin-right: 16px;
+    height: 30px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.57px;
+    text-align: left;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active {
+      background-color: #4ABC96;
+      color: white;
+    }
+   
+  }
+
+ 
+  &__filterItem {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    &:hover {
+      color: $m-01--light-01;
+    }
+
+  
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: $m-01--light-01;
+      bottom: -25px;
+      opacity: 0;
+      width: 0;
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: $m-01--light-01;
+      &:before {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+
+  &__cardsWrapper {
+    padding: 10px;
+    padding-bottom: 32px;
+    border: solid 1px $neu-06;
+    border-radius: 4px;
+
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include xl {
+      grid-template-columns: 1fr;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  color: #666666;
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 12px;
+    padding: 12px 12px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &:nth-last-child(2) {
+      border: 0;
+    }
+  }
+
+  &__noArticles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  // bài viện căn chính giữa
+    
+    width: 660px;
+    height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__itemLeft {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      border-radius: 4px;
+      margin-bottom: 4px;
+      border: solid 1px $neu-06;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      visibility: visible;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    visibility: visible;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__itemRight {
+    margin-right: 8px;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__btnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F26F21;
+    color: white;
+    padding: 0 24px;
+    height: 40px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__status--done {
+    color: #4ABC96;
+  }
+
+  &__status--waiting {
+    color: #0487D9;
+  }
+}
+
+
+   .gift__button__history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color:  #676767;
+    padding: 8px 8px;
+    margin-right: 8px;
+    height: 30px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.57px;
+    text-align: left;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active {
+      color: #0487D9;
+    }
+  }
+
+  .exchange{
+    .wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #FAFAFA;
+      margin: 0 80px;
+      @include sm {
+        margin: 0;
+      }
+    }
+  }

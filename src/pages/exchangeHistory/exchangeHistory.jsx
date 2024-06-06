@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./gift.scss";
+import "./exchangeHistory.scss";
 import { Link } from "react-router-dom";
 import SideBar from "../../components/sideBar/SideBar";
 import Ads from "../../components/ads/Ads";
@@ -7,8 +7,8 @@ import PersonalPosts from "../../components/Posts/PersonalPosts";
 import ListGroup from "../../components/Gift/ListGift";
 import Exchange from "../../components/Gift/Exchanged";
 
-const Gift = () => {
-  const [selectedFilter, setSelectedFilter] = useState("all");
+const ExchangeHistory = () => {
+  const [selectedFilter, setSelectedFilter] = useState("exchange-history");
 
   console.log(selectedFilter);
 
@@ -19,7 +19,7 @@ const Gift = () => {
         <div className="gift__wrapper">
           <div className="giftWrapper">
             <div className="gift">
-              <div className="gift__wrapper">
+              <div className="exchange__wrapper">
                 <div className="gift__back">
                   <svg
                     width="19"
@@ -39,38 +39,30 @@ const Gift = () => {
                 </div>
                 <div className="gift__filters">
                   <Link
-                    className={`gift__button ${
-                      selectedFilter === "all" ? "active" : ""
+                    className={`gift__button__history ${
+                      selectedFilter === "exchange-history" ? "active" : ""
                     }`}
-                    to="/gift/?filter=all"
-                    onClick={() => setSelectedFilter("all")}
+                    to="/exchange-history/?filter=exchange-history"
+                    onClick={() => setSelectedFilter("exchange-history")}
                   >
-                    Đổi quà
+                    Lịch sử đổi quà
                   </Link>
 
                   <Link
-                    className={`gift__button ${
+                    className={`gift__button__history  ${
                       selectedFilter === "congviec" ? "active" : ""
                     }`}
-                    to="/gift/?filter=congviec"
+                    to="/exchange-history/?filter=congviec"
                     onClick={() => setSelectedFilter("congviec")}
                   >
-                    Quà đã đổi
-                  </Link>
-
-                  <Link
-                    to="/exchange-history"
-                    className="gift__link"
-                    onClick={() => setSelectedFilter("congviec")}
-                  >
-                    lịch sử đổi quà
+                    Lịch sử xu
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {selectedFilter === "all" && <ListGroup />}
+        {selectedFilter === "exchange-history" && <Exchange />}
         {selectedFilter === "congviec" && <Exchange />}
       </div>
 
@@ -79,4 +71,4 @@ const Gift = () => {
   );
 };
 
-export default Gift;
+export default ExchangeHistory;

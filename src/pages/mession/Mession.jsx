@@ -203,7 +203,8 @@ const Mession = () => {
                       <p className="steps__created">ngày hết hạn 16/04/2024</p>
                       <p className="steps__role">Xem chính sách điểm thưởng</p>
                     </div>
-                    <p className="steps__address">Địa chỉ nhận quà</p>
+                    {/* <p className="steps__address">Địa chỉ nhận quà</p> */}
+                    <button className="steps__history">Lịch sử đổi quà</button>
                   </div>
                 </div>
               </div>

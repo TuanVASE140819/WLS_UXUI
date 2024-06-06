@@ -44,6 +44,7 @@ import Quiz from "./pages/Quiz/quiz";
 import Events from "./pages/EventAll/Events";
 import Notification from "./pages/notification/notification";
 import ExamResults from "./pages/examResults/ExamResults";
+import ExchangeHistory from "./pages/exchangeHistory/exchangeHistory";
 function App() {
   // const { user } = useContext(Context);
 
@@ -93,6 +94,7 @@ function App() {
         <Route path="/connects" element={<Connects />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/exam-results" element={<ExamResults />} />
+        <Route path="/exchange-history" element={<ExchangeHistory />} />
       </Routes>
       <Footer />
     </BrowserRouter>
