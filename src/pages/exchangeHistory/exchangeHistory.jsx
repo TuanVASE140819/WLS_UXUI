@@ -6,6 +6,7 @@ import Ads from "../../components/ads/Ads";
 import PersonalPosts from "../../components/Posts/PersonalPosts";
 import ListGroup from "../../components/Gift/ListGift";
 import Exchange from "../../components/Gift/Exchanged";
+import CoinHistory from "../../components/coinHistory/CoinHistory";
 
 const ExchangeHistory = () => {
   const [selectedFilter, setSelectedFilter] = useState("exchange-history");
@@ -50,10 +51,10 @@ const ExchangeHistory = () => {
 
                   <Link
                     className={`gift__button__history  ${
-                      selectedFilter === "congviec" ? "active" : ""
+                      selectedFilter === "coins-history" ? "active" : ""
                     }`}
-                    to="/exchange-history/?filter=congviec"
-                    onClick={() => setSelectedFilter("congviec")}
+                    to="/exchange-history/?filter=coins-history"
+                    onClick={() => setSelectedFilter("coins-history")}
                   >
                     Lịch sử xu
                   </Link>
@@ -63,7 +64,7 @@ const ExchangeHistory = () => {
           </div>
         </div>
         {selectedFilter === "exchange-history" && <Exchange />}
-        {selectedFilter === "congviec" && <Exchange />}
+        {selectedFilter === "coins-history" && <CoinHistory />}
       </div>
 
       <Ads />

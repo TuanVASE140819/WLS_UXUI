@@ -21,11 +21,24 @@
   }
 
   &__point {
-       display: flex;
+    display: flex;
     align-items: center;
-    color: #FCAA17;
+    color: #4ABC96;
+    font-weight: bold;
+
+    svg {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+  }
+
+  &__point--minus {
+      display: flex;
+    align-items: center;
+    color: #D13D3D;
     font-weight: bold;
   }
+
 
   &__name {
     font-size: 24px;
