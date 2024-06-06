@@ -21,6 +21,24 @@
     border-radius: 8px;
   }
 
+  &__filter-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 24px;
+    background-color: #4ABC96;
+    color: white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-bottom: 16px;
+    cursor: pointer;
+    // hover effect
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: #32e8ab;
+      box-shadow: 0px 0px 10px rgba(black, 0.2);
+    }
+  }
+
   &__content {
     border-radius: 8px;
     padding: 10px;

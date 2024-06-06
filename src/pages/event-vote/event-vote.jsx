@@ -3,6 +3,7 @@ import SideBarEvents from "../../components/sideBarEvents/SideBarEvents";
 import Ads from "../../components/ads/Ads";
 import "./event-vote.scss";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const EventVote = () => {
   return (
@@ -26,6 +27,12 @@ const EventVote = () => {
         <SideBarEvents />
         <div className="eventVote">
           <div className="eventVote__wrapper">
+            <Link to="/events">
+              <button className="eventVote__filter-button">
+                Tất cả sự kiện
+              </button>
+            </Link>
+
             <div className="eventVote__bg">
               <div className="eventVote__content">
                 <div className="eventVote__header">
