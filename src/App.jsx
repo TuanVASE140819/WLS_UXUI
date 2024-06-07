@@ -45,6 +45,7 @@ import Events from "./pages/EventAll/Events";
 import Notification from "./pages/notification/notification";
 import ExamResults from "./pages/examResults/ExamResults";
 import ExchangeHistory from "./pages/exchangeHistory/exchangeHistory";
+import ForgotPassword from "./pages/Forgot_password/Forgot_password";
 function App() {
   // const { user } = useContext(Context);
 
@@ -95,6 +96,7 @@ function App() {
         <Route path="/notification" element={<Notification />} />
         <Route path="/exam-results" element={<ExamResults />} />
         <Route path="/exchange-history" element={<ExchangeHistory />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
       <Footer />
     </BrowserRouter>
