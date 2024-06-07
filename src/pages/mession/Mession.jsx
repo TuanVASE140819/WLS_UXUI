@@ -204,7 +204,11 @@ const Mession = () => {
                       <p className="steps__role">Xem chính sách điểm thưởng</p>
                     </div>
                     {/* <p className="steps__address">Địa chỉ nhận quà</p> */}
-                    <button className="steps__history">Lịch sử đổi quà</button>
+                    <Link to="/exchange-history">
+                      <button className="steps__history">
+                        Lịch sử đổi quà
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
