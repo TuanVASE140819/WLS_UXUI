@@ -88,7 +88,40 @@ const SearchResults = () => {
                     Thông tin có thể chưa đầy đủ , bạn có thể cập nhật thông tin
                     trường của mình <Link to="/">tại đây</Link>
                   </p>
-                  <h4>Đề xuất</h4>
+                </div>
+                {/*  đề xuất */}
+                <div className="cardItem__suggestion">
+                  {/* đề xuất trường */}
+                  <div className="cardItem__suggestion--form">
+                    <h3 className="cardItem__title">Đề xuất trường</h3>
+                    <div className="cardItem__form">
+                      <div className="cardItem__formItem__left">
+                        <input
+                          type="text"
+                          placeholder="Tên trường"
+                          className="cardItem__input"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Địa chỉ"
+                          className="cardItem__input"
+                        />
+                      </div>
+                      <div className="cardItem__formItem__right">
+                        <textarea
+                          name=""
+                          id=""
+                          cols="30"
+                          rows="10"
+                          placeholder="Ghi chú chi tiết"
+                          className="cardItem__input"
+                        ></textarea>
+                      </div>
+                      <button className="cardItem__btn--suggestion">
+                        Đề xuất
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div className="cardItem__items">
                   <div className="cardItem__item">

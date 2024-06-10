@@ -132,7 +132,7 @@ const Login = () => {
                       {t("remember_password")}
                     </label>
 
-                    <Link to="/login">{t("forgot_password")}</Link>
+                    <Link to="/forgot-password">{t("forgot_password")}</Link>
                   </div>
 
                   <button type="submit" className="login__butonLogin">
