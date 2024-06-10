@@ -172,7 +172,7 @@ const SearchResults = () => {
                         </div>
                       </div>
                       <div className="cardItem__btns">
-                        <Link to="/" className="cardItem__btnView">
+                        <Link to="/schoolDetail" className="cardItem__btnView">
                           Xem trường
                         </Link>
                         <div className="cardItem__btnPopup">
@@ -247,7 +247,7 @@ const SearchResults = () => {
                         </div>
                       </div>
                       <div className="cardItem__btns">
-                        <Link to="/" className="cardItem__btnView">
+                        <Link to="/schoolDetail" className="cardItem__btnView">
                           Xem trường
                         </Link>
                         <div className="cardItem__btnPopup">

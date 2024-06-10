@@ -36,7 +36,7 @@ const CardsAlt = () => {
           </p>
           <h4>Đề xuất</h4>
         </div>
-        
+
         <div className="cards__items">
           <div className="cards__item">
             <figure className="cards__image">
@@ -83,7 +83,7 @@ const CardsAlt = () => {
                 </div>
               </div>
               <div className="cards__btns">
-                <Link to="/" className="cards__btnView">
+                <Link to="/schoolDetail" className="cards__btnView">
                   Xem trường
                 </Link>
                 <div className="cards__btnPopup">
@@ -155,7 +155,7 @@ const CardsAlt = () => {
                 </div>
               </div>
               <div className="cards__btns">
-                <Link to="/" className="cards__btnView">
+                <Link to="/schoolDetail" className="cards__btnView">
                   Xem trường
                 </Link>
                 <div className="cards__btnPopup">
