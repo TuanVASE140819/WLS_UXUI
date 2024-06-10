@@ -7,12 +7,13 @@ import ConnectFriends from "../../components/Connects/ConnectFriends";
 import { SvgIconHeart } from "../../components/svgs/Post/SvgIconHeart";
 import { SvgComment } from "../../components/svgs/Post/SvgComment";
 import { SvgShare } from "../../components/svgs/Post/SvgShare";
+import SideBar from "../../components/sideBar/SideBar";
 
 const ConnectsFriends = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <SideBarEvents />
+        <SideBar />
 
         <div className="connects">
           <h2
