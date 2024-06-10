@@ -4,6 +4,7 @@ import Ads from "../../components/ads/Ads";
 import "./event.scss";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import EventsRight from "../../components/Events/Events";
 
 const Events = () => {
   return (
@@ -87,7 +88,7 @@ const Events = () => {
             </div>
           </div>
         </div>
-        <Ads />
+        <EventsRight />
       </div>
     </>
   );
