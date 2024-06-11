@@ -17,7 +17,7 @@ const Gift = () => {
       <SideBar />
       <div className="gift">
         <div className="gift__wrapper">
-          <Link to="/mession">
+          <Link to="/mission">
             <div className="gift__back">
               <svg
                 width="19"

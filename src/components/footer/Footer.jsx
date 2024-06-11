@@ -38,7 +38,7 @@ const Footer = () => {
           <Link to="/forum" className="footer__link anime">
             Diễn đàng
           </Link>
-          <Link to="/mession" className="footer__link anime">
+          <Link to="/mission" className="footer__link anime">
             Nhiệm vụ
           </Link>
           <Link to="/" className="footer__link anime">

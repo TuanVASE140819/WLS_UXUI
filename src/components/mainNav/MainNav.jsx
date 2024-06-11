@@ -116,7 +116,7 @@ const MainNav = () => {
             </svg>
             <p>{t("events")}</p>
           </NavLink>
-          <NavLink to="/mession" className="mainNav__linkItem">
+          <NavLink to="/mission" className="mainNav__linkItem">
             <svg
               width="24"
               height="24"

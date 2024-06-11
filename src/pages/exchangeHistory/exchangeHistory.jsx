@@ -18,7 +18,7 @@ const ExchangeHistory = () => {
       <SideBar />
       <div className="gift">
         <div className="exchange__wrapper">
-          <Link to="/mession">
+          <Link to="/mission">
             <div className="gift__back">
               <svg
                 width="19"
