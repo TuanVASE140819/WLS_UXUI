@@ -45,7 +45,7 @@ const Footer = () => {
             How its work
           </Link>
           <Link to="/" className="footer__link anime">
-            Goal & Messions
+            Goal & Missions
           </Link>
           <Link to="/" className="footer__link anime">
             Event

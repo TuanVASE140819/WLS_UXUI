@@ -79,7 +79,7 @@ function App() {
         <Route path="/searchResults" element={<SearchResults />} />
         <Route path="/userInfo" element={<UserInfo />} />
         <Route path="/forum" element={<Forum />} />
-        <Route path="/mession" element={<Mession />} />
+        <Route path="/mission" element={<Mession />} />
         <Route path="/schoolDetail" element={<SchoolDetail />} />
         <Route path="/post/:id" element={<Post />} />
         <Route path="/forum-detail" element={<ProfilePage />} />
