@@ -9,17 +9,27 @@ export default function Dial() {
   const progress = (770 / maxParticipants) * 100;
 
   const [randomNumbers, setRandomNumbers] = useState(Array(6).fill(1));
-  const [spinning, setSpinning] = useState(false);
+  const [spinning, setSpinning] = useState(Array(6).fill(false));
 
   const generateRandomNumbers = () => {
-    setSpinning(true);
-    setTimeout(() => {
-      const newNumbers = Array.from({ length: 6 }, () =>
-        Math.floor(Math.random() * 10)
-      );
-      setRandomNumbers(newNumbers);
-      setSpinning(false);
-    }, 2000); // Duration of the spin animation
+    const newSpinning = Array(6).fill(false);
+    setSpinning(newSpinning.map((_, i) => true));
+
+    newSpinning.forEach((_, i) => {
+      setTimeout(() => {
+        setSpinning((prev) => {
+          const newState = [...prev];
+          newState[i] = false;
+          return newState;
+        });
+
+        setRandomNumbers((prev) => {
+          const newState = [...prev];
+          newState[i] = Math.floor(Math.random() * 10);
+          return newState;
+        });
+      }, i * 500); // Stagger the animation by 500ms per number
+    });
   };
 
   return (
@@ -69,13 +79,14 @@ export default function Dial() {
               <p>
                 Số lượt chơi của bạn: <span>1</span> lượt
               </p>
-              <div
-                className={`dial__content__text__input ${
-                  spinning ? "spinning" : ""
-                }`}
-              >
+              <div className="dial__content__text__input">
                 {randomNumbers.map((num, index) => (
-                  <div key={index} className="number-wrapper">
+                  <div
+                    key={index}
+                    className={`number-wrapper ${
+                      spinning[index] ? "spinning" : ""
+                    }`}
+                  >
                     <span className="number">{num}</span>
                   </div>
                 ))}
