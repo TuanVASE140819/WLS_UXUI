@@ -61,7 +61,7 @@ const Minigame = () => {
         </div>
         <section className="Minigame">
           <div className="Minigame__wrapper">
-            <div className="Minigame__item">
+            <Link to="/rotation" className="Minigame__item">
               <img
                 src={require("../../assets/images/minigame-01.png")}
                 alt=""
@@ -72,7 +72,7 @@ const Minigame = () => {
                 <br />
                 adipiscing elit, sed diam nonummy{" "}
               </p>
-            </div>
+            </Link>
             <div className="Minigame__item">
               <img
                 src={require("../../assets/images/minigame-02.png")}

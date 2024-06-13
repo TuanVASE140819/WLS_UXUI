@@ -47,6 +47,7 @@ import ExamResults from "./pages/examResults/ExamResults";
 import ExchangeHistory from "./pages/exchangeHistory/exchangeHistory";
 import ForgotPassword from "./pages/Forgot_password/Forgot_password";
 import Dial from "./pages/dial/Dial";
+import Rotation from "./pages/rotation/rotation";
 function App() {
   // const { user } = useContext(Context);
 
@@ -99,6 +100,7 @@ function App() {
         <Route path="/exchange-history" element={<ExchangeHistory />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/dial" element={<Dial />} />
+        <Route path="/rotation" element={<Rotation />} />
       </Routes>
       <Footer />
     </BrowserRouter>
