@@ -70,7 +70,7 @@ const WheelOfFortune = () => {
       >
         <div className="SidbarGame"></div>
         <main className="wheel-page">
-          <h3>Vòng Quay May Mắn</h3>
+          <h3>Vòng Quay May Mắnn</h3>
           <section className="wheel">
             <span className="wheel__arrow">
               <ul className="wheel__lucky">
