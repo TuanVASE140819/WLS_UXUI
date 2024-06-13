@@ -73,18 +73,18 @@ const Minigame = () => {
                 adipiscing elit, sed diam nonummy{" "}
               </p>
             </Link>
-            <div className="Minigame__item">
+            <Link to="/secret-gift-box" className="Minigame__item">
               <img
                 src={require("../../assets/images/minigame-02.png")}
                 alt=""
               />
-              <h4>Vòng quay may mắn</h4>
+              <h4>Hộp Quà Bí Mật</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetuer
                 <br />
                 adipiscing elit, sed diam nonummy{" "}
               </p>
-            </div>
+            </Link>
           </div>
         </section>
         <div className="SidbarRule"></div>
