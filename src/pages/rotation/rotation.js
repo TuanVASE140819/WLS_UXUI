@@ -51,7 +51,7 @@ const WheelOfFortune = () => {
         list.push({ ...item, index });
       }
     });
-    return list[0];
+    return list[0] || { index: 0 }; // return a default object if list is empty
   };
 
   const showGift = (gift) => {
@@ -70,7 +70,7 @@ const WheelOfFortune = () => {
       >
         <div className="SidbarGame"></div>
         <main className="wheel-page">
-          <h3>Vòng Quay May Mắnn</h3>
+          <h3>Vòng Quay May Mắn</h3>
           <section className="wheel">
             <span className="wheel__arrow">
               <ul className="wheel__lucky">
