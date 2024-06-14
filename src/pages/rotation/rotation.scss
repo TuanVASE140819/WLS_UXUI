@@ -1,7 +1,9 @@
 :root {
   --size-wheel: 25rem;
 }
-
+.wheel {
+  z-index: 1;
+}
 .wheel-page {
   display: flex;
   flex-direction: column;
@@ -173,6 +175,8 @@ color: #0487D9;
    background-color: #FEFCEF;
    border-radius: 10px;
     padding: 2rem;
+    transform: translateY(-60px);
+    index: -1;
   }
 .wheel__btn--mission {
   background-color: #FCAA17;
@@ -226,7 +230,7 @@ text-align: left;
   }
 
   .wheel__gift {
-
+    transform: translateY(-60px);
     h4 {
       font-family: Mulish;
       font-size: 14px;
