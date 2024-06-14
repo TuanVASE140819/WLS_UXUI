@@ -102,15 +102,33 @@ export default function Dial() {
                   Quay số ngẫu nhiên
                 </button>
               </div>
-              <div className="dial__content__text__buy">
-                <button>Mua thêm lượt</button>
+              <div className="dial__content__text__rate">1 lượt = 10 sao</div>
+              <div className="dial__content__text__btn--button">
+                <div className="dial__content__text__buy">
+                  <button>Mua thêm lượt</button>
+                </div>
+                <Link
+                  to="/exchangeHistory"
+                  className="dial__content__text__history"
+                >
+                  Lịch sử quay số
+                </Link>
               </div>
-              <Link
-                to="/exchangeHistory"
-                className="dial__content__text__history"
-              >
-                Lịch sử quay số
-              </Link>
+              <div className="dial__content__text__share">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 16 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 6.73234C15.8753 6.89331 15.7601 7.07322 15.6066 7.22472C13.7835 9.09955 11.9508 10.9744 10.1277 12.8492C9.93583 13.0481 9.72474 13.1806 9.42729 13.1238C9.09145 13.0575 8.88996 12.7924 8.88996 12.3947C8.88996 11.5614 8.88996 10.7282 8.88996 9.88546C8.88996 9.80971 8.88996 9.73396 8.88996 9.67715C8.86117 9.65821 8.85157 9.64874 8.84198 9.63927C6.58711 9.49724 4.55292 9.99909 2.85457 11.552C2.22129 12.139 1.71274 12.8113 1.30975 13.5783C1.10825 13.9571 0.743628 14.0991 0.388606 13.9287C0.167916 13.8245 0.023988 13.6446 0.0143928 13.3984C-0.0143928 12.1012 -0.0431785 10.8039 0.388606 9.55406C1.50165 6.34412 3.73733 4.35566 7.11484 3.65497C7.62339 3.55081 8.15112 3.55081 8.65967 3.50347C8.72684 3.494 8.794 3.494 8.88036 3.494C8.88036 3.40878 8.88036 3.33303 8.88036 3.26675C8.88036 2.47137 8.88996 1.67598 8.87076 0.880602C8.88036 0.473442 8.9955 0.170439 9.37931 0C9.49445 0 9.6 0 9.71514 0C9.86867 0.113626 10.051 0.217783 10.1853 0.359816C11.9988 2.20624 13.8027 4.06213 15.6066 5.91802C15.7505 6.06952 15.8657 6.24943 16 6.4104C16 6.51456 16 6.62819 16 6.73234Z"
+                    fill="#0487D9"
+                  />
+                </svg>
+                Chia sẽ cho bạn bè để nhận thêm lượt
+              </div>
             </div>
           </div>
           <div className="dial__footer">

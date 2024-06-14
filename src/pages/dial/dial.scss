@@ -13,12 +13,26 @@
     }
   }
 
+
+  &__content__text__rate {
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 15.06px;
+    text-align: left;
+  }
   &__banner {
     img {
       border-radius: 8px;
       width: 100%;
     }
     margin: 0 auto;
+  }
+
+  &__content__text__btn--button {
+     display: flex;
+    
   }
 
   &__content {
@@ -33,6 +47,18 @@
     }
   }
 
+  &__content__text__share {
+    display: flex;
+    margin-top: 20px;
+    color: #0487d9;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 50px;
+    svg {
+      margin-right: 10px;
+    }
+    
+  }
   &__content__text {
     h2 {
       color: #0487d9;
