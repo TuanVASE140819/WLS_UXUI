@@ -7,14 +7,30 @@ const WheelOfFortune = () => {
   const [msg, setMsg] = useState("");
 
   const listGift = [
-    { text: "Quà 1", percent: 10 / 100 },
+    {
+      text: "Quà 1",
+      img: require("../../assets/images/gift/xe1.png"),
+      percent: 10 / 100,
+    },
     { text: "Quà 2", percent: 10 / 100 },
     { text: "Quà 3", percent: 5 / 100 },
     { text: "Quà 4", percent: 5 / 100 },
     { text: "Quà 5", percent: 5 / 100 },
-    { text: "Quà 6", percent: 5 / 100 },
-    { text: "Quà 7", percent: 5 / 100 },
-    { text: "Quà 8", percent: 5 / 100 },
+    {
+      text: "Quà 6",
+      img: require("../../assets/images/gift/xe4.png"),
+      percent: 5 / 100,
+    },
+    {
+      text: "Quà 7",
+      img: require("../../assets/images/gift/xe3.png"),
+      percent: 5 / 100,
+    },
+    {
+      text: "Quà 8",
+      img: require("../../assets/images/gift/xe2.png"),
+      percent: 5 / 100,
+    },
   ];
 
   const handleBoxClick = (index) => {
@@ -59,7 +75,21 @@ const WheelOfFortune = () => {
                   src={require("../../assets/images/box_gift.png")}
                   alt=""
                 />
-                <div className="gift-content">{gift.text}</div>
+                <div className="gift-content">
+                  {gift.img && (
+                    <img
+                      className="gift-img"
+                      src={gift.img}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  )}
+                  <div className="gift-text">{gift.text}</div>
+                </div>
               </div>
             ))}
           </div>
