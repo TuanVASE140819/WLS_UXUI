@@ -3,73 +3,33 @@ import "./secretgiftbox.scss";
 import Ads from "../../components/ads/Ads";
 
 const WheelOfFortune = () => {
-  const [currentRotate, setCurrentRotate] = useState(0);
-  const [isRotating, setIsRotating] = useState(false);
+  const [openedBoxes, setOpenedBoxes] = useState([]);
   const [msg, setMsg] = useState("");
 
-  const timeRotate = 7000; // 7 seconds
   const listGift = [
-    {
-      text: "Quà 1",
-      percent: 10 / 100,
-    },
+    { text: "Quà 1", percent: 10 / 100 },
     { text: "Quà 2", percent: 10 / 100 },
     { text: "Quà 3", percent: 5 / 100 },
     { text: "Quà 4", percent: 5 / 100 },
     { text: "Quà 5", percent: 5 / 100 },
-    { text: "Quà 6", percent: 40 / 100 },
-    // { text: "Khóa học js free", percent: 10 / 100 },
-    // { text: "Áo khoác Gucci", percent: 20 / 100 },
+    { text: "Quà 6", percent: 5 / 100 },
+    { text: "Quà 7", percent: 5 / 100 },
+    { text: "Quà 8", percent: 5 / 100 },
   ];
 
-  const size = listGift.length;
-  const rotate = 360 / size;
-  const skewY = 90 - rotate;
-
-  const start = () => {
-    setMsg("");
-    setIsRotating(true);
-    const random = Math.random();
-    const gift = getGift(random);
-    setCurrentRotate((prevRotate) => prevRotate + 360 * 10);
-    rotateWheel(currentRotate, gift.index);
-    showGift(gift);
-  };
-
-  const rotateWheel = (currentRotate, index) => {
-    document.querySelector(".SecretGiftBox__lucky").style.transform = `rotate(${
-      currentRotate - index * rotate - rotate / 2
-    }deg)`;
-  };
-
-  const getGift = (randomNumber) => {
-    let currentPercent = 0;
-    let list = [];
-    listGift.forEach((item, index) => {
-      currentPercent += item.percent;
-      if (randomNumber <= currentPercent) {
-        list.push({ ...item, index });
-      }
-    });
-    return list[0] || { index: 0 }; // return a default object if list is empty
-  };
-
-  const showGift = (gift) => {
-    setTimeout(() => {
-      setIsRotating(false);
-      setMsg(`Chúc mừng bạn đã nhận được "${gift.text}"`);
-    }, timeRotate);
+  const handleBoxClick = (index) => {
+    if (!openedBoxes.includes(index)) {
+      setOpenedBoxes([...openedBoxes, index]);
+      setTimeout(() => {
+        document.getElementById(`box-${index}`).classList.add("opening");
+      }, 50); // Small delay to ensure CSS transition triggers properly
+    }
   };
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-        }}
-      >
+      <div style={{ display: "flex" }}>
         <div className="SidbarGame"></div>
-
         <main className="SecretGiftBox">
           <div className="SecretGiftBox__header">
             <img src={require("../../assets/images/Box.png")} alt="" />
@@ -85,33 +45,26 @@ const WheelOfFortune = () => {
             </div>
           </div>
           <div className="SecretGiftBox__lucky">
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
-            <div className="SecretGiftBox__lucky__box">
-              <img src={require("../../assets/images/box_gift.png")} alt="" />
-            </div>
+            {listGift.map((gift, index) => (
+              <div
+                id={`box-${index}`}
+                key={index}
+                className={`SecretGiftBox__lucky__box ${
+                  openedBoxes.includes(index) ? "opening" : ""
+                }`}
+                onClick={() => handleBoxClick(index)}
+              >
+                <img
+                  className="box-gift"
+                  src={require("../../assets/images/box_gift.png")}
+                  alt=""
+                />
+                <div className="gift-content">{gift.text}</div>
+              </div>
+            ))}
           </div>
+          {msg && <div className="SecretGiftBox__message">{msg}</div>}
         </main>
-
         <div className="SidbarRule"></div>
       </div>
     </>
