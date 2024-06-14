@@ -49,6 +49,7 @@ import ForgotPassword from "./pages/Forgot_password/Forgot_password";
 import Dial from "./pages/dial/Dial";
 import Rotation from "./pages/rotation/rotation";
 import SecretGiftBox from "./pages/Secret-Gift-Box/SecretGiftBox";
+import DialHistory from "./pages/dialingHistory/DialHistory";
 function App() {
   // const { user } = useContext(Context);
 
@@ -103,6 +104,7 @@ function App() {
         <Route path="/dial" element={<Dial />} />
         <Route path="/rotation" element={<Rotation />} />
         <Route path="/secret-gift-box" element={<SecretGiftBox />} />
+        <Route path="/exchangeHistory" element={<DialHistory />} />
       </Routes>
       <Footer />
     </BrowserRouter>

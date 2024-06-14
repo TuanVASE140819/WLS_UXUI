@@ -1,0 +1,139 @@
+@import "../../styles/variables.scss";
+
+
+.dialinghistory {
+  display: flex;
+  flex-direction: column;
+  ;
+  align-items: center;
+  margin-top: 100px;
+  width: 100%;
+  padding: 0 60px;
+  
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+      margin-bottom: 20px;
+    overflow-y: scroll;
+    border: 1px solid #D1D1D1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #3D92D1;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+ &__header {
+    padding: 20px 0;
+   
+    h3{
+      color: #fff;
+     font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.57px;
+  text-align: left;
+
+    }
+  }
+
+
+  &__result--lose{
+    font-family: Mulish;
+font-size: 14px;
+font-weight: 700;
+line-height: 17.57px;
+text-align: center;
+color: #D13D3D;
+  }
+
+  &__number {
+    
+    width: 100%;
+    background: #EFEFEF;
+   margin-right: 5px;
+    padding: 3px 5px;
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #3D92D1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    overflow-x: auto;
+   background:  #fff;
+ 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      th, td {
+        padding: 12px 15px;
+        border: none; /* Remove all borders */
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: Mulish;
+        line-height: 17.57px;
+        text-align: left;
+        
+      }
+
+      thead {
+        background-color: #f4f4f4;
+
+        th {
+          font-weight: bold;
+          // text-transform: uppercase;
+          font-family: Mulish;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 17.57px;
+          text-align: left;
+        }
+      }
+
+      tbody {
+      
+        tr {
+          &:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+
+        td {
+          color: #555;
+        }
+      }
+    }
+  }
+  
+  &__result--win{
+    font-family: Mulish;
+    color: #4ABC96;
+  }
+  
+}
