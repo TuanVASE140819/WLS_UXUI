@@ -38,7 +38,7 @@ const MainNav = () => {
           className="mainNav__logo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" width={150} />
         </NavLink>
         <div className="mainNav__links">
           <NavLink to="/" className="mainNav__linkItem">
@@ -209,11 +209,11 @@ const MainNav = () => {
             </div>
           </>
 
-          <div className="mainNav__Login">
+          {/* <div className="mainNav__Login">
             <NavLink to="/login">
               <span>{t("login")}</span>
             </NavLink>
-          </div>
+          </div> */}
 
           <div className="mainNav__lang">
             <NavLink

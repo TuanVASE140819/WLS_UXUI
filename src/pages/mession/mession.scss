@@ -64,11 +64,11 @@
 
 &__name {
   font-family: Mulish;
-font-size: 20px;
-font-weight: 700;
-line-height: 25.1px;
-text-align: left;
-
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.1px;
+  text-align: left;
+  color: #666666;
 }
 &__info__gift {
   display: flex;
@@ -81,7 +81,7 @@ text-align: left;
 
 &__coin {
   font-family: Mulish;
-font-size: 20px;
+font-size: 16px;
 font-weight: 700;
 margin-left: 5px;
 line-height: 25.1px;
@@ -229,7 +229,7 @@ align-items: center;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
-  // padding: 0 32px;
+
 
   @include sm {
   //  bỏ display flex
@@ -238,6 +238,7 @@ align-items: center;
 }
 
 &__avatar {
+  width: 20px;
   margin-right: 20px; /* Để tạo khoảng cách giữa hình ảnh và text */
 }
 
@@ -293,8 +294,8 @@ background-color: #FEFCEF;
   }
   &__avatar {
     // vòng tròn
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
   }
   &__title {
@@ -543,7 +544,7 @@ text-align: left;
 
   &__history{
     padding: 5px 24px;
-    margin-top: 20px;
+    margin-top: 16px;
     border-radius: 20px;
     color: white;
     background-color: #4abc96;
