@@ -151,7 +151,6 @@ const Notification = () => {
                         )}
                       </div>
                       <div className="notification__content">
-                        /information?filter=history-page{" "}
                         <div className="notification__content">
                           {item.content}
                         </div>
