@@ -67,26 +67,26 @@
     }
   }
 
-  &__header {
-   font-family: Dongle;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 46.34px;
-  text-align: left;
-  color: #696969;
-// căn giữa
-  display: flex;
-  justify-content: center;
-  align-content: center;
+//   &__header {
+//    font-family: Dongle;
+//   font-size: 30px;
+//   font-weight: 700;
+//   line-height: 46.34px;
+//   text-align: left;
+//   color: #696969;
+// // căn giữa
+//   display: flex;
+//   justify-content: center;
+//   align-content: center;
 
-  // dưới có đường gạch
-  border-bottom: 2px solid#D9D9D9;
+//   // dưới có đường gạch
+//   border-bottom: 2px solid#D9D9D9;
 
-  @include sm {
-   display: inline;
-  }
+//   @include sm {
+//    display: inline;
+//   }
 
-  }
+//   }
 
   &__header--highlight {
     color:#3D92D1;

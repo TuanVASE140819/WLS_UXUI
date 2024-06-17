@@ -204,10 +204,10 @@ const Mession = () => {
                       <p className="steps__role">Xem chính sách điểm thưởng</p>
                     </div>
                     {/* <p className="steps__address">Địa chỉ nhận quà</p> */}
-                    <Link to="/exchange-history">
-                      <button className="steps__history">
+                    <Link to="/information?filter=history-page">
+                      {/* <button className="steps__history">
                         Lịch sử đổi quà
-                      </button>
+                      </button> */}
                     </Link>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ const Mession = () => {
                       marginLeft: "10px",
                     }}
                   >
-                    <Link to="/gift">Nhận quà</Link>
+                    <Link to="/gift">Đổi quà</Link>
                   </span>
                 </div>
               </div>

@@ -37,7 +37,7 @@ const notification = [
 
 const Notification = () => {
   const [filter, setFilter] = useState("all"); // state to hold the filter value
-
+  //set
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
@@ -56,6 +56,7 @@ const Notification = () => {
           >
             Tất cả thông báo
           </button>
+
           <button
             className={
               `notification__filter-button ` +
@@ -64,6 +65,35 @@ const Notification = () => {
             onClick={() => handleFilterChange("school")}
           >
             Trường
+          </button>
+
+          <button
+            className={
+              `notification__filter-button ` +
+              (filter === "event" ? "active" : "")
+            }
+            onClick={() => handleFilterChange("event")}
+          >
+            Sự kiện
+          </button>
+
+          <button
+            className={
+              `notification__filter-button ` +
+              (filter === "friends" ? "active" : "")
+            }
+            onClick={() => handleFilterChange("friends")}
+          >
+            Tìm bạn
+          </button>
+          <button
+            className={
+              `notification__filter-button ` +
+              (filter === "news" ? "active" : "")
+            }
+            onClick={() => handleFilterChange("news")}
+          >
+            Tin tức
           </button>
           <button
             className={
@@ -74,7 +104,6 @@ const Notification = () => {
           >
             Nhiêm vụ
           </button>
-
           <div className="notification__wrapper">
             {notification
               .filter((item) => filter === "all" || item.type === filter)
@@ -122,6 +151,7 @@ const Notification = () => {
                         )}
                       </div>
                       <div className="notification__content">
+                        /information?filter=history-page{" "}
                         <div className="notification__content">
                           {item.content}
                         </div>
