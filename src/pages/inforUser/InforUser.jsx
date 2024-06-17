@@ -118,6 +118,18 @@ const InforUser = () => {
                     9015
                   </div>
                 </div>
+                <p
+                  style={{
+                    color: "#8F8F8F",
+                    fontFamily: "Mulish",
+                    fontSize: "12px",
+                    fontStyle: "italic",
+                    fontWeight: "400",
+                    lineHeight: "15.06px",
+                  }}
+                >
+                  còn 245 điểm thăng hạng
+                </p>
               </div>
             </div>
             <div className="siderBarUser__ComboCode">
