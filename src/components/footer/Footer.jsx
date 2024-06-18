@@ -24,7 +24,10 @@ const Footer = () => {
 
         <div className="footer__links anime">
           <h4 className="footer__title">Menu</h4>
-          <Link to="/contacts" className="footer__link anime">
+          <Link
+            to="https://bluepink.gitbook.io/weloveschool"
+            className="footer__link anime"
+          >
             Giới thiệu
           </Link>
           <Link to="/notFound" className="footer__link anime">
@@ -33,25 +36,31 @@ const Footer = () => {
           <Link to="/topSchool" className="footer__link anime">
             Bảng xếp hạng
           </Link>
-          <Link to="/searchResults" className="footer__link anime">
+          <Link to="/events" className="footer__link anime">
             Sự kiện
           </Link>
-          <Link to="/userInfo" className="footer__link anime">
+          <Link to="/contacts" className="footer__link anime">
             Liên hệ
           </Link>
         </div>
         <div className="footer__links anime">
           <h4 className="footer__title"> </h4>
-          <Link to="/forum" className="footer__link anime">
+          <Link
+            to="https://bluepink.gitbook.io/weloveschool/huong-dan-s-dung/quan-ly-tai-khoan"
+            className="footer__link anime"
+          >
             Hướng dẫn
           </Link>
-          <Link to="/mission" className="footer__link anime">
+          <Link
+            to="https://bluepink.gitbook.io/weloveschool"
+            className="footer__link anime"
+          >
             Chính sách
           </Link>
-          <Link to="/" className="footer__link anime">
+          <Link to="https://www.youtube.com/" className="footer__link anime">
             Video
           </Link>
-          <Link to="/" className="footer__link anime">
+          <Link to="https://vnexpress.net/" className="footer__link anime">
             Tin tức
           </Link>
           {/* <Link to="/" className="footer__link anime">
