@@ -97,7 +97,7 @@ line-height: 25.1px;
 text-align: center;
 color: #FCAA17;
 background-color: #F9F9F9;
-padding: 30px 40px;
+padding: 10px 20px;
 border-radius: 10px;
 
 // active
@@ -211,7 +211,7 @@ align-items: center;
 
 &__coin__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Thay đổi 200px với kích thước tối thiểu mong muốn cho mỗi cột
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); // Thay đổi 200px với kích thước tối thiểu mong muốn cho mỗi cột
   align-items: center;
   justify-content: space-between;
   margin: 32px 0;

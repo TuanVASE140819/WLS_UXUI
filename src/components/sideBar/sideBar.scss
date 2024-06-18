@@ -5,7 +5,7 @@
   margin-top: 60px;
   background-color: $neu-04;
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   height: 100vh;
   position: sticky;
   top:60px;
@@ -88,7 +88,7 @@
   &__ratingsHeader {
     color: #6b7280;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 24px;
 
     @include xs {
@@ -162,9 +162,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
-
+   
     a {
-      @include font-xs;
+      // @include font-xs;
+      font-size: 14px;
       font-weight: bold;
       display: -webkit-box;
       -webkit-line-clamp: 1;
@@ -183,7 +184,7 @@
   &__ratingsListUsers {
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 16px;
     color: $neu-09;
 
     svg {
