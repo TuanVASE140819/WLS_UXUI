@@ -9,47 +9,54 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-        <div className="footer__links anime">
+        <div
+          className="footer__links anime"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <div className="footer__logo">
-            <img src={require("../../assets/logos/logo-footer.png")} alt="" />
+            <img
+              src={require("../../assets/logos/logo-footer.png")}
+              alt=""
+              style={{ width: "250px" }}
+            />
           </div>
         </div>
 
         <div className="footer__links anime">
-          <h4 className="footer__title">About Us</h4>
+          <h4 className="footer__title">Menu</h4>
           <Link to="/contacts" className="footer__link anime">
-            Contact us
+            Giới thiệu
           </Link>
           <Link to="/notFound" className="footer__link anime">
-            Not Found
+            Tìm bạn cũ
           </Link>
           <Link to="/topSchool" className="footer__link anime">
-            Top trường học
+            Bảng xếp hạng
           </Link>
           <Link to="/searchResults" className="footer__link anime">
-            Search Results
+            Sự kiện
           </Link>
           <Link to="/userInfo" className="footer__link anime">
-            Thông tin ban
+            Liên hệ
           </Link>
         </div>
         <div className="footer__links anime">
-          <h4 className="footer__title">Chính sách</h4>
+          <h4 className="footer__title"> </h4>
           <Link to="/forum" className="footer__link anime">
-            Diễn đàng
+            Hướng dẫn
           </Link>
           <Link to="/mission" className="footer__link anime">
-            Nhiệm vụ
+            Chính sách
           </Link>
           <Link to="/" className="footer__link anime">
-            How its work
+            Video
           </Link>
           <Link to="/" className="footer__link anime">
-            Goal & Missions
+            Tin tức
           </Link>
-          <Link to="/" className="footer__link anime">
+          {/* <Link to="/" className="footer__link anime">
             Event
-          </Link>
+          </Link> */}
         </div>
         <div className="footer__links anime">
           <h4 className="footer__title">Social</h4>
