@@ -138,7 +138,7 @@ const RelatedArticles = () => {
                           Trở Lại"
                         </h4>
                       </Link>
-                      <div className="relatedArticles__user">
+                      {/* <div className="relatedArticles__user">
                         <img
                           src={require("../../assets/images/user.png")}
                           alt=""
@@ -147,7 +147,7 @@ const RelatedArticles = () => {
                           <h4>Hòa 9x</h4>
                           <p>08/04/2024</p>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 ))
