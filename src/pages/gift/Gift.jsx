@@ -47,13 +47,13 @@ const Gift = () => {
               Đổi quà
             </Link>
 
-            <Link
+            {/* <Link
               to="/exchange-history"
               className="gift__link"
               onClick={() => setSelectedFilter("congviec")}
             >
               lịch sử đổi quà
-            </Link>
+            </Link> */}
           </div>
         </div>
         <ListGroup />
